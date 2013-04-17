@@ -1,0 +1,4 @@
+ZHAW_IRG_SKB_LUCENE
+===================
+
+ZHAW_IRG_SKB_LUCENE
