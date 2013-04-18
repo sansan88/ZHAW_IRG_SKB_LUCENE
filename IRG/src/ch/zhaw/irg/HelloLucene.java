@@ -1,5 +1,7 @@
 package ch.zhaw.irg;
 
+//http://www.lucenetutorial.com/lucene-in-5-minutes.html
+
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
@@ -45,22 +47,22 @@ public class HelloLucene {
 		// READ COLLECTION
 		try {
 
-//			<?xml version="1.0"?>
-//			<company>
-//				<staff id="1001">
-//					<firstname>yong</firstname>
-//					<lastname>mook kim</lastname>
-//					<nickname>mkyong</nickname>
-//					<salary>100000</salary>
-//				</staff>
-//				<staff id="2001">
-//					<firstname>low</firstname>
-//					<lastname>yin fong</lastname>
-//					<nickname>fong fong</nickname>
-//					<salary>200000</salary>
-//				</staff>
-//			</company>
-			
+			// <?xml version="1.0"?>
+			// <company>
+			// <staff id="1001">
+			// <firstname>yong</firstname>
+			// <lastname>mook kim</lastname>
+			// <nickname>mkyong</nickname>
+			// <salary>100000</salary>
+			// </staff>
+			// <staff id="2001">
+			// <firstname>low</firstname>
+			// <lastname>yin fong</lastname>
+			// <nickname>fong fong</nickname>
+			// <salary>200000</salary>
+			// </staff>
+			// </company>
+
 			File fXmlFileEN = new File(
 					"C:\\Users\\sandro\\Dropbox\\ZHAW\\63_IRG\\SKB\\irg_collection.xml");
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory
@@ -68,40 +70,50 @@ public class HelloLucene {
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 			org.w3c.dom.Document doc = dBuilder.parse(fXmlFileEN);
 
-			//optional, but recommended
-			//read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work
+			// optional, but recommended
+			// read this -
+			// http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work
 			doc.getDocumentElement().normalize();
-		 
-			//ROOT --> TREC
-			System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
-		 
+
+			// ROOT --> TREC
+			System.out.println("Root element :"
+					+ doc.getDocumentElement().getNodeName());
+
 			NodeList nList = doc.getElementsByTagName("DOC");
-		 
+
 			System.out.println("----------------------------");
-			
+
 			System.out.println(" Create Index Writer ");
 			IndexWriter w = new IndexWriter(index, config);
-			
+
 			for (int temp = 0; temp < nList.getLength(); temp++) {
-		 
+
 				Node nNode = nList.item(temp);
-		 
+
 				System.out.println("\nCurrent Element :" + nNode.getNodeName());
-		 
+
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-		 
+
 					Element eElement = (Element) nNode;
-		 
-					//System.out.println("Staff id : " + eElement.getAttribute("id"));
-					System.out.println("recordId : " + eElement.getElementsByTagName("recordId").item(0).getTextContent());
-					System.out.println("text : " 	 + eElement.getElementsByTagName("text").item(0).getTextContent());
-					
-					//add to collection
-					addDoc(w, eElement.getElementsByTagName("text").item(0).getTextContent(), eElement.getElementsByTagName("recordId").item(0).getTextContent());
-					
+
+					// System.out.println("Staff id : " +
+					// eElement.getAttribute("id"));
+					System.out.println("recordId : "
+							+ eElement.getElementsByTagName("recordId").item(0)
+									.getTextContent());
+					System.out.println("text : "
+							+ eElement.getElementsByTagName("text").item(0)
+									.getTextContent());
+
+					// add to collection
+					addDoc(w, eElement.getElementsByTagName("text").item(0)
+							.getTextContent(),
+							eElement.getElementsByTagName("recordId").item(0)
+									.getTextContent());
+
 				}
 			}
-			//close doc
+			// close doc
 			w.close();
 
 		} catch (Exception e) {
@@ -143,7 +155,7 @@ public class HelloLucene {
 			throws IOException {
 		Document doc = new Document();
 		doc.add(new TextField("text", text, Field.Store.YES));
-		
+
 		// use a string field for isbn because we don't want it tokenized
 		doc.add(new StringField("recordId", recordId, Field.Store.YES));
 		w.addDocument(doc);
