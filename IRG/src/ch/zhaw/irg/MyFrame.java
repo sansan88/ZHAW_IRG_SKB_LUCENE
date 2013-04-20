@@ -78,6 +78,7 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 		panelCenter.add(collectionRight);
 		
 		btnExportLeft = new Button("Export to File, Left");
+				
 		panelCenter.add(btnExportLeft);
 		btnExportRight = new Button("Export to File, Right");
 		panelCenter.add(btnExportRight);
@@ -88,12 +89,34 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 		panelCenter.add(txtAreaRight);
 		
 		add(panelCenter, BorderLayout.CENTER);
+		
+		//Beim Listener registrieren
+		btnExportLeft.addActionListener(this);
+		btnExportRight.addActionListener(this);
+		btnSearch.addActionListener(this);
+		
+		
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-
+		if (e.getSource() == btnExportLeft ) {
+			System.out.println("Export Left");
+			System.out.println(txtAreaLeft.getText());
+			
+		}
+		
+		if (e.getSource() == btnExportRight){
+			System.out.println("Export Right");
+			System.out.println(txtAreaRight.getText());
+		}
+			
+		if (e.getSource() == btnSearch) {
+			System.out.println("Search, Call Lucene");
+			HelloLucene lucene = new HelloLucene();
+		}
+		
 	}
 
 	@Override
