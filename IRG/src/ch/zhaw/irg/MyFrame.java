@@ -2,6 +2,7 @@ package ch.zhaw.irg;
 
 import java.awt.BorderLayout;
 import java.awt.Button;
+import java.awt.Choice;
 import java.awt.Color;
 import java.awt.Frame;
 import java.awt.GridLayout;
@@ -18,8 +19,6 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 	// Gui Elemente
 	private Panel panelTop;
 	private Panel panelCenter;
-	private Panel panelLeft;
-	private Panel panelRight;
 
 	private Button btnSearch = null;
 	private Button btnExportLeft = null;
@@ -28,6 +27,10 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 	private TextArea txtAreaLeft;
 	private TextArea txtAreaRight;
 
+	private Choice queryList;
+	private Choice collectionLeft;
+	private Choice collectionRight;
+	
 	public static void main(String args[]) {
 		MyFrame myFrame = new MyFrame();
 		myFrame.setSize(600, 600);
@@ -49,6 +52,11 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 		panelTop = new Panel();
 		panelTop.setLayout(new GridLayout(2, 1));
 
+		queryList = new Choice();
+		queryList.add("Query 1");
+		queryList.add("Query 2");
+		panelTop.add(queryList);
+		
 		btnSearch = new Button("GoGoGo");
 		panelTop.add(btnSearch);
 
@@ -56,28 +64,30 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 
 		// CENTER
 		panelCenter = new Panel();
-		panelCenter.setLayout(new GridLayout(1, 2));
-		// panelCenter.add(panelLeft);
-		// panelCenter.add(panelRight);
+		panelCenter.setLayout(new GridLayout(3, 2));
 
+		
+		collectionLeft = new Choice();
+		collectionLeft.add("DE");
+		collectionLeft.add("RU");
+		panelCenter.add(collectionLeft);
+		
+		collectionRight = new Choice();
+		collectionRight.add("DE");
+		collectionRight.add("FR");
+		panelCenter.add(collectionRight);
+		
+		btnExportLeft = new Button("Export to File, Left");
+		panelCenter.add(btnExportLeft);
+		btnExportRight = new Button("Export to File, Right");
+		panelCenter.add(btnExportRight);
+
+		txtAreaLeft = new TextArea("das ist ein Text");
+		panelCenter.add(txtAreaLeft);
+		txtAreaRight = new TextArea("das ist auch ein  Text");
+		panelCenter.add(txtAreaRight);
+		
 		add(panelCenter, BorderLayout.CENTER);
-
-		// // LEFT
-		// panelLeft = new Panel();
-		// panelLeft.setLayout(new GridLayout(2, 1));
-		// btnExportLeft = new Button("Export to File, Left");
-		// panelLeft.add(btnExportLeft);
-		// panelLeft.add(txtAreaLeft);
-		// // add(panelLeft);
-		//
-		// // RIGHT
-		// panelRight = new Panel();
-		// panelRight.setLayout(new GridLayout(2, 1));
-		// btnExportRight = new Button("Export to File, Right");
-		// panelRight.add(btnExportRight);
-		// panelRight.add(txtAreaRight);
-		// // add(panelRight);
-
 	}
 
 	@Override
