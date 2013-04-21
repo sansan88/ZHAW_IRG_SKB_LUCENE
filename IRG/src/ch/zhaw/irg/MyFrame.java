@@ -30,7 +30,7 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 	private Choice queryList;
 	private Choice collectionLeft;
 	private Choice collectionRight;
-	
+
 	public static void main(String args[]) {
 		MyFrame myFrame = new MyFrame();
 		myFrame.setSize(600, 600);
@@ -56,7 +56,7 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 		queryList.add("Query 1");
 		queryList.add("Query 2");
 		panelTop.add(queryList);
-		
+
 		btnSearch = new Button("GoGoGo");
 		panelTop.add(btnSearch);
 
@@ -66,19 +66,18 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 		panelCenter = new Panel();
 		panelCenter.setLayout(new GridLayout(3, 2));
 
-		
 		collectionLeft = new Choice();
 		collectionLeft.add("DE");
 		collectionLeft.add("RU");
 		panelCenter.add(collectionLeft);
-		
+
 		collectionRight = new Choice();
 		collectionRight.add("DE");
 		collectionRight.add("FR");
 		panelCenter.add(collectionRight);
-		
+
 		btnExportLeft = new Button("Export to File, Left");
-				
+
 		panelCenter.add(btnExportLeft);
 		btnExportRight = new Button("Export to File, Right");
 		panelCenter.add(btnExportRight);
@@ -87,36 +86,35 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 		panelCenter.add(txtAreaLeft);
 		txtAreaRight = new TextArea("das ist auch ein  Text");
 		panelCenter.add(txtAreaRight);
-		
+
 		add(panelCenter, BorderLayout.CENTER);
-		
-		//Beim Listener registrieren
+
+		// Beim Listener registrieren
 		btnExportLeft.addActionListener(this);
 		btnExportRight.addActionListener(this);
 		btnSearch.addActionListener(this);
-		
-		
+
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		if (e.getSource() == btnExportLeft ) {
+		if (e.getSource() == btnExportLeft) {
 			System.out.println("Export Left");
 			System.out.println(txtAreaLeft.getText());
-			
+
 		}
-		
-		if (e.getSource() == btnExportRight){
+
+		if (e.getSource() == btnExportRight) {
 			System.out.println("Export Right");
 			System.out.println(txtAreaRight.getText());
 		}
-			
+
 		if (e.getSource() == btnSearch) {
 			System.out.println("Search, Call Lucene");
 			HelloLucene lucene = new HelloLucene();
 		}
-		
+
 	}
 
 	@Override
