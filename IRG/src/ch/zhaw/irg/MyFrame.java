@@ -61,8 +61,13 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 		panelTop.setLayout(new GridLayout(2, 1));
 
 		queryList = new Choice();
-		queryList.add("Query 1");
-		queryList.add("Query 2");
+
+		qFile = new FileHandler(TRUE, FALSE, "EN");
+
+		for (int i = 0; i < qFile.ids.length; i++) {
+			System.out.println("add item to choicebox. ID: " + qFile.ids[i]);
+			queryList.add(qFile.ids[i]);
+		}
 		panelTop.add(queryList);
 
 		btnSearch = new Button("GoGoGo");
@@ -127,12 +132,14 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 
 		if (e.getSource() == btnSearch) {
 			System.out.println("Search, Call Lucene");
-			// HelloLucene lucene = new HelloLucene();
-			qFile = new FileHandler(TRUE, FALSE, "");
 			cFileLeft = new FileHandler(FALSE, TRUE,
 					collectionLeft.getSelectedItem());
+			System.out.println("File Selected Left: "+ collectionLeft.getSelectedItem());
+			
 			cFileRight = new FileHandler(FALSE, TRUE,
 					collectionRight.getSelectedItem());
+			System.out.println("File selected Right: " + collectionRight.getSelectedItem());
+
 		}
 
 	}
