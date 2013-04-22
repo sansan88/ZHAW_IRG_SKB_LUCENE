@@ -1,41 +1,41 @@
 <? Xml version = "1.0" encoding = "utf-8"?>
 <TREC>
-  <doc>
-    <recordId> 245 </ RECORDID>
-    <text> circuits à transistors de phase de fractionnement </ text>
-  </ DOC>
-  <doc>
-    <recordId> 891 </ RECORDID>
-    <texte> la détermination des orbites des météores individuels par
-    méthodes de radio </ text>
-  </ DOC>
-  <doc>
-    <recordId> 1217 </ RECORDID>
+<DOC>
+    <recordId>245</recordId>
+    <text> circuits à transistors de phase de fractionnement</text>
+</DOC>
+<DOC>
+    <recordId>891</recordId>
+    <text>la détermination des orbites des météores individuels par
+    méthodes de radio</text>
+</DOC>
+<DOC>
+    <recordId>1217</recordId>
     <text> articles sur les systèmes de formatage de texte, y compris «ce que vous
     voyez est ce que vous obtenez "systèmes exemples:. t / nroff, scribe,
-    bravo. </ text>
-  </ DOC>
-  <doc>
-    <recordId> 1741 </ RECORDID>
-    <texte> je suis intéressé par les modèles cognitifs de l'utilisation de la bibliothèque. que
+    bravo.</text>
+</DOC>
+<DOC>
+    <recordId>1741</recordId>
+    <text>je suis intéressé par les modèles cognitifs de l'utilisation de la bibliothèque. que
     études ou des articles sont là à regarder la psychologie de
     l'utilisation des bibliothèques et de l'information, à savoir les stratégies de recherche,
     l'information et de la manière dont est perçu son utilité. l'utilisation de
     des bibliothèques, des documents de la bibliothèque, le comportement des utilisateurs, des informations
     comportement de recherche ou d'utilisation, l'utilité, la psychologie de la bibliothèque et
-    utilisation de l'information, usager de la bibliothèque, la satisfaction des utilisateurs. </ text>
-  </ DOC>
-  <doc>
-    <recordId> 2405 </ RECORDID>
-    aspects <text> gestion de la mémoire des systèmes d'exploitation </ text>
-  </ DOC>
-  <doc>
-    <recordId> 3777 </ RECORDID>
-    détermination <texte> des systèmes actuels dans le coin supérieur
-    l'atmosphère pendant les orages magnétiques </ text>
-  </ DOC>
-  <doc>
-    <recordId> 4233 </ RECORDID>
+    utilisation de l'information, usager de la bibliothèque, la satisfaction des utilisateurs.</text>
+</DOC>
+<DOC>
+    <recordId>2405</recordId>
+    aspects <text> gestion de la mémoire des systèmes d'exploitation</text>
+</DOC>
+<DOC>
+    <recordId>3777</recordId>
+    <text>détermination des systèmes actuels dans le coin supérieur
+    l'atmosphère pendant les orages magnétiques</text>
+</DOC>
+<DOC>
+    <recordId>4233</recordId>
     <text> articles sur la sensibilité de la valeur propre
     décomposition des matrices réelles, en particulier, une nulle
     matrices. Je suis particulièrement intéressé par la séparation des
@@ -44,81 +44,81 @@
     vecteurs propres par une permutation: siam, j. analyse numérique,
     vol. 7, no. 1 (1970); g.w. stewart, limites d'erreur »pour
     approximatives de sous-espaces invariants fermés opérateurs linéaires »,
-    siam j. analyse numérique., vol. 8, no. 4 (1971). </ Text>
-  </ DOC>
-  <doc>
-    <recordId> 4767 </ RECORDID>
-    représentation des nombres <texte> dans les machines binaires </ text>
-  </ DOC>
-  <doc>
-    <recordId> 5899 </ RECORDID>
+    siam j. analyse numérique., vol. 8, no. 4 (1971).</text>
+</DOC>
+<DOC>
+    <recordId>4767</recordId>
+    représentation des nombres <text>dans les machines binaires</text>
+</DOC>
+<DOC>
+    <recordId>5899</recordId>
     <text> observations simultanées de siffleurs et de la foudre
-    décharges </ text>
-  </ DOC>
-  <doc>
-    <recordId> 6324 </ RECORDID>
-    <texte> ce qui ne signifie pas la compatibilité des types dans les langages qui permettent
+    décharges</text>
+</DOC>
+<DOC>
+    <recordId>6324</recordId>
+    <text>ce qui ne signifie pas la compatibilité des types dans les langages qui permettent
     Programmateur selon les types? (Vous voudrez peut-être de le restreindre à
     "Extensibles" langues qui permettent la définition des données abstraites
     types ou des définitions fournies programmeur d'opérateurs tels que *,
-    +.) </ Text>
-  </ DOC>
-  <doc>
-    <recordId> 7328 </ RECORDID>
-    <texte> l'effet de l'oxydation sur le disjoncteur
-    contacts </ text>
-  </ DOC>
-  <doc>
-    <recordId> 8141 </ RECORDID>
+    +.)</text>
+</DOC>
+<DOC>
+    <recordId>7328</recordId>
+    <text>l'effet de l'oxydation sur le disjoncteur
+    contacts</text>
+</DOC>
+<DOC>
+    <recordId>8141</recordId>
     <text> articles décrivant la relation entre les types de données
     et de la concurrence (par exemple, quel est le type d'un processus? quand est une
     tentative de synchronisation entre deux processus «bon type»?
     dans un système de transmission de messages est là toute notion des types de
     Messages -?. i e. un moyen de vérifier que l'expéditeur du message
     et le récepteur sont tous deux le traitement du train de bits comme certains
-    type particulier) </ text>
-  </ DOC>
-  <doc>
-    <recordId> 9125 </ RECORDID>
+    type particulier)</text>
+</DOC>
+<DOC>
+    <recordId>9125</recordId>
     <text> schémas d'adressage de ressources dans les réseaux; ressources
-    aborder dans les systèmes d'exploitation de réseau </ text>
-  </ DOC>
-  <doc>
-    <recordId> 9983 </ RECORDID>
-    plus de détails disponibles <text> de condensateurs basse tension </ text>
-  </ DOC>
-  <doc>
-    <recordId> 10637 </ RECORDID>
-    <texte> je serais intéressée de recevoir des informations sur les non-utilisateurs
+    aborder dans les systèmes d'exploitation de réseau</text>
+</DOC>
+<DOC>
+    <recordId>9983</recordId>
+    plus de détails disponibles <text> de condensateurs basse tension</text>
+</DOC>
+<DOC>
+    <recordId>10637</recordId>
+    <text>je serais intéressée de recevoir des informations sur les non-utilisateurs
     des bibliothèques, y compris des études sur qui sont les non-utilisateurs et
     pourquoi ils sont des non-utilisateurs. je serais particulièrement reconnaissant pour
     documents donnant les approches méthodologiques utilisées dans ces
     les études et les résultats obtenus. la non-utilisation, utilisation de la bibliothèque, l'utilisateur
-    études. </ text>
-  </ DOC>
-  <doc>
-    <recordId> 10893 </ RECORDID>
-    <texte> J'aimerais trouver des articles décrivant l'utilisation du singulier
+    études.</text>
+</DOC>
+<DOC>
+    <recordId>10893</recordId>
+    <text>J'aimerais trouver des articles décrivant l'utilisation du singulier
     décomposition en valeur de traitement d'image numérique. applications
     notamment de trouver des approximations de l'image originale et
     restaurer des images qui sont soumises au bruit. un article sur l'
     sujet est h.c. andrews et C.I. patterson "produit extérieur
     expansions et leurs utilisations dans le traitement numérique de l'image ",
-    American Mathematical mensuel, vol. 82. </ Text>
-  </ DOC>
-  <doc>
-    <recordId> 11961 </ RECORDID>
-    <texte> l'effet de petites déformations dans la surface d'un
-    cavité résonante </ text>
-  </ DOC>
-  <doc>
-    <recordId> 13280 </ RECORDID>
-    <texte> le rôle de la recherche d'information dans la base de connaissances
-    systèmes (c'est à dire, les systèmes experts). </ text>
-  </ DOC>
-  <doc>
-    <recordId> 14000 </ RECORDID>
-    <texte> je serais heureux de recevoir vos articles décrivant gratuit
+    American Mathematical mensuel, vol. 82.</text>
+</DOC>
+<DOC>
+    <recordId>11961</recordId>
+    <text>l'effet de petites déformations dans la surface d'un
+    cavité résonante</text>
+</DOC>
+<DOC>
+    <recordId>13280</recordId>
+    <text>le rôle de la recherche d'information dans la base de connaissances
+    systèmes (c'est à dire, les systèmes experts).</text>
+</DOC>
+<DOC>
+    <recordId>14000</recordId>
+    <text>je serais heureux de recevoir vos articles décrivant gratuit
     forfaits de récupération de texte comme le SCDAI, assasin, l'état, déco ou
     escaliers, surtout si les caractéristiques de différents forfaits sont
     rapport, ou si la mise en oeuvre et l'utilisation d'un système est
@@ -126,11 +126,11 @@
     micros et dans toute association entre recherche de texte libre
     progiciels et de systèmes de gestion de bases de données. mini-ordinateurs,
     micro-ordinateurs, systèmes de gestion de bases de données, texte libre
-    récupération </ text>
-  </ DOC>
-  <doc>
-    <recordId> 14536 </ RECORDID>
-    <texte> je suis intéressé par l'information et les moins développés
+    récupération</text>
+</DOC>
+<DOC>
+    <recordId>14536</recordId>
+    <text>je suis intéressé par l'information et les moins développés
     pays. ce qui comprend les problèmes particuliers de moins
     les pays développés aujourd'hui, et leurs problèmes futurs attendus
     (Tels que l'édition électronique). aussi, les politiques d'information
@@ -138,76 +138,76 @@
     leur mise en œuvre pratique. quelles sont les priorités et
     suggérées stages pratiques dans la solution des problèmes et
     mise en œuvre des politiques. pays les moins avancés, dans le cadre
-    les pays développés, les pays en développement. </ text>
-  </ DOC>
-  <doc>
-    <recordId> 15349 </ RECORDID>
-    <texte> analyse et la perception de la forme par les humains et les ordinateurs.
+    les pays développés, les pays en développement.</text>
+</DOC>
+<DOC>
+    <recordId>15349</recordId>
+    <text>analyse et la perception de la forme par les humains et les ordinateurs.
     descriptions de forme, reconnaissance de formes par ordinateur.
     deux dimensions. mesures de circularité. façonner
-    assorti. </ text>
-  </ DOC>
-  <doc>
-    <recordId> 15842 </ RECORDID>
-    <texte> je serais heureux de recevoir toute information sur l'utilisation
+    assorti.</text>
+</DOC>
+<DOC>
+    <recordId>15842</recordId>
+    <text>je serais heureux de recevoir toute information sur l'utilisation
     de revues dans les bibliothèques (tous types de bibliothèque), à ​​la fois en cours
     anciens numéros et. Je suis également intéressé par des informations sur la
     façon dont les bibliothèques ont fait face à des coupes dans les périodiques
     budgets. périodiques, revues, bibliothèques, les études, les coupures utilisateur
     dans les bibliothèques publiques, les bibliothèques universitaires, les bibliothèques universitaires,
-    bibliothèques polytechniques, des bibliothèques d'enseignement supérieur. </ text>
-  </ DOC>
-  <doc>
-    <recordId> 18179 </ RECORDID>
+    bibliothèques polytechniques, des bibliothèques d'enseignement supérieur.</text>
+</DOC>
+<DOC>
+    <recordId>18179</recordId>
     <text> références sur les théories des champs électriques de l'
-    aurora </ text>
-  </ DOC>
-  <doc>
-    <recordId> 19262 </ RECORDID>
+    aurora</text>
+</DOC>
+<DOC>
+    <recordId>19262</recordId>
     <text> techniques informatiques d'évaluation des performances aide d'un patron
-    la reconnaissance et le clustering. </ text>
-  </ DOC>
-  <doc>
-    <recordId> 19982 </ RECORDID>
-    <texte> s'il vous plaît envoyer un résumé sur les spectres source de la foudre
-    décharges </ text>
-  </ DOC>
-  <doc>
-    <recordId> 21083 </ RECORDID>
+    la reconnaissance et le clustering.</text>
+</DOC>
+<DOC>
+    <recordId>19982</recordId>
+    <text>s'il vous plaît envoyer un résumé sur les spectres source de la foudre
+    décharges</text>
+</DOC>
+<DOC>
+    <recordId>21083</recordId>
     <text> mesures de dérives ionosphériques près de l'
-    équateur </ text>
-  </ DOC>
-  <doc>
-    <recordId> 21265 </ RECORDID>
-    <texte> la théorie de la stabilité par rapport aux systèmes de contrôle
-    avec des éléments de relais </ text>
-  </ DOC>
-  <doc>
-    <recordId> 21278 </ RECORDID>
-    <texte> je voudrais des détails sur le travail qui a été fait pour
-    étendre la gamme de fréquence des amplificateurs magnétiques </ text>
-  </ DOC>
-  <doc>
-    <recordId> 21731 </ RECORDID>
-    systèmes d'exploitation <texte> portable </ text>
-  </ DOC>
-  <doc>
-    <recordId> 22423 </ RECORDID>
+    équateur</text>
+</DOC>
+<DOC>
+    <recordId>21265</recordId>
+    <text>la théorie de la stabilité par rapport aux systèmes de contrôle
+    avec des éléments de relais</text>
+</DOC>
+<DOC>
+    <recordId>21278</recordId>
+    <text>je voudrais des détails sur le travail qui a été fait pour
+    étendre la gamme de fréquence des amplificateurs magnétiques</text>
+</DOC>
+<DOC>
+    <recordId>21731</recordId>
+    systèmes d'exploitation <text>portable</text>
+</DOC>
+<DOC>
+    <recordId>22423</recordId>
     expressions mathématiques <text> et des graphiques pour la conception de
-    transistorisées accordés amplificateurs de bande passante </ text>
-  </ DOC>
-  <doc>
-    <recordId> 22698 </ RECORDID>
-    <texte> de mesure de la température du plasma dans une décharge d'arc à l'aide
-    techniques onde de choc </ text>
-  </ DOC>
-  <doc>
-    <recordId> 23223 </ RECORDID>
-    avantages de <text> amplificateurs paramétriques </ text>
-  </ DOC>
-  <doc>
-    <recordId> 23242 </ RECORDID>
-    <texte> je fais une étude de christian le bibliothécaire
+    transistorisées accordés amplificateurs de bande passante</text>
+</DOC>
+<DOC>
+    <recordId>22698</recordId>
+    <text>de mesure de la température du plasma dans une décharge d'arc à l'aide
+    techniques onde de choc</text>
+</DOC>
+<DOC>
+    <recordId>23223</recordId>
+    avantages de <text> amplificateurs paramétriques</text>
+</DOC>
+<DOC>
+    <recordId>23242</recordId>
+    <text>je fais une étude de christian le bibliothécaire
     communion sous un angle professionnel. je suis à la recherche d'
     littérature qui reflète une vision nettement chrétienne de
     bibliothéconomie, en particulier avant 1973. quoi que ce soit sur le
@@ -217,42 +217,42 @@
     et points de vue des membres et non-membres de l'activité chrétienne et
     attitudes dans la profession (notamment des sujets tels que l'éthique,
     la censure, la sélection, etc.) chrétien, évangélique, l'éthique,
-    la censure, bibliothécaire Christian Fellowship, lcf. </ text>
-  </ DOC>
-  <doc>
-    <recordId> 24081 </ RECORDID>
-    <texte> estimations de la densité et de la température de l'ionisation dans
-    la couronne solaire </ text>
-  </ DOC>
-  <doc>
-    <recordId> 24894 </ RECORDID>
-    <texte> analyse des systèmes non linéaires en utilisant plan de phase
-    techniques </ text>
-  </ DOC>
-  <doc>
-    <recordId> 25733 </ RECORDID>
+    la censure, bibliothécaire Christian Fellowship, lcf.</text>
+</DOC>
+<DOC>
+    <recordId>24081</recordId>
+    <text>estimations de la densité et de la température de l'ionisation dans
+    la couronne solaire</text>
+</DOC>
+<DOC>
+    <recordId>24894</recordId>
+    <text>analyse des systèmes non linéaires en utilisant plan de phase
+    techniques</text>
+</DOC>
+<DOC>
+    <recordId>25733</recordId>
     mécanismes de contrôle de simultanéité <text> en exploitation
-    systèmes </ text>
-  </ DOC>
-  <doc>
-    <recordId> 28098 </ RECORDID>
-    <texte> je tiens à calculer l'inductance et la perte en bobines faites
+    systèmes</text>
+</DOC>
+<DOC>
+    <recordId>28098</recordId>
+    <text>je tiens à calculer l'inductance et la perte en bobines faites
     à l'aide de circuits imprimés ou d'autres idées de miniaturisation. un
-    l'article approprié s'il vous plaît </ text>
-  </ DOC>
-  <doc>
-    <recordId> 30535 </ RECORDID>
+    l'article approprié s'il vous plaît</text>
+</DOC>
+<DOC>
+    <recordId>30535</recordId>
     <text> similitudes entre la théorie de la diffraction des
     ondes électromagnétiques et que les flux d'électrons d'</ text>
-  </ DOC>
-  <doc>
-    <recordId> 33367 </ RECORDID>
-    <texte> le comportement d'un faisceau de particules chargées dans l'
-    présence de conducteurs plans </ text>
-  </ DOC>
-  <doc>
-    <recordId> 35418 </ RECORDID>
-    <texte> je suis intéressé par la politique d'information, par exemple national
+</DOC>
+<DOC>
+    <recordId>33367</recordId>
+    <text>le comportement d'un faisceau de particules chargées dans l'
+    présence de conducteurs plans</text>
+</DOC>
+<DOC>
+    <recordId>35418</recordId>
+    <text>je suis intéressé par la politique d'information, par exemple national
     (Y compris ceux des «centres» nationaux et les «foyers»), scientifique
     et technologique (en médecine, industrie, agriculture). sources
     peuvent inclure divers organismes professionnels, parlementaires
@@ -263,63 +263,63 @@
     déclarations papier qui ne sont pas suffisamment soutenues par
     ressources. la planification, les buts et les objectifs, le gouvernement,
     internationale, la politique, la politique de l'information, les politiques nationales,
-    coopération. </ text>
-  </ DOC>
-  <doc>
-    <recordId> 35491 </ RECORDID>
-    caractéristiques de contrôle <text> de systèmes d'asservissement d'échantillonnage </ text>
-  </ DOC>
-  <doc>
-    <recordId> 35645 </ RECORDID>
-    <texte> intéressé par des articles sur la robotique, la planification de mouvement
+    coopération.</text>
+</DOC>
+<DOC>
+    <recordId>35491</recordId>
+    caractéristiques de contrôle <text> de systèmes d'asservissement d'échantillonnage</text>
+</DOC>
+<DOC>
+    <recordId>35645</recordId>
+    <text>intéressé par des articles sur la robotique, la planification de mouvement
     en particulier les aspects géométriques et combinatoires. nous sommes
-    pas intéressé à la dynamique du mouvement du bras. </ text>
-  </ DOC>
-  <doc>
-    <recordId> 35727 </ RECORDID>
-    <texte> algorithme rapide pour le hors-contexte reconnaissance de la langue ou
-    analyse </ text>
-  </ DOC>
-  <doc>
-    <recordId> 37026 </ RECORDID>
-    générateurs <text> transistor de balayage </ text>
-  </ DOC>
-  <doc>
-    <recordId> 37202 </ RECORDID>
-    <texte> haute impédance d'entrée grande stabilité transistorisé
-    amplificateur analogique </ text>
-  </ DOC>
-  <doc>
-    <recordId> 37294 </ RECORDID>
-    <texte> je suis intéressé par les systèmes de gestion (aide à la décision
+    pas intéressé à la dynamique du mouvement du bras.</text>
+</DOC>
+<DOC>
+    <recordId>35727</recordId>
+    <text>algorithme rapide pour le hors-contexte reconnaissance de la langue ou
+    analyse</text>
+</DOC>
+<DOC>
+    <recordId>37026</recordId>
+    générateurs <text> transistor de balayage</text>
+</DOC>
+<DOC>
+    <recordId>37202</recordId>
+    <text>haute impédance d'entrée grande stabilité transistorisé
+    amplificateur analogique</text>
+</DOC>
+<DOC>
+    <recordId>37294</recordId>
+    <text>je suis intéressé par les systèmes de gestion (aide à la décision
     systèmes d'information) à la fois informatisés et non informatisés, mais
     en particulier au Royaume-Uni. Je suis intéressé par des études de cas de leur
     comportementaux, psychologiques et sociologiques. décision
-    les systèmes de soutien des systèmes d'information de gestion. </ text>
-  </ DOC>
-  <doc>
-    <recordId> 37511 </ RECORDID>
-    <texte> l'application de la théorie sous-ensemble flou de clustering et
+    les systèmes de soutien des systèmes d'information de gestion.</text>
+</DOC>
+<DOC>
+    <recordId>37511</recordId>
+    <text>l'application de la théorie sous-ensemble flou de clustering et
     problèmes de recherche d'information. ce qui inclut la performance
-    l'évaluation et les considérations d'indexation automatique. </ text>
-  </ DOC>
-  <doc>
-    <recordId> 37845 </ RECORDID>
-    <texte> l'utilisation de la radio réflexions lunaires dans les enquêtes de
-    la nature de la surface de lunes </ text>
-  </ DOC>
-  <doc>
-    <recordId> 38367 </ RECORDID>
-    <texte> quelles sont les références en matière de spectre intégrante du cosmique primaire
-    rayons </ text>
-  </ DOC>
-  <doc>
-    <recordId> 39228 </ RECORDID>
-    <texte> je serais intéressé par toute information sur ligne
+    l'évaluation et les considérations d'indexation automatique.</text>
+</DOC>
+<DOC>
+    <recordId>37845</recordId>
+    <text>l'utilisation de la radio réflexions lunaires dans les enquêtes de
+    la nature de la surface de lunes</text>
+</DOC>
+<DOC>
+    <recordId>38367</recordId>
+    <text>quelles sont les références en matière de spectre intégrante du cosmique primaire
+    rayons</text>
+</DOC>
+<DOC>
+    <recordId>39228</recordId>
+    <text>je serais intéressé par toute information sur ligne
     l'éducation et de la formation en utilisant des aides formation assistée par ordinateur pour
     recherche en ligne. Je suis également intéressé par la formation de fin
     utilisateurs. la formation, l'éducation, la recherche d'information en ligne,
     Enseignement assisté par ordinateur, des dossiers pédagogiques, à la fin
-    utilisateurs. </ text>
-  </ DOC>
-</ TREC>
+    utilisateurs.</text>
+</DOC>
+</TREC>

@@ -1,42 +1,42 @@
 <? Xml version = "1.0" encoding = "utf-8"?>
 <TREC>
   <DOC>
-    <recordId> 245 </ recordId>
-    <text> transistori vaiheessa halkaisu piirit </ text>
-  </ DOC>
+    <recordId>245</recordId>
+    <text>transistori vaiheessa halkaisu piirit</text>
+  </DOC>
   <DOC>
-    <recordId> 891 </ recordId>
-    <text> määrittämiseksi kiertoradat yksittäisten meteorit esittäjä
-    radio menetelmät </ text>
-  </ DOC>
+    <recordId>891</recordId>
+    <text>määrittämiseksi kiertoradat yksittäisten meteorit esittäjä
+    radio menetelmät</text>
+  </DOC>
   <DOC>
-    <recordId> 1217 </ recordId>
-    <text> artikkeleita tekstin muotoilun, mukaan lukien "mitä
+    <recordId>1217</recordId>
+    <text>artikkeleita tekstin muotoilun, mukaan lukien "mitä
     näet on mitä saat "-järjestelmät. Esimerkkejä: t / nroff, kirjanoppinut,
-    bravo. </ text>
-  </ DOC>
+    bravo.</text>
+  </DOC>
   <DOC>
-    <recordId> 1741 </ recordId>
-    <text> Olen kiinnostunut kognitiivisesta malleissa kirjaston käyttöä. mitä
+    <recordId>1741</recordId>
+    <text>Olen kiinnostunut kognitiivisesta malleissa kirjaston käyttöä. mitä
     tutkimuksia tai esineet katselemassa psykologia
     kirjasto-ja tietopalvelut käyttöä, eli strategioita hakea,
     tietoa ja miten sen käyttökelpoisuus on koettu. käyttö
     kirjastot, kirjastoaineiston, käyttäytymistä, tietoa
     tähtäävän tai käyttö, hyödyllisyys, psykologia kirjasto ja
-    tietoa käytöstä, kirjaston käyttäjä, käyttäjän tyytyväisyyttä. </ text>
-  </ DOC>
+    tietoa käytöstä, kirjaston käyttäjä, käyttäjän tyytyväisyyttä.</text>
+  </DOC>
   <DOC>
-    <recordId> 2405 </ recordId>
-    <text> muistin hallinta näkökohtia käyttöjärjestelmien </ text>
-  </ DOC>
+    <recordId>2405</recordId>
+    <text>muistin hallinta näkökohtia käyttöjärjestelmien</text>
+  </DOC>
   <DOC>
-    <recordId> 3777 </ recordId>
-    <text> määrittämiseksi nykyisten järjestelmien ylempään
-    ilmapiiri magneettisten myrskyjen aikana </ text>
-  </ DOC>
+    <recordId>3777</recordId>
+    <text>määrittämiseksi nykyisten järjestelmien ylempään
+    ilmapiiri magneettisten myrskyjen aikana</text>
+  </DOC>
   <DOC>
-    <recordId> 4233 </ recordId>
-    <text> artikkeleita herkkyyttä ominaisarvo
+    <recordId>4233</recordId>
+    <text>artikkeleita herkkyyttä ominaisarvo
     hajoaminen todellista matriiseja, erityisesti, nolla-yksi
     matriiseja. Olen erityisen kiinnostunut erottaminen
     eigenspaces vastaavat eri ominaisarvot. artikkeleita
@@ -44,81 +44,81 @@
     ominaisvektorit by permutaatio: Siam j. numeerinen analyysi,
     til. 7, no. 1 (1970); G.W. Stewart, "virhe rajat varten
     likimääräinen invariantti subspaces suljetun lineaarisen toimijoiden "
-    Siam j. numeerinen analyysi., voi. 8, nro. 4 (1971). </ Text>
-  </ DOC>
+    Siam j. numeerinen analyysi., voi. 8, nro. 4 (1971).</text>
+  </DOC>
   <DOC>
-    <recordId> 4767 </ recordId>
-    <text> numero edustus binääri koneissa </ text>
-  </ DOC>
+    <recordId>4767</recordId>
+    <text>numero edustus binääri koneissa</text>
+  </DOC>
   <DOC>
-    <recordId> 5899 </ recordId>
-    <text> samanaikaisesti havaintoja Whistlers ja salama
-    päästöjä </ text>
-  </ DOC>
+    <recordId>5899</recordId>
+    <text>samanaikaisesti havaintoja Whistlers ja salama
+    päästöjä</text>
+  </DOC>
   <DOC>
-    <recordId> 6324 </ recordId>
-    <text> mitä tyyppiä yhteensopivuus tarkoittaa kielillä, jotka mahdollistavat
+    <recordId>6324</recordId>
+    <text>mitä tyyppiä yhteensopivuus tarkoittaa kielillä, jotka mahdollistavat
     ohjelmoija tietyntyyppisiin? (Saatat haluta rajoittaa tämän
     "Laajennettavissa" kieliä, jotka mahdollistavat määritelmä abstraktien tietojen
     tyyppejä tai ohjelmoija toimittamien määritelmät toimijoiden kuten *
-    +.) </ Text>
-  </ DOC>
+    +.)</text>
+  </DOC>
   <DOC>
-    <recordId> 7328 </ recordId>
-    <text> vaikutus hapettumisen katkaisijan
-    Yhteystiedot </ text>
-  </ DOC>
+    <recordId>7328</recordId>
+    <text>vaikutus hapettumisen katkaisijan
+    Yhteystiedot</text>
+  </DOC>
   <DOC>
-    <recordId> 8141 </ recordId>
-    <text> artikkelit kuvaavat suhdetta tietotyypit
+    <recordId>8141</recordId>
+    <text>artikkelit kuvaavat suhdetta tietotyypit
     ja samanaikaisuuden (esim. mikä on tyyppinen prosessi? kun on
     synkronointia yritetään kahden prosesseja "type oikein"?
     in viestin-ohimennen järjestelmä on olemassa käsite tyypit
     Viestien? - Minä. e.. mitenkään tarkistaa, että viestin lähettäjä
     ja vastaanotin on sekä käsittelemällä bittivirran kuten jotkut
-    erityisesti tyyppi) </ text>
-  </ DOC>
+    erityisesti tyyppi)</text>
+  </DOC>
   <DOC>
-    <recordId> 9125 </ recordId>
-    <text> käsitellään järjestelmiä resurssien verkoissa; resurssi
-    käsitellään verkko käyttöjärjestelmien </ text>
-  </ DOC>
+    <recordId>9125</recordId>
+    <text>käsitellään järjestelmiä resurssien verkoissa; resurssi
+    käsitellään verkko käyttöjärjestelmien</text>
+  </DOC>
   <DOC>
-    <recordId> 9983 </ recordId>
-    <text> tiedot saataville alhaisen kondensaattorit </ text>
-  </ DOC>
+    <recordId>9983</recordId>
+    <text>tiedot saataville alhaisen kondensaattorit</text>
+  </DOC>
   <DOC>
-    <recordId> 10637 </ recordId>
-    <text> Olisin kiinnostunut saada tietoa ei-käyttäjät
+    <recordId>10637</recordId>
+    <text>Olisin kiinnostunut saada tietoa ei-käyttäjät
     kirjastojen, mukaan lukien tutkimukset, jotka eivät ole käyttäjien ja
     miksi he eivät ole käyttäjiä. Olisin erityisen kiitollinen
     paperit antaa menetelmällisiä lähestymistapoja käyttää näissä
     tutkimukset ja saadut tulokset. käytön laiminlyönti, kirjasto käyttöön, käyttäjän
-    tutkimukset. </ text>
-  </ DOC>
+    tutkimukset.</text>
+  </DOC>
   <DOC>
-    <recordId> 10893 </ recordId>
-    <text> Haluaisin löytää artikkelit käyttöä kuvaavia yksikkö
+    <recordId>10893</recordId>
+    <text>Haluaisin löytää artikkelit käyttöä kuvaavia yksikkö
     arvo hajoaminen digitaalisessa kuvankäsittelyssä. sovellukset
     on löytää likiarvoja alkuperäisen kuvan ja
     palauttaa kuvia, jotka ovat alttiita melulle. artikkeli
     aihe on H.C. Andrews ja C.L. Patterson "ulompi tuote
     laajennuksia ja niiden käyttötarkoituksia digitaalinen kuvankäsittely "
-    American Mathematical kuukausittain, vol.. 82. </ Text>
-  </ DOC>
+    American Mathematical kuukausittain, vol.. 82.</text>
+  </DOC>
   <DOC>
-    <recordId> 11961 </ recordId>
-    <text> vaikutus pienten vääristymien pinnalla
-    onkaloresonaattori </ text>
-  </ DOC>
+    <recordId>11961</recordId>
+    <text>vaikutus pienten vääristymien pinnalla
+    onkaloresonaattori</text>
+  </DOC>
   <DOC>
-    <recordId> 13280 </ recordId>
-    <text> rooli tiedonhaun osaamisen perusteella
-    järjestelmät (ts. asiantuntija järjestelmät). </ text>
-  </ DOC>
+    <recordId>13280</recordId>
+    <text>rooli tiedonhaun osaamisen perusteella
+    järjestelmät (ts. asiantuntija järjestelmät).</text>
+  </DOC>
   <DOC>
-    <recordId> 14000 </ recordId>
-    <text> olisin iloinen saada mitään papereita kuvaavat ilmaiseksi
+    <recordId>14000</recordId>
+    <text>olisin iloinen saada mitään papereita kuvaavat ilmaiseksi
     tekstin haku paketteja kuten cairs, assasin, tila, deco tai
     portaat, varsinkin jos ominaisuuksia eri paketteja ovat
     verrattuna, tai jos täytäntöönpano ja käyttö järjestelmän
@@ -126,11 +126,11 @@
     mikrot ja kaikissa yhdistyksen välillä vapaata tekstiä haku
     paketteja ja tietokannan hallintajärjestelmiä. pientietokoneet,
     mikrotietokoneet, tietokannan hallintajärjestelmät, vapaata tekstiä
-    haku </ text>
-  </ DOC>
+    haku</text>
+  </DOC>
   <DOC>
-    <recordId> 14536 </ recordId>
-    <text> Olen kiinnostunut tieto ja vähemmän kehittyneet
+    <recordId>14536</recordId>
+    <text>Olen kiinnostunut tieto ja vähemmän kehittyneet
     maissa. tämä sisältää erityisiä ongelmia vähemmän
     kehittyneissä maissa nyt, ja niiden odotettavissa ongelmia
     (Kuten sähköinen julkaiseminen). myös, tiedotuspolitiikka
@@ -138,76 +138,76 @@
     käytännön toteutusta. mitkä ovat prioriteetit ja
     ehdotettiin käytännön vaiheissa ongelmien ratkaisuun ja
     politiikkojen toteuttamista. vähemmän kehittyneissä maissa, mukaan
-    kehittyneet maat, kehitysmaat. </ text>
-  </ DOC>
+    kehittyneet maat, kehitysmaat.</text>
+  </DOC>
   <DOC>
-    <recordId> 15349 </ recordId>
-    <text> analyysi ja käsitys muodon ihmisten ja tietokoneiden.
+    <recordId>15349</recordId>
+    <text>analyysi ja käsitys muodon ihmisten ja tietokoneiden.
     muoto kuvaukset, muoto tunnustaminen tietokoneella.
     kaksiulotteinen muotoja. toimenpiteet kierron. muoto
-    matching. </ text>
-  </ DOC>
+    matching.</text>
+  </DOC>
   <DOC>
-    <recordId> 15842 </ recordId>
-    <text> Olisin iloinen vastaanottaa tietoa käytöstä
+    <recordId>15842</recordId>
+    <text>Olisin iloinen vastaanottaa tietoa käytöstä
     lehtien kirjastoissa (kaikki mahdolliset kirjasto) sekä nykyinen
     ja vanhoja numeroita. Olen myös kiinnostunut tiedot
     miten kirjastot ovat selviytyneet leikkauksia aikakauslehdissä
     talousarvioihin. kausijulkaisut, lehdet, kirjastot, käyttäjän tutkimukset, leikkaukset
     yleisissä kirjastoissa, tieteellisten kirjastojen, yliopistojen kirjastot,
-    ammattikorkeakoulujen kirjastot, korkeakoulujen kirjastot. </ text>
-  </ DOC>
+    ammattikorkeakoulujen kirjastot, korkeakoulujen kirjastot.</text>
+  </DOC>
   <DOC>
-    <recordId> 18179 </ recordId>
-    <text> viitteet sähkökentän teorioita
-    Aurora </ text>
-  </ DOC>
+    <recordId>18179</recordId>
+    <text>viitteet sähkökentän teorioita
+    Aurora</text>
+  </DOC>
   <DOC>
-    <recordId> 19262 </ recordId>
-    <text> tietokoneen suorituskyvyn arviointiin tekniikoita käyttäen kaavaa
-    tunnustamista ja klusterointi. </ text>
-  </ DOC>
+    <recordId>19262</recordId>
+    <text>tietokoneen suorituskyvyn arviointiin tekniikoita käyttäen kaavaa
+    tunnustamista ja klusterointi.</text>
+  </DOC>
   <DOC>
-    <recordId> 19982 </ recordId>
-    <text> lähetä tiivistelmiä lähteen spektrien salama
-    päästöjä </ text>
-  </ DOC>
+    <recordId>19982</recordId>
+    <text>lähetä tiivistelmiä lähteen spektrien salama
+    päästöjä</text>
+  </DOC>
   <DOC>
-    <recordId> 21083 </ recordId>
-    <text> mittaukset ionosfäärin ajautuu lähellä
-    equator </ text>
-  </ DOC>
+    <recordId>21083</recordId>
+    <text>mittaukset ionosfäärin ajautuu lähellä
+    equator</text>
+  </DOC>
   <DOC>
-    <recordId> 21265 </ recordId>
-    <text> teorian vakauden suhteen valvontajärjestelmien
-    rele elementtien </ text>
-  </ DOC>
+    <recordId>21265</recordId>
+    <text>teorian vakauden suhteen valvontajärjestelmien
+    rele elementtien</text>
+  </DOC>
   <DOC>
-    <recordId> 21278 </ recordId>
-    <text> haluaisin yksityiskohtia työstä, joka on tehty
-    laajentaa taajuusaluetta magneettiset vahvistimet </ text>
-  </ DOC>
+    <recordId>21278</recordId>
+    <text>haluaisin yksityiskohtia työstä, joka on tehty
+    laajentaa taajuusaluetta magneettiset vahvistimet</text>
+  </DOC>
   <DOC>
-    <recordId> 21731 </ recordId>
-    <text> kannettavat käyttöjärjestelmien </ text>
-  </ DOC>
+    <recordId>21731</recordId>
+    <text>kannettavat käyttöjärjestelmien</text>
+  </DOC>
   <DOC>
-    <recordId> 22423 </ recordId>
-    <text> matemaattisia lausekkeita ja kaaviot suunnittelu
-    transistorised viritetty päästökaistan vahvistimet </ text>
-  </ DOC>
+    <recordId>22423</recordId>
+    <text>matemaattisia lausekkeita ja kaaviot suunnittelu
+    transistorised viritetty päästökaistan vahvistimet</text>
+  </DOC>
   <DOC>
-    <recordId> 22698 </ recordId>
-    <text> mittaus plasman lämpötila kaaripurkaus käyttäen
-    Paineaalto tekniikat </ text>
-  </ DOC>
+    <recordId>22698</recordId>
+    <text>mittaus plasman lämpötila kaaripurkaus käyttäen
+    Paineaalto tekniikat</text>
+  </DOC>
   <DOC>
-    <recordId> 23223 </ recordId>
-    <text> edut parametrinen vahvistimien </ text>
-  </ DOC>
+    <recordId>23223</recordId>
+    <text>edut parametrinen vahvistimien</text>
+  </DOC>
   <DOC>
-    <recordId> 23242 </ recordId>
-    <text> olen tekemässä tutkimuksessa kirjastonhoitajan kristitty
+    <recordId>23242</recordId>
+    <text>olen tekemässä tutkimuksessa kirjastonhoitajan kristitty
     Fellowship alkaen ammattilainen kulmasta. Etsin
     kirjallisuutta, joka kuvastaa selvästi kristillistä
     Kirjastoalan, erityisesti ennen 1973. mitään
@@ -217,42 +217,42 @@
     ja näkemykset jäsenille ja ei-jäsenille kristillisen toiminnan ja
     asenteita ammatti (erityisesti aiheista kuten etiikka,
     sensuuri, valinta jne.). christian, evankelinen, etiikka,
-    sensuuri, kirjastonhoitajan Christian Fellowship, LCF. </ text>
-  </ DOC>
+    sensuuri, kirjastonhoitajan Christian Fellowship, LCF.</text>
+  </DOC>
   <DOC>
-    <recordId> 24081 </ recordId>
-    <text> arvioi tiheyden ionisaatio-ja lämpötila-
-    Auringon korona </ text>
-  </ DOC>
+    <recordId>24081</recordId>
+    <text>arvioi tiheyden ionisaatio-ja lämpötila-
+    Auringon korona</text>
+  </DOC>
   <DOC>
-    <recordId> 24894 </ recordId>
-    <text> analyysi epälineaarisen käyttävien järjestelmien vaihe tasossa
-    tekniikat </ text>
-  </ DOC>
+    <recordId>24894</recordId>
+    <text>analyysi epälineaarisen käyttävien järjestelmien vaihe tasossa
+    tekniikat</text>
+  </DOC>
   <DOC>
-    <recordId> 25733 </ recordId>
-    <text> samanaikaisuuden valvontamekanismit toiminta
-    järjestelmät </ text>
-  </ DOC>
+    <recordId>25733</recordId>
+    <text>samanaikaisuuden valvontamekanismit toiminta
+    järjestelmät</text>
+  </DOC>
   <DOC>
-    <recordId> 28098 </ recordId>
-    <text> Haluan laskea induktanssi ja menetys kelat tehty
+    <recordId>28098</recordId>
+    <text>Haluan laskea induktanssi ja menetys kelat tehty
     käyttäen painettu piiri tai muu miniatyrisoinnin ideoita.
-    sopiva artikkeli please </ text>
-  </ DOC>
+    sopiva artikkeli please</text>
+  </DOC>
   <DOC>
-    <recordId> 30535 </ recordId>
-    <text> yhtäläisyyksiä diffraktio teorian
-    sähkömagneettisia aaltoja ja että elektroni virtoja </ text>
-  </ DOC>
+    <recordId>30535</recordId>
+    <text>yhtäläisyyksiä diffraktio teorian
+    sähkömagneettisia aaltoja ja että elektroni virtoja</text>
+  </DOC>
   <DOC>
-    <recordId> 33367 </ recordId>
-    <text> käyttäytymistä säteen varautuneiden hiukkasten
-    läsnäolo kone johtimien </ text>
-  </ DOC>
+    <recordId>33367</recordId>
+    <text>käyttäytymistä säteen varautuneiden hiukkasten
+    läsnäolo kone johtimien</text>
+  </DOC>
   <DOC>
-    <recordId> 35418 </ recordId>
-    <text> Olen kiinnostunut tiedotuspolitiikkaa, esim. kansallinen
+    <recordId>35418</recordId>
+    <text>Olen kiinnostunut tiedotuspolitiikkaa, esim. kansallinen
     (Mukaan lukien kansalliset "keskusten" ja "pesäkkeitä"), tieteelliset
     ja teknologian (lääketieteessä, teollisuudessa, maataloudessa). lähteet
     voi sisältää erilaisia ​​ammatillisia elimiä, parlamentaarista
@@ -263,63 +263,63 @@
     Paperin ilmoituksia, joita ei varmuuskopioida riittävästi
     resursseja. suunnittelu, tavoitteet, hallitus,
     kansainvälinen, politiikka, tiedotuspolitiikka, kansallisia politiikkoja,
-    yhteistyö. </ text>
-  </ DOC>
+    yhteistyö.</text>
+  </DOC>
   <DOC>
-    <recordId> 35491 </ recordId>
-    <text> Säätöominaisuuksia näytteenotto servojärjestelmien </ text>
-  </ DOC>
+    <recordId>35491</recordId>
+    <text>Säätöominaisuuksia näytteenotto servojärjestelmien</text>
+  </DOC>
   <DOC>
-    <recordId> 35645 </ recordId>
-    <text> kiinnostunut artikkeleita robotiikka, liike suunnittelu
+    <recordId>35645</recordId>
+    <text>kiinnostunut artikkeleita robotiikka, liike suunnittelu
     erityisesti geometristen ja kombinatorinen näkökohtia. olemme
-    ei kiinnosta dynamiikka varren liikettä. </ text>
-  </ DOC>
+    ei kiinnosta dynamiikka varren liikettä.</text>
+  </DOC>
   <DOC>
-    <recordId> 35727 </ recordId>
-    <text> nopea algoritmi yhteydettömän kielen tunnustaminen tai
-    jäsennys </ text>
-  </ DOC>
+    <recordId>35727</recordId>
+    <text>nopea algoritmi yhteydettömän kielen tunnustaminen tai
+    jäsennys</text>
+  </DOC>
   <DOC>
-    <recordId> 37026 </ recordId>
-    <text> transistori Sweep generaattorit </ text>
-  </ DOC>
+    <recordId>37026</recordId>
+    <text>transistori Sweep generaattorit</text>
+  </DOC>
   <DOC>
-    <recordId> 37202 </ recordId>
-    <text> korkean vakauden korkea impedanssi transistorised
-    analoginen vahvistin </ text>
-  </ DOC>
+    <recordId>37202</recordId>
+    <text>korkean vakauden korkea impedanssi transistorised
+    analoginen vahvistin</text>
+  </DOC>
   <DOC>
-    <recordId> 37294 </ recordId>
-    <text> Olen kiinnostunut päätöksenteon tukijärjestelmät (hallinta
+    <recordId>37294</recordId>
+    <text>Olen kiinnostunut päätöksenteon tukijärjestelmät (hallinta
     tietojärjestelmät) sekä atk-ja ei-atk mutta
     etenkin uk. Olen kiinnostunut tapaustutkimuksia niiden
     käyttäytymiseen, psykologisia ja sosiologisia vaikutuksia. päätös
-    tukijärjestelmiä, johdon tietojärjestelmät. </ text>
-  </ DOC>
+    tukijärjestelmiä, johdon tietojärjestelmät.</text>
+  </DOC>
   <DOC>
-    <recordId> 37511 </ recordId>
-    <text> soveltaminen sumea osajoukko teorian klustereiden ja
+    <recordId>37511</recordId>
+    <text>soveltaminen sumea osajoukko teorian klustereiden ja
     tiedonhaun ongelmia. tähän sisältyy esitys
-    arviointi ja automaattinen indeksointi näkökohdat. </ text>
-  </ DOC>
+    arviointi ja automaattinen indeksointi näkökohdat.</text>
+  </DOC>
   <DOC>
-    <recordId> 37845 </ recordId>
-    <text> käyttö Kuun radio heijastuksia tutkintaan
-    luonne kuiden pinnalla </ text>
-  </ DOC>
+    <recordId>37845</recordId>
+    <text>käyttö Kuun radio heijastuksia tutkintaan
+    luonne kuiden pinnalla</text>
+  </DOC>
   <DOC>
-    <recordId> 38367 </ recordId>
-    <text> mitä viitteet olennainen spektri ensisijainen kosmisen
-    säteet </ text>
-  </ DOC>
+    <recordId>38367</recordId>
+    <text>mitä viitteet olennainen spektri ensisijainen kosmisen
+    säteet</text>
+  </DOC>
   <DOC>
-    <recordId> 39228 </ recordId>
-    <text> Olisin kiinnostunut mitään tietoa verkossa
+    <recordId>39228</recordId>
+    <text>Olisin kiinnostunut mitään tietoa verkossa
     koulutuksen avulla tietokoneavusteista opetusta apuvälineet
     online-hakuihin. Olen myös kiinnostunut koulutuksen loppuun
     käyttäjille. koulutus, online-tiedonhaku,
     tietokoneavusteinen opetus, opetus paketteja, pää
-    käyttäjille. </ text>
-  </ DOC>
-</ TREC>
+    käyttäjille.</text>
+  </DOC>
+</TREC>
