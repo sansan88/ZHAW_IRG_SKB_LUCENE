@@ -14,7 +14,15 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
 public class MyFrame extends Frame implements WindowListener, ActionListener {
+	private static final Boolean TRUE = null;
+
+	private static final Boolean FALSE = null;
+
 	private Color bg;
+
+	private FileHandler qFile; // query File
+	private FileHandler cFileLeft; // Left Collection File
+	private FileHandler cFileRight; // Right Collection File
 
 	// Gui Elemente
 	private Panel panelTop;
@@ -69,11 +77,19 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 		collectionLeft = new Choice();
 		collectionLeft.add("DE");
 		collectionLeft.add("RU");
+		collectionLeft.add("FI");
+		collectionLeft.add("FR");
+		collectionLeft.add("EN");
+		collectionLeft.add("IT");
 		panelCenter.add(collectionLeft);
 
 		collectionRight = new Choice();
 		collectionRight.add("DE");
+		collectionRight.add("RU");
+		collectionRight.add("FI");
 		collectionRight.add("FR");
+		collectionRight.add("EN");
+		collectionRight.add("IT");
 		panelCenter.add(collectionRight);
 
 		btnExportLeft = new Button("Export to File, Left");
@@ -93,7 +109,6 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 		btnExportLeft.addActionListener(this);
 		btnExportRight.addActionListener(this);
 		btnSearch.addActionListener(this);
-
 	}
 
 	@Override
@@ -112,7 +127,12 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 
 		if (e.getSource() == btnSearch) {
 			System.out.println("Search, Call Lucene");
-			HelloLucene lucene = new HelloLucene();
+			// HelloLucene lucene = new HelloLucene();
+			qFile = new FileHandler(TRUE, FALSE, "");
+			cFileLeft = new FileHandler(FALSE, TRUE,
+					collectionLeft.getSelectedItem());
+			cFileRight = new FileHandler(FALSE, TRUE,
+					collectionRight.getSelectedItem());
 		}
 
 	}
