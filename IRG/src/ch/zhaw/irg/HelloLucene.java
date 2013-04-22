@@ -33,7 +33,8 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 public class HelloLucene {
-	public static void main(String[] args) throws IOException, ParseException {
+
+	public static void main(FileHandler query, FileHandler collection) throws IOException, ParseException {
 		// 0. Specify the analyzer for tokenizing text.
 		// The same analyzer should be used for indexing and searching
 		StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_40);
@@ -47,28 +48,11 @@ public class HelloLucene {
 		// READ COLLECTION
 		try {
 
-			// <?xml version="1.0"?>
-			// <company>
-			// <staff id="1001">
-			// <firstname>yong</firstname>
-			// <lastname>mook kim</lastname>
-			// <nickname>mkyong</nickname>
-			// <salary>100000</salary>
-			// </staff>
-			// <staff id="2001">
-			// <firstname>low</firstname>
-			// <lastname>yin fong</lastname>
-			// <nickname>fong fong</nickname>
-			// <salary>200000</salary>
-			// </staff>
-			// </company>
-
-			File fXmlFileEN = new File(
-					"C:\\Users\\sandro\\Dropbox\\ZHAW\\63_IRG\\SKB\\irg_collection.xml");
+			File fXmlFile = new File(collection.filename);
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory
 					.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-			org.w3c.dom.Document doc = dBuilder.parse(fXmlFileEN);
+			org.w3c.dom.Document doc = dBuilder.parse(fXmlFile);
 
 			// optional, but recommended
 			// read this -
@@ -121,6 +105,7 @@ public class HelloLucene {
 		}
 
 		// 2. query
+		//query
 		String querystr = args.length > 0 ? args[0] : "lucene";
 
 		// the "title" arg specifies the default field to use
@@ -161,3 +146,4 @@ public class HelloLucene {
 		w.addDocument(doc);
 	}
 }
+
