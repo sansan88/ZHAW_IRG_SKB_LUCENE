@@ -24,17 +24,53 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 public class HelloLucene {
+	private Document d = null;
+	private String returnString = null;
+	private int documentId = 0;
+	private String filename = null;
+	private String[] collection = { "../collection/irg_collection_DE.xml",
+			"../collection/irg_collection_FI.xml",
+			"../collection/irg_collection_FR.xml",
+			"../collection/irg_collection_IT.xml",
+			"../collection/irg_collection_RU.xml",
+			"../collection/irg_collection_EN.xml" };
 
-	public static void main(FileHandler query, FileHandler collection) throws IOException, ParseException {
+	// public static void main(String[] args, FileHandler collection)
+	public HelloLucene(String[] args, String language) throws IOException,
+			ParseException {
+		
+		// 00. Get XML File from Language Key
+		switch (language) {
+		case "DE":
+			this.filename = collection[0];
+			break;
+		case "FI":
+			this.filename = collection[1];
+			break;
+		case "FR":
+			this.filename = collection[2];
+			break;
+		case "IT":
+			this.filename = collection[3];
+			break;
+		case "RU":
+			this.filename = collection[4];
+			break;
+		case "EN":
+			this.filename = collection[5];
+			break;
+		default:
+			this.filename = collection[5];
+			break;
+		}
+		
 		// 0. Specify the analyzer for tokenizing text.
 		// The same analyzer should be used for indexing and searching
 		StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_40);
@@ -45,10 +81,10 @@ public class HelloLucene {
 		IndexWriterConfig config = new IndexWriterConfig(Version.LUCENE_40,
 				analyzer);
 
-		// READ COLLECTION
+		// READ Collection
 		try {
 
-			File fXmlFile = new File(collection.filename);
+			File fXmlFile = new File(filename);
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory
 					.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -60,21 +96,19 @@ public class HelloLucene {
 			doc.getDocumentElement().normalize();
 
 			// ROOT --> TREC
-			System.out.println("Root element :"
-					+ doc.getDocumentElement().getNodeName());
+			//System.out.println("Root element :"
+				//	+ doc.getDocumentElement().getNodeName());
 
 			NodeList nList = doc.getElementsByTagName("DOC");
 
-			System.out.println("----------------------------");
-
-			System.out.println(" Create Index Writer ");
+			//System.out.println(" Create Index Writer ");
 			IndexWriter w = new IndexWriter(index, config);
 
 			for (int temp = 0; temp < nList.getLength(); temp++) {
 
 				Node nNode = nList.item(temp);
 
-				System.out.println("\nCurrent Element :" + nNode.getNodeName());
+				//System.out.println("\nCurrent Element :" + nNode.getNodeName());
 
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 
@@ -82,19 +116,18 @@ public class HelloLucene {
 
 					// System.out.println("Staff id : " +
 					// eElement.getAttribute("id"));
-					System.out.println("recordId : "
-							+ eElement.getElementsByTagName("recordId").item(0)
-									.getTextContent());
-					System.out.println("text : "
-							+ eElement.getElementsByTagName("text").item(0)
-									.getTextContent());
+					// System.out.println("recordId : "
+					// + eElement.getElementsByTagName("recordId").item(0)
+					// .getTextContent());
+					// System.out.println("text : "
+					// + eElement.getElementsByTagName("text").item(0)
+					//				.getTextContent());
 
 					// add to collection
 					addDoc(w, eElement.getElementsByTagName("text").item(0)
 							.getTextContent(),
 							eElement.getElementsByTagName("recordId").item(0)
 									.getTextContent());
-
 				}
 			}
 			// close doc
@@ -105,8 +138,11 @@ public class HelloLucene {
 		}
 
 		// 2. query
-		//query
-		String querystr = args.length > 0 ? args[0] : "lucene";
+		// query
+		String querystr = null;
+		if (args.length > 0) {
+			querystr = args[0];
+		}
 
 		// the "title" arg specifies the default field to use
 		// when no field is explicitly specified in the query.
@@ -123,12 +159,15 @@ public class HelloLucene {
 		ScoreDoc[] hits = collector.topDocs().scoreDocs;
 
 		// 4. display results
-		System.out.println("Found " + hits.length + " hits.");
+		//System.out.println("Found " + hits.length + " hits.");
 		for (int i = 0; i < hits.length; ++i) {
 			int docId = hits[i].doc;
-			Document d = searcher.doc(docId);
-			System.out.println((i + 1) + ". " + d.get("isbn") + "\t"
-					+ d.get("title"));
+			
+			this.d = searcher.doc(docId);
+			this.returnString = String.valueOf(docId);
+			this.documentId = docId;
+			//System.out.println((i + 1) + ". " + d.get("isbn") + "\t" + d.get("title"));
+
 		}
 
 		// reader can only be closed when there
@@ -145,5 +184,14 @@ public class HelloLucene {
 		doc.add(new StringField("recordId", recordId, Field.Store.YES));
 		w.addDocument(doc);
 	}
+	public String getResult(){
+		return this.returnString;
+	}
+	public int getDocumentId(){
+		return this.documentId;
+	}
+	public Document getDocument(){
+		return this.d;
+	}
+	
 }
-

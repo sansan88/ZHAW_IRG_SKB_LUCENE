@@ -12,21 +12,25 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+
+import org.apache.lucene.index.IndexWriter;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.StringTokenizer;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 
 public class MyFrame extends Frame implements WindowListener, ActionListener {
 	private Color bg;
-
-	private FileHandler qFile; // query File für Dropdown
-	private FileHandler cFileLeft; // Left Collection File
-	private FileHandler cFileRight; // Right Collection File
-	private FileHandler qFileLeft; // Left Query File
-	private FileHandler qFileRight; // Right Query File
-
-	private static HelloLucene lucene;
 
 	// Gui Elemente
 	private Panel panelTop;
@@ -43,12 +47,22 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 	private Choice collectionLeft;
 	private Choice collectionRight;
 
+	// XML und Andere Attribute
+	private HelloLucene luceneLeft = null;
+	private StringTokenizer st = null;
+	private String[] queryDoc = null;
+	private String filename = null;
+	private File file; // parsed XML File
+	private String[] queryArray = { "../query/irg_queries_DE.xml",
+			"../query/irg_queries_FI.xml", "../query/irg_queries_FR.xml",
+			"../query/irg_queries_IT.xml", "../query/irg_queries_RU.xml",
+			"../query/irg_queries_EN.xml" };
+
 	public static void main(String args[]) {
 		MyFrame myFrame = new MyFrame();
 		myFrame.setSize(600, 600);
 		myFrame.setVisible(true);
 		myFrame.setLayout(new BorderLayout());
-		lucene = new HelloLucene();
 	}
 
 	public MyFrame() {
@@ -63,18 +77,7 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 
 		// TOP Panel mit Query Bereich
 		panelTop = new Panel();
-		panelTop.setLayout(new GridLayout(2, 1));
-
-		// Dropdown Liste aufbauen für Query select
-		queryList = new Choice();
-		qFile = new FileHandler(true, false, "EN");
-		qFile.setIds();
-		queryList.add("All");
-		// for (int i = 0; i < qFile.docIds.length; i++) {
-		// System.out.println("add item to choicebox. ID: " + qFile.docIds[i]);
-		// queryList.add(qFile.docIds[i]);
-		// }
-		panelTop.add(queryList);
+		panelTop.setLayout(new GridLayout(1, 1));
 
 		btnSearch = new Button("GoGoGo");
 		panelTop.add(btnSearch);
@@ -148,7 +151,6 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 			} catch (IOException e1) {
 				e1.printStackTrace();
 			}
-
 		}
 
 		if (e.getSource() == btnExportRight) {
@@ -160,46 +162,112 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 
 		}
 
+		// MAGIC HAPPENS HERE!!
 		if (e.getSource() == btnSearch) {
-			System.out.println("Search, Call Lucene");
+			System.out.println("MAGIC HAPPENS HERE!! GOGOGO Lucene");
 
 			// Process Left Side
 			System.out.println("File Selected Left: "
 					+ collectionLeft.getSelectedItem());
-			cFileLeft = new FileHandler(false, true, // Collection
-					collectionLeft.getSelectedItem());
-			qFileLeft = new FileHandler(true, false, // Query
-					collectionLeft.getSelectedItem());
 
-			// Process Right Side
-			System.out.println("File selected Right: "
-					+ collectionRight.getSelectedItem());
-			cFileRight = new FileHandler(false, true, // Collection
-					collectionRight.getSelectedItem());
-			qFileRight = new FileHandler(true, false, // Query
-					collectionRight.getSelectedItem());
+			// Get XML File from Language Key
+			switch (collectionLeft.getSelectedItem()) {
+			case "DE":
+				filename = queryArray[0];
+				break;
+			case "FI":
+				filename = queryArray[1];
+				break;
+			case "FR":
+				filename = queryArray[2];
+				break;
+			case "IT":
+				filename = queryArray[3];
+				break;
+			case "RU":
+				filename = queryArray[4];
+				break;
+			case "EN":
+				filename = queryArray[5];
+				break;
+			default:
+				filename = queryArray[5];
+				break;
+			}
 
-			FileHandler[] args = new FileHandler[2];
-			args[0] = qFileRight;
-			args[1] = cFileRight;
+			// Parse XML File
+			try {
+				file = new File(filename);
 
-			HelloLucene luceneRight = new HelloLucene();
+				System.out.println("Read File: \n" + file);
 
-			// txtAreaRight.setText(luceneRight.getResult);
+				DocumentBuilderFactory dbFactory = DocumentBuilderFactory
+						.newInstance();
+				DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+				org.w3c.dom.Document doc = dBuilder.parse(file);
+
+				doc.getDocumentElement().normalize();
+
+				// ROOT --> TREC
+				System.out.println("Root element :"
+						+ doc.getDocumentElement().getNodeName());
+
+				NodeList nList = doc.getElementsByTagName("DOC");
+
+				for (int temp = 0; temp < nList.getLength(); temp++) {
+					Node nNode = nList.item(temp);
+
+					System.out.println("\nCurrent Element :"
+							+ nNode.getNodeName());
+					if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+						Element eElement = (Element) nNode;
+
+						// Create Lucene Instance with String
+						System.out
+								.println("Create Lucene Instance with String");
+						System.out.println(eElement
+								.getElementsByTagName("text").item(0)
+								.getTextContent());
+
+						// create tokenizer
+						st = new StringTokenizer(eElement
+								.getElementsByTagName("text").item(0)
+								.getTextContent());
+
+						System.out.println("create query string array.");
+						queryDoc = new String[st.countTokens()];
+						for (int i = 0; st.hasMoreTokens(); i++) {
+							queryDoc[i] = st.nextToken();
+						}
+
+						System.out.println("call lucene with query doc");
+						luceneLeft = new HelloLucene(queryDoc,
+								collectionLeft.getSelectedItem());
+
+						
+						System.out.println("get Results from document id: "+ luceneLeft.getDocumentId());
+						System.out.println(luceneLeft.getResult());
+						System.out.println(luceneLeft.getDocument().get("recordId") + luceneLeft.getDocument().get("text"));
+						
+
+					}// ifend
+				}// for
+
+			} catch (Exception exception) {
+				// TODO: handle exception
+			}
+
 		}
-
 	}
 
 	@Override
 	public void windowActivated(WindowEvent e) {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public void windowClosed(WindowEvent e) {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
@@ -211,25 +279,20 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 	@Override
 	public void windowDeactivated(WindowEvent e) {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public void windowDeiconified(WindowEvent e) {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public void windowIconified(WindowEvent e) {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public void windowOpened(WindowEvent e) {
 		// TODO Auto-generated method stub
-
 	}
-
 }

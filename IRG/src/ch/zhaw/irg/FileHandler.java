@@ -10,12 +10,14 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class FileHandler {
-
+	// Attribute
 	public Boolean isQuery;
 	public Boolean isCollection;
 	public String language;
 
 	public String[] docIds;
+	
+	public String[] queryArgs;
 
 	private File file; // parsed XML File
 	public String filename;
@@ -59,7 +61,7 @@ public class FileHandler {
 
 		}// EndOfQuery
 
-		if (this.isCollection == true && this.isQuery == false ) {
+		if (this.isCollection == true && this.isQuery == false) {
 			if (this.language == "DE") {
 				this.filename = collection[0];
 			}
@@ -82,10 +84,45 @@ public class FileHandler {
 
 	}
 
+//	public void setQueryArgs() {
+//		try {
+//			this.file = new File(this.filename);
+//			DocumentBuilderFactory dbFactory = DocumentBuilderFactory
+//					.newInstance();
+//			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+//			org.w3c.dom.Document doc = dBuilder.parse(file);
+//
+//			doc.getDocumentElement().normalize();
+//
+//			// ROOT --> TREC
+//			System.out.println("Root element :"
+//					+ doc.getDocumentElement().getNodeName());
+//
+//			NodeList nList = doc.getElementsByTagName("DOC");
+//
+//			// Build ID Array
+//			for (int temp = 0; temp < nList.getLength(); temp++) {
+//				Node nNode = nList.item(temp);
+//
+//				System.out.println("\nCurrent Element :" + nNode.getNodeName());
+//				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+//					Element eElement = (Element) nNode;
+//
+////					queryArgs[i] = eElement.getElementsByTagName("text").item(0)
+////							.getTextContent();
+//
+//				
+//				} // endif
+//			} // endfor
+//
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//		}
+//	}
+
 	public String[] setIds() {
-		String[] ids = null;
-		
-		
+//		String[] ids = null;
+
 		// READ FILE
 		System.out
 				.println("--------------------------------------------------------------------------\n"
@@ -115,9 +152,9 @@ public class FileHandler {
 
 			NodeList nList = doc.getElementsByTagName("DOC");
 
-			int i = 0;
+//			int i = 0;
 
-			ids = new String[nList.getLength()];
+//			ids = new String[nList.getLength()];
 
 			// Build ID Array
 			System.out.println("Build ID Array");
@@ -136,10 +173,10 @@ public class FileHandler {
 					// + eElement.getElementsByTagName("text").item(0)
 					// .getTextContent());
 
-					ids[i] = eElement.getElementsByTagName("recordId").item(0)
-							.getTextContent();
-
-					i++;
+//					ids[i] = eElement.getElementsByTagName("recordId").item(0)
+//							.getTextContent();
+//
+//					i++;
 				} // endif
 			} // endfor
 
