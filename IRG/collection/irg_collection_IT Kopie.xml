@@ -4417,4 +4417,1852 @@
     <text> una generalizzazione di Algol Settembre 1963 Wirth, n
     ca630929 jb 13 marzo 1978 07:02 </ text>
   </ DOC>
+  <Doc>
+    <recordId> 801 </ recordId>
+    <text> una ferrite modulatore a microonde Utilizzando le valutazioni a
+    modulatore di ampiezza con buona linearità si ottiene applicando
+    feedback per un giratore Composto da un asta di ferrite in una circolare
+    sezione di guida d'onda interposta tra guida d'onda rettangolare
+    sezioni del circuito di retroazione si basa sulla rilevazione lineare
+    la modulazione di ampiezza per mezzo di un cristallo di limitazioni
+    la disposizione si discutono buon risultato havebeen Ottenuto
+    Modulante con segnali sinusoidali di frequenze fino a </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 802 </ recordId>
+    <text> schottkys l'applicazione della teoria di diffusione
+    scariche con diversi tipi di ioni ed eccitati neutri
+    particelle </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 803 </ recordId>
+    stoccaggio <text> e le proprietà di ricerca di una memoria albero organizzato
+    una memoria di sistema con proprietà di elenco [1] 'può essere usato per
+    costruire alberi numerici, alfabetici o alfanumerici. alberi di ricerca
+    avere informazioni di stoccaggio e di proprietà di recupero applicabili alle
+    Il coinvolgimento di grandi quantità di dati o problemi a problemi
+    dove la quantità, la lunghezza e la distribuzione di stored parola
+    informazioni non è noto a priori, o cambiamenti procedono rapidamente durante
+    l'elaborazione. lo scopo di questo lavoro è quello di esaminare la
+    archiviazione e ricerca proprietà di un deposito albero organizzato
+    Assumendo un sistema di memoria ha fatto posse canto elenco certo
+    proprietà è disponibile. di grande interesse è l'applicazione
+    dove una tabella dei simboli, dizionario o simili file deve essere
+    immagazzinato e ricercato. Gennaio 1963 Scidmore, un vigneto k, b.
+    l ca630104 jb 14 marzo 1978 03:02 </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 804 </ recordId>
+    <text> stretta banda di amplificazione a transistor con il design
+    Formule per tuned circuito di accoppiamento di stadi amplificatori con
+    resistenza e reattanza con la corrispondenza e sono considerate
+    curve di progetto sono date per le condizioni ottimali di circuito </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 807 </ recordId>
+    <text> un approccio euristico per inferenza induttiva infatti
+    sistema di recupero, procedure euristiche vengono presentati Che hanno
+    stato sviluppato per eseguire inferenze generalizzando da
+    informazioni disponibili. le procedure fanno uso di una somiglianza
+    Quale struttura è inflitta la base di dati usando non numerico
+    algoritmi di clustering. Essi sono implementati in realtà un modello
+    Quale sistema di recupero usa un linguaggio di interrogazione formale e una
+    struttura dati struttura-list. Un programma di esperimenti è
+    Descritto in cui i procedimenti sono usati con basi di dati di test
+    Quali sono alterati eliminando parte dei dati e dalle volutamente
+    l'introduzione di dati falsi. si trova ha il sistema può dedurre
+    la risposta corretta sotto una varietà di condizioni che comportano
+    dati incompleti e incoerenti. dicembre 1974 skinner, c. w.
+    illazione, inferenza induttiva, clustering, infatti il ​​recupero,
+    euristiche 3.61 3.71 3.79 jb ca741213 13 Gennaio 1978 03:40
+    pm </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 808 </ recordId>
+    <text> un caso per le biblioteche. lettera aperta utilizzata in una hall di
+    Provinciale premiers di Papua Nuova Guinea, Port Moresby, Ottobre 80th
+    esamina lo stato di commissione biblioteca pubblica in provincia
+    Papua Nuova Guinea, e chiede il sostegno del premier in
+    lo sviluppo di un servizio, che può fornire l'istruzione,
+    ricreazione, comunicazione, auto-miglioramento, lo sviluppo rurale
+    e l'alfabetizzazione. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 809 </ recordId>
+    <text> il mezzo video e la futura Commissione delle biblioteche
+    immagini. Descrive la crescita di filmati video. chiede un
+    forum di bibliotecari che possono avviare progetti pilota e di esaminare
+    diversi aspetti del video in relazione alle biblioteche. come questa
+    Notevolmente medio è più economico da produrre e distribuire oltre
+    film, è importanti biblioteche hanno collaborato con altri
+    istituzioni culturali di garanzia di una produzione di qualità a
+    contrastare la potenza attuale bassa qualità. Il mezzo così
+    La possibilità di biblioteche solleva workshop Stabilire
+    dove tutti possono utilizzare apparecchiature per la produzione video.
+    Descrive una libreria di progetto e il video in hvidovre pubblico
+    biblioteche in Aprile 80 programma di video erano disponibili attraverso
+    raccolta di video della biblioteca e attraverso un laboratorio video nel
+    Cui il pubblico sono stati incoraggiati a sperimentare con la
+    Stesse apparecchiature. </ Text>
+  </ DOC>
+  <Doc>
+    <recordId> 813 </ recordId>
+    <text> di algoritmo per trovare un insieme fondamentale di cicli di una
+    metodo grafico viene presentato quasi una fonte per un insieme fondamentale
+    di cicli per un grafo finito non orientato. un albero di copertura è
+    coltivate ed i vertici Esaminato a sua volta, non esaminata vertici
+    essere memorizzati in una lista pushdown per attendere l'esame. uno stadio
+    nel processo è quello di prendere l'elemento superiore v del pushdown
+    elencare ed esaminare esso, vale a dire Quelli ispezionare tutti i lati (v, z) del
+    Per il quale grafico Z non è ancora stato esaminato. se z è già in
+    l'albero, viene aggiunto un ciclo essenziale, addirittura, il bordo (v, z)
+    è collocato nella struttura. c'è esattamente una per ciascuna fase di ricerca
+    del n vertici del grafico. per n grande, il negozio richiesto
+    in pieghe come n ^ 2 ed il tempo come n ^ g dove g dipende dalla
+    tipo di grafico in questione. g è limitata inferiormente da 2 e superiore del 3,
+    ed è dimostrato entrambi limiti sono raggiunti hanno. in termini di
+    stoccaggio nostro algoritmo è simile a fatto di Gotlieb e Corneil
+    e di quanto fatto superiore, in termini di velocità è simile
+    per ciò che ha fatto e ha fatto superiore al di Gotlieb e Corneil.
+    testare mostrare il nostro algoritmo di essere straordinariamente efficiente (g = 2) su
+    grafi casuali. Settembre 1969 Paton, k set ciclo fondamentale,
+    grafico, algoritmo, moto, spanning tree 05:32 ca690909 jb
+    15 febbraio 1978 16:29 </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 814 </ recordId>
+    strumenti <testo> per il controllo bibliografico universale 'un insegnamento
+    esperienza. una descrizione del corso offerto dalla biblioteca
+    dipartimento di scienze presso l'Università Federale del Paranà, Brasile,
+    dal 1976. una breve introduzione traccia lo sviluppo della
+    concetto di controllo bibliografico, dimostrando la sua importanza
+    in biblioteconomia. Sono riportati i dettagli di come il soggetto è
+    integrato nel curriculum resistere, la struttura e la
+    organizzazione del corso, il contenuto effettivo della 8
+    unità componenti, ed i metodi di insegnamento e dei materiali utilizzati.
+    infine, si fa riferimento al sondaggio di lavoro per monitorare Condotto
+    gli effetti di introdurre l'argomento, e un'ulteriore prova
+    citato a sostegno della conclusione hanno bibliotecari sono vantaggi di marketing
+    da questa iniziativa. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 816 </ recordId>
+    <text> fornitura libro di scuola) che commissione d'inchiesta del
+    fornitura di libri alle scuole e collegi (convocata dal
+    Associazione Librai e l'associazione editori) ha
+    rilasciato i suoi risultati. questo numero di 2the bookseller1 contiene 3
+    articoli su questo argomento. libro di scuola di alimentazione al bivio '
+    presenta 30 raccomandazioni della commissione che riguarda
+    responsabilità, le procedure di e costo di ordinazione e
+    Fornitura di libri di testo e libri della biblioteca. in un altro articolo di
+    lo stesso titolo, i vari aspetti della relazione sono considerati in
+    dettaglio. in vigore a sinistra nella catena di approvvigionamento scuola, baronessa
+    David (che ha presieduto il comitato) delinea gli obiettivi del comitato
+    e le conclusioni. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 818 </ recordId>
+    <text> l'individuazione delle piogge di meteoriti con l'applicazione di
+    risultati dell'emisfero meridionale degli ultimi risultati radar
+    misurazioni delle piogge di meteoriti a Christchurch Nuova Zelanda sono
+    combinato con le precedenti rilevazioni visive e radar per sviluppare un
+    quadro composito delle piogge meteoriche sono sette attività
+    Apparendo in tutti e tre i sondaggi ha confermato un altro sei a nove
+    sono probabili essere identificati in due </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 819 </ recordId>
+    <text> le condizioni di realizzabilità per le funzioni di impedenza
+    due poli di reti elettriche Tenendo conto delle perdite in rotoli
+    e condensatori </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 820 </ recordId>
+    <text> finale ed elettrone scarica a catodo freddo secondario in
+    elio </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 823 </ recordId>
+    <testo> gli obiettivi della biblioteca tribunali, Sydney. la legge
+    biblioteca tribunali è un commonwealth / Biblioteca di Stato della joint
+    stabilito per ottenere credito, e sfruttare Fornire materiali giuridici e
+    informazioni per la Corte Suprema del New South Wales, federale
+    tribunale del Commonwealth e le commissioni e tribunali. Descrive l'
+    obiettivi di servizio della biblioteca (per fornire informazioni e
+    materiale alla magistratura e al personale giudiziario); interno
+    obiettivi (di back-up di formazione in servizio), e le relazioni con
+    corpi-il genitore biblioteca statale del NSW, NSW Department della
+    di giustizia e di procuratore generale, e l'australiano reparto
+    del procuratore generale. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 825 </ recordId>
+    componente protone <text> della radiazione cosmica primaria
+    componente di protoni è stato studiato in quota su una serie
+    di flighst palloncino a varie latitudini con il Cerenkov
+    Contatore a scintillazione risultati tecnica sono discussi </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 829 </ recordId>
+    <text> un semplice ampiezza oscillatore a frequenza molto bassa
+    limitazione è effettuata da un diodo Zener e un circuito selettivo
+    Risultante filtrare le armoniche dando ampiezza
+    Stabilizzazione Non è selettivo in frequenza </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 830 </ recordId>
+    <text> desorbimento e la ionizzazione a causa di forti campi elettrici
+    indagini sperimentali della distribuzione di intensità
+    tipo di campo emissione di elettroni da punti cristallo singolo coperto
+    sono segnalati con film sottili di altri materiali in cui superficie
+    di composti sono presenti o con una variazione di caratteristica del
+    distribuzione emissione si osserva-dopo l'applicazione di un
+    campo di ostacolare il cambiamento è attribuita a ionizzazione locale
+    elettrone di essere rilasciato verso l'interno del metallo e un
+    ione positivo viene emessa nel vuoto se il campo è
+    abbastanza forte da superare la forza dell'immagine la ionizzazione di campo
+    di molecole adsorbite fisicamente o Atom richiede relativamente
+    campi di forza stime quantitative sono fatti di tirare fuori
+    intensità di campo e la sua variazione di temperatura </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 831 </ recordId>
+    <text> l'altezza della linea di emissione del bagliore aria come
+    Osservato sulla Jungfraujoch è una altitudine media di
+    dedotto </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 833 </ recordId>
+    serials <testo> catalogazione e AACR 2 'un'introduzione. AACR 2
+    è un insieme di regole che soddisfi gli standard internazionali di
+    Fornisce descrizione bibliografica e uniformità per la macchina
+    elaborazione di registrazioni bibliografiche. principi di Parigi
+    uniformità di descrizione per tutti i tipi di materiali e
+    norme generali per la scelta e la forma di ingresso e voci sono la
+    linee guida del AACR 2 Così si basa sul quadro di ISBD
+    (G) per gli elementi e l'ordine dei dati. gli sviluppi storici
+    e le peculiarità di AACR 2 catalogazione e serial sono
+    discusso. alcuni esempi sono inclusi per illustrare l'
+    applicazione di AACR 2 catalogazione in serial. pre-AACR 2
+    Così esempi di catalogazione sono inclusi per il confronto. </ Text>
+  </ DOC>
+  <Doc>
+    <recordId> 835 </ recordId>
+    <text> l'elaborazione in-house dei tascabili e opuscoli.
+    semplici metodi di rilegatura in-house di libri tascabili e
+    opuscoli sono descritti. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 836 </ recordId>
+    <text> l'effetto di attaccamento alla radio echo osservazioni di
+    Relazione osservata tra la meteora meteora magnitudine visuale
+    e la durata eco è come spiegato da questo meccanismo sono la
+    partenze dalla lunghezza d'onda variazione quadrato di eco
+    durata prevista dai processi di attaccamento teoria della diffusione
+    quindi conto per l'osservazione ha fatto le altezze finali di
+    meteora duraturo riecheggia tutto centro circa novant'anni di storia cinque miglia anche
+    se meteore luminose possono presentare un massimo di intensità luminosa
+    sotto 80 km </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 837 </ recordId>
+    <text> emissione radio da Giove rapporto sulle misurazioni effettuate
+    dai quattro interferometro elemento a Cambridge del rapporto
+    fra densità di flusso e il diametro del confronto jupiter
+    è fatto con le osservazioni di densità del flusso di altri autori </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 839 </ recordId>
+    abstracts <testo> di documenti presentati all'undicesima annuale
+    riunione della filiale nordamericana, 01-03 Giugno 1980 presso Boulder,
+    colorado. speial sezione dedicata abstract di 42 carte
+    presentato al meeting annuale 11 ° della classifica
+    società, nord americano ramo, Boulder, Colorado, 80 giugno 1-03,
+    Occupa soprattutto di clustering in automatico
+    classificazione. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 842 </ recordId>
+    <testo> cinquant'anni di manutenzione delle informazioni ha bisogno di
+    scienze agrarie e di allevamento pratico. la centrale
+    scientifica biblioteca agricola (CSAL), il principale agricola
+    biblioteca dell'URSS, ha celebrato il suo 50 ° anniversario il 23 luglio
+    Nel 1980. la libreria è la più grande biblioteca agricola nel
+    mondo e agisce come Stato depositario all-unione di nazionale
+    e letteratura straniera, il centro di bibliografia agricolo
+    e il centro sistematico e scientifico per tutti agricola
+    biblioteche dell'URSS. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 845 </ recordId>
+    misure di radiazione <testo> di chilometri di altitudine a
+    latitudini equatoriali dei relativi flussi e gli spettri di energia
+    distribuzioni angolari di elettroni e protoni deterministici minato
+    durante tre voli gratuiti sono riportati lo spettro di elettroni Appare
+    per essere più morbido rispetto a quello atteso un decadimento beta dei neutroni
+    origine </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 848 </ recordId>
+    <text> bozza di schema di DPP all'esame del Parlamento. osservazioni sul progetto
+    regime di diritto di prestito pubblico, che è stato presentato al Parlamento
+    marzo 82, in risposta a un atto del 1979. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 852 </ recordId>
+    attività <text> solare e l'analisi statistica atmosfera di
+    record ha confermato la correlazione esistente tra segnale geomagnetico
+    disturbi e le fluttuazioni della pressione atmosferica oltre
+    scandinavia l'ipotesi di influenza planetaria sul solare
+    attività è ipotesi discusso per quanto riguarda il meccanismo di
+    i soli influenza sul clima sono giustificate da
+    misurazioni </ text>
+  </ DOC>
+  <Doc>
+    856 <recordId> </ recordId>
+    riflessioni <testo> da irregolarità nella ionosfera
+    Complessità nei registri di e per la regione f sono dimostrato di essere
+    causa di curvatura della superficie riflettente dell'ordine
+    curvatura associata a disturbi del viaggio viene calcolata è
+    e la variazione del tipo di complessità è mostrato ai risultati
+    Differente da ritardo di gruppo nei diversi percorsi una base
+    sistema triangolare di tre trasmettitori di impulsi e una panoramica
+    tipo sono stati utilizzati rispettivamente per la registrazione e la registrazione </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 858 </ recordId>
+    <testo> effetti di rilassamento elettrico e termico in corrente
+    conduttori metallici che trasportano l'ammissione ac di conduttori
+    dc è calcolato sta portando e una relazione è trovato a
+    mineraria deterministico la frequenza dipendente conducibilità termica
+    risultati delle misurazioni delle filamenti confermano questa
+    rapporto </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 860 </ recordId>
+    <text> ordinato funzioni binarie walsh $ S22) (algoritmo 389)
+    Agosto 1970 Hubner, funzioni H Walsh, binario, ordinò Walsh
+    Funzioni 05:12 05:13 ca700809 jb 10 febbraio 1978 03:22
+    pm </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 861 </ recordId>
+    <text> elenco internazionale di servizi di documentazione
+    Per quanto riguarda i prodotti forestali e forestali. liste di 120
+    servizi di documentazione presentata, con la silvicoltura, foresta
+    prodotti, o di settori affini in 28 paesi. la voce per ogni
+    servizio include titolo del servizio, costo, editore, soggetto,
+    dati di copertura, di formattazione, sorgente di ingresso e l'indicizzazione
+    metodi di elaborazione dei dati e la disponibilità di servizi speciali
+    oltre a quelli primari di indicizzazione e di astrazione. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 863 </ recordId>
+    <text> errore funzione x-large (algoritmo 180 [S15]) Giugno 1967
+    collina, id Joyce, ca670607h jb SA 23 mar 1978 03:35
+    pm </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 865 </ recordId>
+    <text> Adattare la generazione di codice ottimale per l'aritmetica
+    espressioni per l'istruzione imposta accessibile oggi
+    computer (errata) Ottobre, Stockhausen, 1974, p. f ca741012 jb
+    16 gennaio 1978 11:05 </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 868 </ recordId>
+    <text> una classe di allocazione dinamica della memoria algoritmi di nuovo
+    algoritmo di allocazione dinamica della memoria, il sistema Fibonacci, è
+    Introdotto. questo algoritmo è simile, ma sembra avere
+    Alcuni vantaggi rispetto, il Sistema "compagno". Una generalizzazione
+    Che è menzionato include sintesi di entrambi i sistemi in modo speciale
+    casi. Ottobre 1973 Hirschberg, archiviazione dinamica d s
+    allocazione, sistema di coppia, la simulazione, Fibonacci, la frammentazione
+    3.89 04:32 04:39 ca731005 jb 20 gen 1978 11:38 </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 871 </ recordId>
+    <text> misurazione del campo elettrico atmosferica nella libera
+    atmosfera i risultati delle misurazioni radiosonde fino a circa
+    Rispetto a misura e altezza sono calcolati è intensità di campo
+    dati di altri autori </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 872 </ recordId>
+    loci <text> teoria curva applicata alle reti ad alta frequenza
+    applicazione del metodo viene mostrato per la valutazione della ricerca
+    curve di risposta in quattro reti terminali come sono prodotti da
+    la variazione di uno dei parametri sono contenute esempi del
+    calcolo di un monte termistore larga banda utilizzando un rettangolare
+    grafico ammissione e la variazione della riflessione ingresso
+    coefficiente di frequenza di un trasformatore givenName utilizzando un fabbro
+    grafico </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 873 </ recordId>
+    <text> una grafica analisi sinusoidale di una fase non lineare-rc
+    retroazione Scorrimento Circuiti curve di risposta in frequenza sono discussi
+    di circuiti oscillatori af tra cui ad esempio non lineare thyrite
+    resistenze nel circuito di retroazione su una parte delle frequenze
+    l'intervallo di tensione triplice funzione valutata è il metodo usato
+    Comporta la sovrapposizione grafica della resistenza tensione
+    caratteristica del resistore non lineare ha fatto uno dei
+    circuito parallelo </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 875 </ recordId>
+    <text> una soluzione analitica per l'effetto della carica spaziale in
+    catodo freddo scariche di gas, utilizzando un semplice matematica
+    modellare una soluzione analitica per lo spazio di carica Varney
+    equazione si ottiene è in buon accordo con l'esatta
+    soluzioni è stato calcolato </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 878 </ recordId>
+    <testo> caratteristiche sperimentali di un forno a microonde parametrico
+    un amplificatore diodo semiconduttore usando una cavità rettangolare
+    Contemporaneamente a risonanza e viene utilizzato con un diodo a giunzione ge
+    avente una polarizzazione capacitanza zero e una resistenza di diffusione
+    con una amplificazione del segnale di pompaggio può essere applicato a Ottenuti
+    In entrambi i casi le frequenze di guadagno inferiore al preliminare
+    misurazioni mostrano una figura di rumore inferiore a db </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 879 </ recordId>
+    <testo> processori sincronizzazione con memoria-content-generated
+    interrompe implementazioni del metodo "lock-unlock" di
+    sincronizzazione di processori in un sistema multiprocessore, di solito
+    richiedere, pausa istruzioni tipo di memoria statici di continuità. a
+    interblocco schema chiamato lettura interblocco, che non richiede
+    istruzioni pausa di memoria, è stato sviluppato per un duplice dicembre
+    PDP-10 Sistema con requisiti real-time. la lettura di interblocco
+    metodo richiede una speciale istruzione "read-interlock" in
+    il repertorio dei processori e uno speciale "leggi-interlock"
+    ciclo nel repertorio dei moduli di memoria. Quando un processore
+    esamina un "blocco" (una posizione di memoria) con una lettura di interblocco
+    istruzione, sarà interrotto se la serratura che già
+    impostato, l'esame di una serratura imposta immediatamente se non fosse già
+    impostare (questa sequenza di eventi è un ciclo di lettura-interblocco). scritto
+    in una serratura libera. aver interrotto il processore upon
+    L'incontro con una serratura set invece di ramificazione è vantaggioso se
+    il ramo avrebbe comportato efficace per interrompere. giugno
+    1973 collina, j. c. interrompe, supervisori, monitor, debug,
+    elaborazione parallela, memorie associative, microprogrammazione
+    04:32 06:29 ca730603 jb 23 Gennaio 1978 15:29 </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 881 </ recordId>
+    <text> i passa-banda espressioni amplificatori distribuiti generali
+    sono derivati ​​per il guadagno di un amplificatore distribuito con qualsiasi
+    numero di valvole accoppiate da sezioni di filtro identici l'
+    analisi indica la riduzione dei picchi di limite di banda ha fatto è più
+    difficile per passabanda che per passa basso amplificatori di scelta
+    adeguate reti per la cassa filtro passa-banda è discusso
+    e alcuni risultati sperimentali sono presentati per una valvola
+    amplificatore con una banda passante da a </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 883 </ recordId>
+    comportamento <text> di rumore termico e acustico trave in una quadrupolo
+    amplificatore </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 884 </ recordId>
+    <text> un amplificatore cascode degenerativa descrizione stabilizzatore
+    di stabilizzatori con amplificatori cascode shunt modificato ed avente
+    guadagno </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 886 </ recordId>
+    <text> io sono così invidioso. dà un ritratto di pubblico Silkeborg
+    biblioteca, la Danimarca e la confronta con la biblioteca dell'autore del
+    infanzia. interviste juditthe boock, il presidente del
+    comitato culturale, che avrebbe voluto un centro civico, ma
+    ha dovuto accontentarsi di un 1.260 mq ampliamento nel 1978 e
+    acquisizione di altri edifici per ospitare la storia locale
+    raccolta e attività per bambini, ora nella libreria principale.
+    vorrebbe più librerie filiali di periferia, ma riguarda
+    biblioteche mobili come adeguata per sottilmente dell'Autorità
+    Popolato periferia. si compiace del ricorso biblioteca dei bambini
+    come servizio e per il tempo libero centro assistenza bambini e approva
+    materiali non-book: come la musica e poster. le interviste
+    conducente e bibliotecario mobile. bambini costituiscono il 75% dei mobili
+    utenti della biblioteca, con gli anziani prossimi importanza. una stretta
+    rapporto con il lettore ha sviluppato e lettori sono ben
+    soddisfatto con la selezione di libri. interviste del capo
+    Povl bibliotecario, Skov, che spera di ope n 4 nuove filiali nel corso
+    gli anni '80. i tagli hanno colpito finora acquisto di nuovi libri
+    e di personale, ma i servizi, come le prenotazioni non possono più essere
+    esentati. accetta avevano la libreria devono essere soggette allo stesso
+    restrizioni economiche come altri servizi locali. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 888 </ recordId>
+    <text> di elettroni oscillazioni di plasma in elettrico esterno
+    campo della frequenza di oscillazione è calcolato assume ha fatto il
+    funzione di distribuzione degli elettroni satis fica una cinetica givenName
+    equazione </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 889 </ recordId>
+    <text> on-line in profondità. una breve relazione sul libtrad annuale
+    conferenza, 12 giugno 81 libri on-line. David Brown, pergamena
+    stampa, Peter Lewis, British Library, gordon graham
+    Meriti burro e Blackwell julian pozzi di nero ha parlato sul
+    influenza delle nuove tecnologie per le pubblicazioni e di libri
+    in futuro. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 890 </ recordId>
+    <testo> equazioni integrali di immunologia l'inversione di una
+    Equazione integrale particolare della prima (Fredholm) bambino è
+    il problema di base considerato. Quale strategia ha prodotto i
+    successo consisteva di tre punti essenziali: (1) montare il conosciuto
+    dati sperimentali da una curva con cui proprietà derivano da
+    proprietà della funzione (ancora sconosciuto), (2) stabilizzano il
+    calcolo per la funzione incognita utilizzando singolare valore
+    decomposizione, e (3) limitare il ravvicinamento funzione incognita
+    (Dato che rappresenta una distribuzione di probabilità) di essere
+    non negativo. Un certo numero di casi di test sono presentati. un insieme di
+    dati sperimentali reali è analizzato con le procedure
+    presentato. Ottobre 1972 Hanson, r. j. equazioni integrali di
+    il primo figlio, i vincoli non negativi, singolare valore
+    analisi 03:10 05:14 05:18 05:41 ca721003 jb 27 Gennaio 1978 03:37
+    pm </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 892 </ recordId>
+    <text> la raccolta turco di libri stampati in
+    bibliotheque, nationale. gli inizi della stampa pouf
+    (Parte 1). uno studio nel centenario della nascita di Kemel
+    Ataturk. givenName è un resoconto dettagliato delle visite effettuate da
+    leader turchi alla corte di Francia nel tardo 17 ° e l'inizio del
+    18 ° secolo, che ha portato alla creazione del primo
+    stampa stampa e la biblioteca di Costantinopoli nel 1727, con la
+    obiettivo di incoraggiare una cultura indipendente arabo turco
+    influenzare. comprende un elenco descrittivo dettagliato dei 17 titoli
+    prodotta a questo comunicato, tenutasi nella Biblioteca Nazionale
+    raccolta. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 893 </ recordId>
+    la crisi finanziaria <testo> biblioteche tedesche e la sua
+    Conseguenze. givenName lezione a una riunione dei membri della
+    parlamento di Berlino. I tedeschi sono orgogliosi del loro diritto alla
+    libertà di espressione nel linguaggio e nella scrittura, ma questa
+    stessa libertà può causare confusione. poiché le informazioni possono essere
+    spregiudicatamente manipolato un atteggiamento responsabile deve essere
+    mantenuto. interbibliotecario cooperazione per acquisto di azioni e
+    prestiti è essenziale per mantenere bassi i costi. Spesso biblioteche rango basso
+    negli elenchi di priorità culturali a causa di una mancanza di informazioni
+    dei loro problemi e la mancanza di interesse pubblico; mercato
+    criteri dell'economia non possono essere applicati ad essi. la commissione di
+    informazioni e la letteratura deve essere pianificata razionalmente. molti
+    biblioteche hanno dovuto accettare i tagli nei bilanci loro Anche se il
+    i prezzi di libri e periodici sono aumentati; cooperazione tra
+    biblioteche e il commercio dei libri devono essere migliorate. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 903 </ recordId>
+    <text> fm risposta transitoria di un circuiti generali passa-banda
+    formula è derivata per la deviazione istantanea di uscita
+    frequenza risultante da un salto di frequenza in ingresso
+    calcoli sono presentati per spostamenti di grandi dimensioni frequenza in un
+    singolo circuito accordato e per i piccoli spostamenti di frequenza
+    amplificatori con vari numeri di circuiti accordati per il piccolo
+    ingresso passaggi vicino al centro della banda passante del transitoriamente
+    la risposta è la stessa che per fm per la scaglionare sintonizzazione dà lievitare
+    di superamento, ma la portata di questa è piccola se la quantità di
+    scaglionare non è più che sufficiente per fornire massimamente piatta
+    risposta in stato stazionario </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 905 </ recordId>
+    <text> matrice di analisi dei trasduttori multi-terminali
+    trasduttore multi-terminale è definita come una rete con un set di
+    terminali di ingresso n e una serie di terminali di uscita n, può essere
+    Rappresentata dalla sua impedenza di trasferimento o matrice di ammettenza
+    speciali proprietà delle reti espositrici simmetria e o
+    reciprocità discussi sono la rappresentazione è classificato come
+    determinato o indeterminato Accor Ding come il riferimento di tensione
+    terminali sono o non sono specificate le reti semplici possono essere
+    Analizzata da ispezione reti più complesse possono essere trattati
+    come cascate di quelle semplici del metodo è illustrato dalla
+    Derivando le matrici di trasferimento di alcune reti semplici
+    tra cui una sezione di amplificazione distribuita </ ​​text>
+  </ DOC>
+  <Doc>
+    <recordId> 909 </ recordId>
+    <testo> coefficienti binomiali (Algoritmo 19) ottobre 1960
+    Kenyon, a d. r. ca601009 jb 20 mar 1978 20:14 </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 911 </ recordId>
+    <text> ovest a est moto di aurorale zona dell'evento raggi x di un occidentale
+    mozione est di un evento aurorale zona x ray osservato-che si traducono in
+    la tempesta magnetica di ritardi giugno tra raggi x scoppiare a
+    Incrementi di palloncino altitudine e l'assorbimento ionosferico di
+    disturbi radio cosmico ha indicato che indica componenti di velocità lungo la
+    della zona aurorale sono presenti in questo tipo di evento </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 913 </ recordId>
+    implifications <testo> dell'olografia di sistemi informativi. gli
+    vantaggi di usare olografia per memorizzazione e
+    altre applicazioni sono presentati. i vantaggi sono superiori
+    capacità di stoccaggio di memorie a semiconduttore, memorie a bolla;
+    utilizzare Secure per il riconoscimento dei caratteri, e 3-dimensionale
+    proiezione, dischi televisivi, riproduzione dei colori, la capacità di
+    combinare con altre tecnologie: come fibre ottiche,
+    , di riferimento e sistemi di sicurezza per i file videodischi </ testo>.
+  </ DOC>
+  <Doc>
+    <recordId> 915 </ recordId>
+    microcomputer <testo> nel lavoro di informazione 'sulla panoramica del
+    Sistema domestico. Descrive domestico (sviluppo di
+    applicazioni minicomputer nell'ambiente di scientifica e per
+    centri di informazione tecnologica) del progetto, un tedesco-israeliane
+    Lo sviluppo del progetto per l'applicazione di computer per mini
+    centri di informazione. moduli di sistema includono funzioni per
+    la creazione e l'aggiornamento di banche dati, la formulazione e la gestione dei dati
+    ricerche di base e risultati di ricerca stampa. le informazioni
+    sistema è applicabile per l'acquisizione, la catalogazione,
+    circolazione, e statistici esigenze di informazione
+    centri. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 916 </ recordId>
+    <text> un monitor multiprogrammazione per macchine piccole int, un
+    combinazione hardware / monitor software progettato per controllare un
+    Un'ampia varietà di immissione in tempo reale / dispositivi di uscita, è descritto.
+    le semplici aggiunte di hardware di fornire un dispositivo uniforme
+    interfaccia macchina per gli elementi che cercano le tastiere input grafico
+    dispositivi, e timer di intervallo. il software solleva l'utente
+    programma dai dettagli di input / tempi di uscita, buffer, e
+    Fornisce la pianificazione delle attività e la capacità di elaborazione parallela.
+    programmi utente di comunicare con il monitor attraverso un piccolo set
+    di meta-istruzione che consiste principalmente di linguaggio macchina
+    richiami di sottoprogrammi. maggio 1967 Hornbuckle, g d ca670503 jb
+    28 feb 1978 10:57 </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 917 | </ recordId>
+    <text> dritto amplificatore diodo tunnel a partire preamplificatore rumore
+    palco per la gamma UHF le caratteristiche del segnale e del rumore
+    Indagato sono di un amplificatore a triodo convenzionale con un
+    tunnel circuito diodo come stadio preamplificatore e sperimentale
+    Ottenuti i risultati in e si trovano d'accordo bene con la teoria di
+    indagini simili su una reattanza preamplificatore diodo
+    lago </ text>
+  </ DOC>
+  <Doc>
+    920 <recordId> </ recordID>
+    <testo> reti quadripolo per la correzione di fase in passa-basso e
+    amplificatori passabanda per la progettazione di equalizzatori ritardo
+    sistema di trasmissione televisiva è descritto </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 922 </ recordId>
+    <text> diradamento algoritmi su rettangolare, esagonale, e
+    matrici triangolari in questo rapporto tre algoritmi di assottigliamento sono
+    sviluppato: uno ciascuno per uso con rettangolare, esagonale, e
+    matrici triangolari. l'approccio allo sviluppo di ogni
+    algoritmo è la stessa. risultati pittorici prodotti da ciascuna di
+    gli algoritmi sono presentati e le relative prestazioni dei
+    Rispetto sono gli algoritmi. esso sta il fatto algoritmo
+    operando con la matrice triangolare è il più sensibile alle
+    Immagine Irregolarità e rumore, eppure produrrà un assottigliato
+    con immagine complessiva a ridotto numero di punti. Si è concluso
+    ha fatto l'algoritmo che opera in collaborazione con il esagonale
+    array ha caratteristiche che rappresentano l'equilibrio tra quelli dei
+    altri due array. Settembre 1972 tedesco, e s diradamento
+    algoritmi, rettangolare, esagonale, matrici triangolari, immagine
+    elaborazione, scheletro ca720907 3.64 jb 27 Gennaio 1978 04:25
+    pm </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 923 </ recordId>
+    <text> la funzione degli elementi di base dei sistemi digitali
+    tre elementi di base di computer digitali sono un bistabile
+    elemento per la memorizzazione di soprammobili a un cancello cifra per il controllo del passaggio
+    una cifra di un diodo per controllare la direzione di un passaggio
+    Unità nella forma di una valvola di deflessione del fascio è stata progettata
+    comprendente un elemento bistabile insieme a due elementi gating
+    Quindi vedi sotto </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 926 </ recordId>
+    <text> l'hardware-software complementarità ottobre 1967
+    Oettinger, ag ca671001 jb 27 feb 1978 02:42 </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 930 </ recordId>
+    <text> lo strato di f in osservazioni Alba a Cambridge e
+    Slough Mostra fece ad altezze fisse nella regione f appena dopo
+    strato alba la densità elettronica aumenta più velocemente in inverno
+    che in estate e più veloce al massimo delle macchie solari rispetto a delle macchie solari
+    minimo viene postulato ha fatto i cambiamenti stagionali della atmosferico
+    composizione per età della produzione di elettroni e di tassi di perdita
+    Causando così sia il mezzogiorno e l'alba strato f stagionale
+    anomalie </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 931 </ recordId>
+    <testo> le relazioni tra la variazione secolare e la non
+    campi di dipolo la deriva e il decadimento Contributi alla secolare
+    variazione sono stati stimati da isomagnetico e isoporic
+    tabelle per Brunswick nella deriva verso ovest, negli ultimi anni, che
+    risultata essere significativamente inferiore alla media mondiale
+    Relazioni ottenute sono tra i coefficienti gaussiani nel
+    Sferica armonica analisi del campo principale terre e la
+    variazione secolare è dimostrato uno ha fatto la metà di questa variazione
+    è prodotto da ovest deriva e hanno le condizioni di decadimento sono
+    poco importante </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 932 </ recordId>
+    servizi di riferimento <testo> in funzione didattica. contributo
+    per una questione tematica per l'uso istruzioni biblioteca. recensioni alcune delle
+    gli argomenti a favore e contro l'idea di una funzione di insegnamento
+    Il che per i bibliotecari di riferimento sono state avanzate nel
+    ci Biblioteca professione. Descrive il modo in cui il bibliotecario
+    adempie il suo ruolo di insegnante su base 1 a 1 al riferimento
+    scrivania, e per la preparazione di vari tipi di guide per l'utente. Sostiene
+    fatto a scuola e accademico biblioteche della funzione docente
+    il bibliotecario deve essere intensificato causa della didattica
+    obiettivi inerenti ambienti sintesi. Suggerisce fatto con
+    Budget decrescenti biblioteca nel 1980, bibliotecari, in particolare di
+    Quelli nei servizi di riferimento, dovrà affrontare giustificando
+    Le loro funzioni e ha un modo adatto per farlo sarebbe
+    per la biblioteca di diventare una 'biblioteca insegnamento'. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 933 </ recordId>
+    <text> on line i & r nella libreria: lo stato dell'arte. gli
+    potenziale per l'utilizzo di informazioni on-line di recupero e di altro
+    Tecniche computerizzate per la memorizzazione e la gestione in
+    un servizio di informazione di comunità è descritta. specificazioni
+    per l'hardware e il software adatto per un rinvio del computer
+    centro sono tabulati. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 935 </ recordId>
+    linee guida per l'apprendimento delle risorse <testo> centro di sviluppo in
+    tradizionalmente nero di quattro anni di college e sostenuto dallo stato
+    università. (Tesi di dottorato-Florida State University.)
+    indagine per lo sviluppo di linee guida per l'apprendimento
+    centri di risorse, sulla base di uno studio dei centri selezionati in
+    tradizionalmente nero di quattro anni di college e sostenuto dallo stato
+    università, 1972-1977. Tenta di determinare la misura in
+    Quale titolo III, avanzato programma di sviluppo istituzionale
+    (AIDP) finanziamento è utilizzato per effettuare la modifica del collegio e
+    biblioteche universitarie così diventano thatthey apprendimento efficace
+    centri di risorse e di sviluppare linee guida che sarebbe
+    utile nel settore minerario deterministico l'efficacia delle risorse di apprendimento
+    centro di sviluppo in tradizionalmente nero di 4 anni
+    college e le università a contributo statale. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 939 </ recordId>
+    <text> la geomorfologia della diffusione F verificarsi di diffusione F
+    Approssimativamente è simmetrica rispetto all'equatore geomagnetico ed è
+    maggiore nelle regioni equatoriali e aurorale Principalmente è una verifica
+    durante la notte ed è maggiore in inverno nella aurorale
+    regione e al equinozio nella regione equatoriale </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 940 </ recordId>
+    calcolo <text> di shunt termoresistencias di rhumbatrontype
+    cavità è il calcolo di tenecteplase derivando la
+    espressione per la resistenza di shunt in una forma in cui il
+    assiale intensità di campo elettrico è l'unico indipendente
+    variabile </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 941 </ recordId>
+    directory <text> chimiche Informazioni risorse 'di integrazione ting
+    componente della rete di informazione sostanze chimiche. gli
+    directory chimiche Informazioni risorse (CIRD) Funge da
+    Integra meccanismo ting per le diverse fonti di informazione per
+    essere inclusi nella rete di informazione sostanze chimiche. gli
+    CIRD presente, disponibile come un manuale pubblicato con i suoi due
+    parti, l'oggetto e il catalogo catalogo descrittivo,
+    Uniformemente cataloghi e indici delle funzioni, i contenuti,
+    accedere, e altri attributi di 53 informazioni chimiche relative
+    risorse. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 942 </ recordId>
+    rappresentazione guadagno <text> per un unico multi-valore
+    non linearità con diversi ingressi e la valutazione della loro
+    guadagni equivalenti da un metodo cursore </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 943 </ recordId>
+    <text> ripartizione tensione impulso di aria in un campo non uniforme
+    esperimenti su scariche tra una parte sferica e un aereo
+    Descritto sono elettrodi e un tentativo di spiegazione del
+    meccanismo di ripartizione è presentato </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 944 </ recordId>
+    <text> sviluppo della massima densità di elettroni del s
+    strato a Leopoldville Binza e Ottenuto strato di dati durante la
+    periodo dicembre febbraio Analizzato sono la variazione diurna del
+    massima densità di elettroni è strettamente conforme chapmans
+    legge </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 945 </ recordId>
+    <text> tre livelli di spin refrigerazione e di azione maser a </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 946 </ recordId>
+    <testo> rappresentazioni source per elettromagnetica di Debye
+    teoria potenzialità della radiazione viene presentato Discussi Debye
+    potenziali possono essere utilizzati per tutti i punti anche all'interno della sorgente
+    a questa distribuzione porta a metodi alternativi per la
+    determinazione diretta di espansioni multipolari </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 948 </ recordId>
+    <testo> processi ricorsivi e traduzione Algol Gennaio 1961
+    Grigio, citato ca610102 jb 17 Marzo 1978 01:29 </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 950 </ recordId>
+    <text> il cryosistor un effetto di campo impatto controllato
+    ionizzazione passare un nuovo dispositivo a tre terminali è descritta in
+    Quale la ionizzazione da impatto di impurità in ge è al
+    controllato tramite l'effetto di campo esaurimento di una inversione
+    giunzione polarizzato la natura localizzata della ionizzazione Qualora
+    consentire la costruzione di numerose cryosistors indipendenti
+    un wafer singolo ge </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 951 </ recordId>
+    <testo> amplificatori parametrici e cancellazione dei ferromagnetico
+    da misurazioni ortogonali isteresi polarizzazione sono stati
+    fatta su campioni tubolari di ni zn ferriti che mostrano l'effetto di
+    un campo magnetico uniforme parallelo all'asse sul
+    magnetizzazione per corrente alternata in un avvolgimento toroidali
+    Campo sufficientemente elevata intensità per una isteresi diventa
+    trascurabile e la curva di magnetizzazione tende a diventare linearmente
+    tale principio è stato applicato nella progettazione di una variabile
+    induttanza parametrico amplificatore funzionante a con un guadagno
+    di </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 952 </ recordId>
+    <text> un tipo reattanza amplificatore dritto sintonizzabile per la uhf
+    gamma di sperimentale capacità variabile sintonizzabile amplificatore in
+    la gamma con una frequenza di pompaggio è descritta con un
+    banda la figura di rumore è migliore di quella ottenibile con A
+    un convenzionale a terra amplificatore a triodo griglia </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 953 </ recordId>
+    <text> lessicografia 'una introduzione allo studio della
+    dizionari. presenta una analisi strutturale del dizionario
+    Incorporando forma e contenuto utilizzando una tipologia che
+    Tiene ugualmente conto dello scopo e campo di applicazione della linguistica
+    ogni tipo. la struttura della voce del dizionario e la
+    problemi di definizione sono discussi in dettaglio, e una
+    confronto con il thesaurus. infine il thesaurus è
+    distinta dal linguaggio di thesauri, come quello usato in
+    informatica per mostrare la relazione tra soggetto e
+    parola chiave. Conclude fatto studi teorici su thesaurus
+    Qualora la costruzione si basa sulla semantica. </ Text>
+  </ DOC>
+  <Doc>
+    <recordId> 957 </ recordId>
+    <text> la biblioteca scolastica nella biblioteca comunale Landshut
+    Sistema. Landshut il sistema bibliotecario pubblico è composto da 3
+    Quali biblioteche sono così biblioteche scolastiche, una biblioteca dell'ospedale
+    e 9 biblioteche scolastiche, tutti amministrati da una biblioteca centrale
+    responsabile di tutti gli acquisti e la lavorazione. le esigenze dei
+    8.000 allievi sono soddisfatti in 12 primarie e secondarie
+    scuole, 1 scuola speciale, 2 scuole professionali e 2 scuole
+    di istruzione superiore. 123 lezioni settimanali visitare le librerie
+    e l'aiuto speciale è givenName di bambini stranieri. Obiettivi per il
+    Aumentare futuro includono azioni in tutte le librerie a 10 libri
+    per alunno, fornendo più spazio e magazzino per gli alunni più grandi,
+    Incorporando le biblioteche degli insegnanti nelle biblioteche scolastiche e
+    rendere il lavoro in biblioteca a parte integrante della scuola
+    curricula. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 959 </ recordId>
+    <text> multistadio filtro passa-banda con approssimazione ottimale
+    la forma rettangolare ideale della curva di risposta </ ​​text>
+  </ DOC>
+  <Doc>
+    <recordId> 960 </ recordId>
+    <testo> modulazione correzioni effetto per momenti magnetici di
+    forme linea di risonanza </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 961 </ recordId>
+    induttanze bobina <testo> ei limiti della capacità del singolo strato
+    bobine cilindriche per diverse distribuzioni di tensione di corrente
+    sopra la bobina </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 965 </ recordId>
+    teoria modalità <text> di lossless periodicamente distribuito
+    amplificatori parametrici </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 966 </ recordId>
+    valutazione <text> di utilizzo della captazione di corrente
+    metodologie e risultati. Una recente valutazione della corrente
+    ha ricerca indica l'uso di librerie non può essere
+    Rispetto, ma, l'uso delle collezioni delle biblioteche può essere paragonata
+    se gli obiettivi per le collezioni sono gli stessi. gli
+    ragionamento dietro questa tesi alongwith! Focus on
+    valutazione delle metodologie di raccolta sicura di uso corrente e
+    risultati. ha fatto una serie di variabili devono essere contabilizzati in
+    studi comparativi È quindi previsto. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 968 </ recordId>
+    * Progettazione <text> di una migliore elaborazione del codice di trasmissione dati /
+    maggio 1961 notevole, r. w. smith jr, h j. williams jr, f a
+    ca610501 jb 16 marzo 1978 11:14 </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 971 </ recordId>
+    azionamenti <testo> per i trasmettitori a più canali e ricevitori in
+    nastro hf con precisione i metodi di messa a punto per una frequenza prescritta
+    Descritto come vengono applicati a un oscillatore diversità con manuale
+    Sintonizzazione automatica per trasmettitori ricevuti airboard sintonizzati
+    auto </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 973 </ recordId>
+    dispositivi di imaging <testo> 'dall'inizio alla fine. in una parola
+    sistema di elaborazione / dati ci sono molte periferiche
+    macchine utilizzate per semplificare il flusso di lavoro da ingresso attraverso
+    editing per uscita. Maggioranza sono i dispositivi di imaging-ottici
+    unità di riconoscimento dei caratteri, unità facsimile e grafica
+    terminali, copiatrici / stampanti intelligenti, micro e grafica
+    apparecchiature. Loro capacità di fornire riproduzioni accettabili di
+    l'ingresso di materiale originale è cruciale. esplora il modo ottimale
+    qualità di riproduzione possono essere raggiunti e le tecnologie
+    Coinvolto. </ Text>
+  </ DOC>
+  <Doc>
+    <recordId> 974 </ recordId>
+    effetti <testo> di breve termine in tutto il mondo la modulazione della
+    radiazione cosmica primaria intensità giornaliera osservati
+    variazioni </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 975 </ recordId>
+    <text> una analisi del problema-diffrazione è presentato per il caso
+    di un incidente di un'onda piana di norma su infinitamente lungo
+    Condurre perfettamente striscia </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 976 </ recordId>
+    <text> digitale tecniche di computer rapporto lettera di una convenzione
+    tenutosi presso l'Institution of Electrical Engineers di Londra
+    documenti sono stati presentati insieme al testo completo del report
+    la discussione deve essere pubblicato in tre sezioni come
+    supplemento al </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 977 </ recordId>
+    <text> il bibliotecario cristiana e la censura: un altro punto di vista. un
+    rispondere alla 'libertà, democrazia e censura' la responsabilità
+    del bibliotecario cristiana ', Christian bibliotecario (5) 1981
+    29-38 (vedi precedente abstract). Seguendo seguito solleva i punti 'del
+    credente sicuro può dare un giudizio discriminante in
+    La selezione dei materiali, utilizzando tutti i mezzi a sua disposizione,
+    Anche se questo significa Fortemente comprese le cose è in disaccordo con;
+    bibliotecari devono essere attenti al potere del male, ma di nascondere
+    non è per distruggerla, il bibliotecario spende denaro pubblico,
+    generata da persone di molte fedi, con diversi background culturali
+    sfondi e morali, i bibliotecari hanno bisogno di essere, e di essere visto
+    esempio, le persone aperte che sono costantemente alle prese con i problemi
+    della vita reale, nel modo più ampio Essi si riflettono nella pubblicazione
+    mondo, e, infine, i bibliotecari dovrebbero bea miglioramento della vita e di un
+    di affermazione della vita influenza e la biblioteca può essere un vero e proprio
+    mercato delle idee in cui i libri "buoni" possono competere con il
+    Sono semplicemente un male perché lì insieme. </ Text>
+  </ DOC>
+  <Doc>
+    <recordId> 979 </ recordId>
+    <text> sul teorema di unicità per i campi elettromagnetici
+    modi di risonanza e la condizione al contorno miste in stato stazionario
+    sono considerati </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 980 </ recordId>
+    testina magnetica <text> legge nastro alla velocità zero dettagli di design di
+    Un sistema che consente di segnale hf registrato da riprodurre in
+    velocità abbastanza basso per l'uscita da alimentare ad un registratore a penna
+    senza deterioramento del rapporto segnale-rumore </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 981 </ recordId>
+    <text> analisi fattoriale della varianza (algoritmo 330 [g1]), giugno
+    1968 Oliver, analisi della varianza fattoriale, varianza,
+    analisi statistica ca680613 5.5 jb 22 febbraio 1978 03:21
+    pm </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 982 </ recordId>
+    <text> proposto metodo di accordare una cavità maser è un metodo
+    Descritto per estrazione deterministica la piccola differenza tra la
+    frequenza di risonanza della cavità e la frequenza delle microonde
+    spettrale linea </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 983 </ recordId>
+    <text> riducendo al minimo la perdita di disadattamento preparati e curve semplici sono
+    givenName </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 985 </ recordId>
+    <testo> elettroni distribuzioni energetiche scariche stazionarie
+    estensione della precedente analisi al caso di un fermo
+    scaricare in un campo di carica spaziale dc l'effetto dello spazio
+    carica è di aumentare allargare la percentuale di elettroni ad alta energia
+    questo si traduce in un più alto tasso di ionizzazione, ma l'effetto non è
+    grande abbastanza per tenere conto di bassa manutenzione Osservato potenziali
+    positivo in colonne e scarichi in microonde in inerte
+    gas </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 986 </ recordId>
+    <text> ICAM e record architettoniche. relazione del 2 °
+    Conferenza della Confederazione Internazionale di architettura
+    museo (ICAM), Londra, 26-30 APRILE 81 Aumentare la consapevolezza di
+    di L'importanza di record architettoniche e preoccupazione circa
+    La loro acquisizione, il controllo, la conservazione e l'esposizione che
+    reso evidente nel corso della conferenza, alla quale hanno partecipato
+    I rappresentanti di 16 paesi. </ Text>
+  </ DOC>
+  <Doc>
+    <recordId> 987 </ recordId>
+    <text> distorsione push-pull amplificatori in classe di Fourier
+    coefficienti della forma d'onda di corrente per una singola valvola o
+    transistor di lavoro al variare delle condizioni di bias sono valutate
+    come funzione dell'angolo di flusso della corrente di uscita
+    sintesi risulta la distorsione armonica è deterministico estratto per un
+    bilanciato sistema push-pull ed è dimostrato fecero piccoli gradi di
+    squilibrio può essere responsabile per i grandi contributi al
+    Principalmente distorsione complessiva dall'introduzione della seconda
+    armoniche </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 989 </ recordId>
+    <text> micro grafica e di ingegneria gestione dei record 'un
+    sondaggio di attrezzature disponibili. Descrive indagine una vasta gamma
+    di micro apparecchiatura grafica pertinenti ingegneria
+    applicazioni di micro grafica. comprende documento di origine
+    telecamere, com, registratori, duplicatori, il sostegno alla produzione
+    attrezzature, lettori, lettori / stampanti, ingranditore / stampanti e
+    sistema di recupero. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 992 </ recordId>
+    <text> dal paradigma di praticare 'la logica della promozione. carta
+    presentato alla conferenza di marketing promozionale e biblioteca marchendising pubblico
+    e servizi di informazione, Aslib, Londra, 16 marzo 81 un
+    discussione teorica del razionale dietro la biblioteca
+    promozione, concentrandosi sulle biblioteche pubbliche. sottolineare la necessità di
+    per anticipazione intelligente in questo momento di sviluppo
+    tecnologie di comunicazione per mantenere un passo avanti del sociale
+    le tendenze e le aspettative come fecero risposte servizio appropriato
+    possono essere sviluppati e una dipendenza sociale o organizzativo
+    la libreria creato. Descrive come le biblioteche pubbliche potrebbero
+    I loro servizi si sviluppano per diventare istituzioni del contemporaneo
+    ha rilevanza sono la cura. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 994 </ recordId>
+    <text> un registratore ionosferica panoramica per lo studio dei
+    disturbi che viaggiano nella ionosfera è confermata
+    givenName di un registratore che copre l'intervallo di frequenza o in questo sec
+    si ottiene oscillatore eterodina Quale è continuamente
+    variabile da a con un oscillatore a impulsi e amplificando l'
+    Risultante fornire il segnale a impulsi per l'uscita del trasmettitore
+    stesso oscillatore variabile è utilizzata nel supereterodina
+    uno schema a blocchi del ricevitore registratore è givenName e tipici
+    i record sono mostrati entrambi i record singoli e continui su mm film
+    record sul mm film si muove a o può essere fatto in pochi minuti utilizzando cr
+    tubi con schermi di persistenza a lungo e breve
+    rispettivamente </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 995 </ recordId>
+    <testo> polifase oscillatori la stabilità di frequenza e la libertà
+    da armoniche di monofase è maggiore per simmetrica
+    oscillatori polifase </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 996 </ recordId>
+    <text> Semplificare fase di progettazione equalizzatore un metodo grafico
+    colmato con t e tutte le reti a traliccio appropriate </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 998 </ recordId>
+    <testo> newbery libri medaglia sono vivi e vegeti in via corte
+    scuola. Descrive le attività del club del libro Newbery a
+    Court Street scuola elementare, Lancaster, New York, che era
+    Incoraggiamo i lettori a creare a livello di grado 6 per scegliere un
+    varietà di buona letteratura, in particolare, i libri premio newbery.
+    discute il modo in cui il club ha stimolato l'amore di
+    la lettura e l'uso della biblioteca centro media come
+    risorsa. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1001 </ recordId>
+    <text> proprio come a casa e più economico rispetto al caffè. relazione su Karup
+    biblioteca, con a colloquio con il bibliotecario, Birte Ellermann.
+    la biblioteca si trova in una stazione ferroviaria trasformata. la vernice
+    di spazio e il mantenimento delle vecchie pareti interne Contribuire alla
+    l'atmosfera intima e accogliente. 75% della popolazione di utilizzo
+    essa, contro il 30% prima della conversione. stanza dei giovani
+    al 1 ° piano è un luogo di incontro per l'anno 13-16
+    olds. b. Ellermann, allora bibliotecario presso il vicino aviazione Karup
+    base, che ha chiesto di elaborare un piano per la struttura della libreria di
+    la zona. Decentrata suo piano di 3 librerie indipendenti
+    diè un danese premio Library Association. artigiani locali
+    hanno eseguito il proprio interior design. mostre sono realizzate
+    a livello locale, e libri vengono ricevuti da un libraio locale e
+    ready made in biblioteca in modo thatthey può raggiungere gli scaffali mentre
+    silenzioso attualità. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1002 </ recordId>
+    <testo> gli eventi di raggi cosmici insoliti di intensità luglio
+    variazioni registrate in sei stazioni sono discutono il raggio cosmico
+    aumentare ingrandire di luglio variazioni nell'intensità di ionosferica
+    percorsi di segnale a dispersione per la islanda e inghilterra massachusetts
+    Tracciati sono labrador diminuisce di intensità indicare che indica una grande
+    ioniging eccesso di particelle con la rigidità di cui sopra geomagnetico
+    tagliare a metà i punti di percorso </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1003 </ recordId>
+    cultura <text> in Hedemora una sfida. Descrive la cultura
+    la vita di un piccolo ente locale, Hedemora (Svezia). Osservazioni sul
+    il concetto di cultura come indicato nei programmi ufficiali,
+    dove i sogni sono avanzate, e mette in guardia contro l'espansione
+    in assurdità. divide il concetto in 'popolare e
+    cultura amatoriale, nutrita da società e circoli di studio e
+    esemplificato da mostre biennali, un'antologia di poesie,
+    dimostrazioni di artigianato ed eventi musicali durante l'estate, alti
+    cultura, come rappresentato dal teatro, arte e musica da camera
+    società e la biblioteca che mirano a preservare la cultura
+    cultura del patrimonio e per bambini. questo aspetto è trascurato come
+    la biblioteca dispone di una sezione per bambini e non poveri bambini
+    bibliotecario. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1006 </ recordId>
+    <text> energia banda struttura dei solidi da una perturbazione su
+    il reticolo vuoto </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1009 </ recordId>
+    tecniche di insegnamento <testo> per l'uso di librerie. scuola
+    i bambini hanno bisogno di imparare come utilizzare le librerie e ciò che è
+    disponibile in una libreria. indagini sono state condotte per scoprire
+    ciò che i bambini leggono la letteratura. Sulla base dei risultati di sintesi
+    sondaggi un corso per insegnare le tecniche di bambini per l'uso
+    di librerie che si sono sviluppate. il corso consisteva di compiti in classe '
+    Analizzando libri preferiti, scoprire la lista dei contenuti,
+    prefazione, titolo, editore, ecc e visite a biblioteche. durante
+    biblioteca visita i bambini hanno lavorato in gruppo con compiti givenName.
+    attraverso chiedendo bibliotecari e gli altri a scoprire theywere
+    Mezzi di trovare diversi libri. Così theywere Incoraggiati da
+    Scopri come una biblioteca è organizzata, quali le condizioni di prestito
+    sono e ciò che ha bisogno di un bibliotecario allenamento. Rispetto ai gruppi
+    I loro risultati in compiti in classe. </ Text>
+  </ DOC>
+  <Doc>
+    <recordId> 1010 </ recordId>
+    teoria <text> di scarica ad alta frequenza nei gas a bassa
+    Pressioni calcolo della funzione di distribuzione degli elettroni
+    Ottenuto per risolvere la distribuzione degli elettroni è di Boltzmann
+    equazione con un metodo di approssimazioni successive Considerando
+    urti elastici ed anelastici sia la temperatura elettronica
+    Corrispondente ad una distribuzione di velocità di Maxwell è derivato
+    e la forma generale di evoluzione della densità elettronica è
+    givenName </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1012 </ recordId>
+    Statistiche <testo> per le biblioteche pubbliche nel 1980. il numero di
+    mutuatari in biblioteche pubbliche finlandesi sono diminuiti dell'1% dal
+    all'anno precedente, ma il numero di libri prestati è salito del 2%. av
+    i prestiti sono aumentati del 16%. la spesa totale per abitante che
+    73 marchi finlandesi. ci sono stati 1.343 professionisti a tempo pieno, a
+    aumentare ingrandire del 8,8% rispetto all'anno precedente, e 950 a tempo parziale
+    professionisti disponibili nelle biblioteche pubbliche. il numero di abitanti in
+    cosa Finlandia 4.748.688, il numero di librerie principali 448, ramo
+    937 biblioteche (un calo del 3% rispetto all'anno precedente), e
+    il numero totale di libri quali 21,9 milioni, cinque libri di
+    abitante. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1013 </ recordId>
+    <text> a tre studio esplorativo di sistemi di accesso soggetti a
+    medicina 'LCSH, maglia, precis. (Tesi di Dottorato, Università di
+    Pittsburgh). esamina il lago così strutture di riferimento
+    (Strutture Syndetic) di 3 sistemi di accesso soggetti utilizzati in
+    medicina-precis, maglia, e LCSH. Le loro differenze ed esplora
+    sulle somiglianze nel tentativo di sviluppare il miglior possibleness
+    struttura con caratteristiche di tutti e 3 3 variabili erano
+    Valutata la copertura oggetto-zona, browseability, e
+    flessibilità. Le mappe sono state sviluppate per le intestazioni di soggetto in
+    Rispetto a ogni sistema e di mappe sviluppato da Riconosciuta
+    'Classic' libri di testo, questo procedimento facilmente le lacune individuate nel
+    copertura e incongruenze nel controllo terminologico. mappe di ricerca
+    potrebbe essere convertito per schermi di computer per migliorare la precisione
+    e richiamare in dati bibliografici ricerca di base. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1015 </ recordId>
+    <text> sul valore di misurazione delle informazioni. considera un
+    teorica modello matematico di valore informazioni
+    determinazione e propone un criterio pratico per
+    informazioni valore di stima. spettacoli hanno fatto ricerca sul metodo
+    Rappresenta una generalizzazione statistica della quantità di
+    informativo. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1016 </ recordId>
+    <text> la propagazione delle onde di elettroni spazio di carica in
+    guide d'onda con struttura e tubi periodica </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1017 </ recordId>
+    <testo> stadi amplificatori a transistor con guadagno e prescritta
+    sensibilità una procedura di progettazione è sviluppato per circuiti
+    Prescritto guadagno incontro e criteri di sensibilità in termini di
+    atteso operativa e variazioni dei componenti disponibili
+    Dati </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1018 </ recordId>
+    <text> qualche terminologia di base collegato con meccanica
+    Le loro lingue e processori i suggerimenti di questo documento
+    sono parte della terminologia utilizzata nel lavoro per l'università di
+    ufficio di ricerca e formazione informatica della Pennsylvania. gli
+    Congiuntamente lavoro è supportato dalla National Science Foundation
+    e l'ufficio Air Force di ricerca scientifica. Agosto 1961
+    Gorn, vedere ca610801 jb 16 marzo 1978 10:16 </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1019 </ recordId>
+    <testo> circuiti di feedback inseguitore catodico rc quando alcuni rc
+    circuiti sono associati ad un circuito inseguitore catodico una
+    guadagno di tensione può essere ottenuto su una banda di frequenze a
+    numero di prototipi e rc circuiti derivati ​​che possono essere utilizzati
+    in questo modo vengono Analizzate e le loro curve di risposta sono
+    deterministico minato le matrici delle reti derivate possono essere formati
+    Facilmente da quelli dei prototipi corrispondente l'effetto di
+    terminazione circuito risposta è discusso e l'uso di
+    circuiti di sintesi come elementi di retroazione negli amplificatori è considerato
+    in dettaglio gli esperimenti a conferma della teoria sono
+    Menzionato </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1021 </ recordId>
+    <text> l'indagine di plasmi ad alta frequenza per mezzo di un
+    dc test </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1022 </ recordId>
+    <text> non lineare sistema elettromeccanico per estensione pari ad
+    lienards metodo grafico astrae solo due o tre complanare
+    curve bisogno di risalire per uno studio topologico completo del
+    condizioni di stabilità per il sistema rappresentato dalle equazioni del
+    tipi i risultati di un'analisi dettagliata vengono applicati al
+    caso di un oscillatore filtrato di maggio e giugno di una molto più breve
+    versione della prima parte di questo saggio in cui givenName
+    paris </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1024 </ recordId>
+    <testo> classiche equazioni elettrodinamiche del moto con
+    reazione radiativa è la classica teoria-recensione precedente
+    Obiezioni ad esso sono dimostrato di essere invalido In gran parte </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1026 </ recordId>
+    radiazione <text> di rumore da arco di scarico radiazioni plasma
+    sono da catodo freddo scariche dc in aria è stato osservato-a
+    e le frequenze di oscillazione è pensato per essere generato
+    da emissione di elettroni periodica dal catodo Causato da un
+    piccola perturbazione del gradiente di potenziale dovuta a variazioni
+    del potenziale guaina ione </ text>
+  </ DOC>
+  <Doc>
+    1028 <recordId> </ recordId>
+    <text> un sondaggio di basi di dati leggibili a macchina. 42 della
+    macchina banche dati leggibili a disposizione del tecnico e
+    ricercatore nel campo delle scienze naturali e dell'ingegneria sono
+    Descritto e confrontato con le basi di dati e basi di dati
+    Servizi offerti dalla nasa. </ Text>
+  </ DOC>
+  <Doc>
+    <recordId> 1029 </ recordId>
+    test delle prestazioni <text> di un libro e il suo indice per
+    informazioni di sistema di recupero. prestazioni reperimento del libro
+    Gli indici possono essere misurati in termini di capacità di dirigere un
+    Selettivamente all'utente di materiale testo la cui identità, ma non
+    posizione è nota. il metodo richiede ricercatori umani alla base
+    Le loro strategie di ricerca su passaggi reali del libro
+    piuttosto che su query di test, naturali o artificiosa. esso
+    elude la necessità di un giudizio rilevanza, ma produce ancora
+    indicatori di performance hanno fatto circa ^ P per il
+    richiamo e precisione i rapporti di sistema di recupero dei documenti di grandi dimensioni
+    valutazione. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1030 </ recordId>
+    furto <text> e distruzione dei materiali librari 'il legale
+    opportunità di trattare con il furto delle collezioni e
+    distruzione del materiale librario. ogni anno un considerevole
+    quantità del materiale è scritto fuori dalle biblioteche pubbliche come
+    seguito di furto o danneggiamento da parte degli utenti della biblioteca. in Maastricht
+    biblioteca pubblica nei Paesi Bassi ha fatto uno studio del problema-
+    da gennaio-giugno 81 ha fatto quello che ha mostrato un po 'di materiale rimosso dal
+    libreria senza Registrazione della transazione, che ha preso in prestito un po 'di
+    ora: contenenti informazioni false o inesatte, mentre
+    altri sono stati presi in prestito e non restituiti o restituiti in un danneggiato
+    condizione. dove la prova di furto o distruzione della biblioteca
+    esiste la proprietà olandese libreria di codice civile consente alle autorità
+    di incaricare l'ispettore capo locale di giustizia di prendere legale
+    procedimento contro il colpevole. se il convenuto è
+    riconosciuto colpevole il giudice può ordinare la riparazione da apportare al
+    Biblioteca interessata. </ Text>
+  </ DOC>
+  <Doc>
+    <recordId> 1031 </ recordId>
+    <text> ricerca di espressioni regolari Algoritmo di un metodo per la localizzazione
+    stringhe di caratteri specifiche incorporate nel testo carattere è
+    Descritto e sui implementazione di questo metodo nella forma di un
+    compilatore è discusso. il compilatore accetta un normale
+    espressione come lingua di partenza e produce in IBM programma 7094
+    come linguaggio oggetto. il programma oggetto poi accetta il testo di
+    essere cercato come input e produce un segnale ogni volta a
+    stringa incorporato nel testo corrisponde al givenName regolare
+    espressione. esempi, problemi e soluzioni sono quindi
+    presentato. giugno 1968, Thompson k ricerca, partita, regolare
+    espressione 3.74 04:49 05:32 ca680606 jb 22 Febbraio 1978 04:18
+    pm </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1032 </ recordId>
+    <text> sulle modalità di frequenza di risonanza del rubino maser ottico
+    utilizzando uno spettrografo ad alta risoluzione in collegamento con un
+    Fabry Perot di alto potere di risoluzione indica la
+    dalla produzione ai maser ottico per l'offerta di linee a più alto
+    energie di ingresso più modi sono eccitati </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1036 </ recordId>
+    <text> strumento automatico ionogramma scaler è stato progettato per
+    Quali progetti ionogramma ad uno schermo sui parametri che
+    Contemporaneamente sono leggere vengono registrati su nastri perforati e
+    in forma dattiloscritta il nastro può essere usato per produrre perforato
+    carte se richiesto </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1037 </ recordId>
+    <text> mini, micro e terminali per le biblioteche e le informazioni
+    verbale della conferenza di servizi "organizzato congiuntamente da
+    l'istituto di scienziati di informazione e le informazioni
+    reperimento gruppo specializzato della British Computer Society,
+    tenutasi presso il centro di calcolo nazionale, manchester, 6-07 novembre
+    Nel 1980. atti di un convegno Organizzato per assistere
+    bibliotecari e scienziati informazioni in loro scelta di
+    Materiale informatico adeguato. per gli abstract dei singoli
+    lago giornali seguito Seguendo i serial-numeri '. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1039 </ recordId>
+    <testo> le condizioni necessarie e sufficienti per la fisica
+    relizability rango di una matrice di ammettenza impedenza campo nella
+    forma di un multipolare passivo è provato faceva ogni positivo
+    matrice reale di rango, dove m è un numero intero finito può essere
+    fisicamente realizzato nella forma di un multipolare passiva </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1040 </ recordId>
+    proposta <text> per un generatore di microonde ferromagnetico pulsata
+    precisione di rotazione è indotta ruotando il campo applicato da un
+    metastabile ad una direzione di magnetizzazione stabile </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1041 </ recordId>
+    <text> teleconferenza video 'moda del futuro congresso.
+    esamina la fattibilità di teleconferenza video alla luce del
+    eventi recenti e le tendenze attuali. la competizione e
+    complementari ruoli dei satelliti di comunicazione, fibre ottiche,
+    tecniche di compressione di banda, la televisione via cavo interattiva,
+    videoregistratori, e schermi di proiezione video di grandi dimensioni
+    sono discussi. gli aspetti umani di progettazione e implementazione di
+    un sistema di teleconferenza video sono quindi considerato. in aggiunta,
+    i potenziali benefici e gli impatti delle teleconferenze video su
+    la crisi energetica, l'inquinamento atmosferico, medico ed educativo
+    sistema, i sordi sono presentati. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1043 </ recordId>
+    <text> indagine sperimentale dei moti degli elettroni in
+    un gas in presenza di un campo magnetico l'obiettivo di questa
+    cosa indagine per verificare la teoria givenName da Huxley
+    e </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1046 | </ recordId>
+    <testo> la meccanica statistica e della dinamica
+    plasmi magneto-idrodinamiche di un sistema di equazioni è
+    In particolare istituito per indicare il movimento della corrente
+    tensore e la compressione di un gas ionizzato sintesi sono applicati
+    ai gas parzialmente e completamente ionizzati e utilizzato per ottenere credito
+    le equazioni generali della magneto-idrodinamica propagazione
+    modalità di diversi tipi di onda sono deterministici minato </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1047 </ recordId>
+    <text> ultra interruttori ad alta frequenza e filtri discussione pp
+    la progettazione di filtri e interruttori per la Londra Birmingham
+    collegamento relè televisione è descritto il tipo di interruttore ADOTTATO
+    usa linee aperte risonanti in shunt con la trasmissione principale
+    linee tipiche dettagli gli errori sono riferiti i filtri sono
+    il tipo di banda-stop e sono costituiti da linee aperte composte da un
+    serie di tratti di linea nominali deviato attraverso il principale
+    linea di trasmissione curve di progettazione sono date e tipico filtro
+    curve di attenuazione mostrati </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1049 </ recordId>
+    procedure <testo> per la gamma di aritmetica (algoritmo di 61) Luglio 1961
+    Gibb, un ca610706 jb 16 mar 1978 22:25 </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1050 </ recordId>
+    <text> potenziale di un campo elettrostatico e le traiettorie dei
+    particelle cariche descritta è una procedura per il calcolo del
+    potenziale elettrico nel percorso di una particella carica </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1051 </ recordId>
+    <text> incorporazione di un modello di difensore civico in i & r
+    programmi. esamina l'applicabilità di una funzione di difensore civico
+    Informazione convenzionale e rinvio all'interno di una struttura.
+    definisce ed esamina lo sviluppo storico del difensore civico
+    concetto, interfacce e questo concetto con le realtà del
+    esigenze di I & R funzioni, di finanziamento e di cliente. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1055 </ recordId>
+    <text> programma di formazione biblioteca pianificazione. guida alla
+    pianificazione del programma di formazione biblioteca. varie indagini
+    metodi per sviluppare le competenze di entrambi i professionisti e
+    il personale non professionale, che vanno dalla formazione on-the-job di
+    corsi esterni, e fornisce informazioni dettagliate sul
+    contenuti del corso. esamina la gamma di attrezzature disponibili per
+    assistere gli ufficiali di allenamento, e guarda i meriti e
+    magagne dei vari aiuti allenamento. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1057 </ recordId>
+    controllo <text> di tiratroni da piccole variazioni del segnale
+    fase della tensione di griglia di controllo Attiva la potenza erogata dal
+    al circuito esterno di un thyratron di variare continuamente
+    in un ampio intervallo i risultati ottenuti con piccolo controllo
+    Sebbene Tensioni hanno indicato segnale di indicazione può essere piccolo come
+    Quando ammessa la thyratron fa parte di un sistema di feedback
+    grande segnale deve essere utilizzato quando possibile </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1059 </ recordId>
+    <text> andato fiche-ing .. microfiche proiezione è stato suggerito
+    da alternativa ai proiettori di diapositive o di testa da un
+    successione di produttori di hardware. è una sensazione molto piacevole,
+    ma ci sono svantaggi, tra luce ambiente, la necessità di
+    Utilizzare la scheda in ordine, senza schivare di avanti e indietro,
+    e l'incapacità del presentatore per disegnare o scrivere sul
+    fiche. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1060 </ recordId>
+    economia <text> nella serie stabilizzatore considerazione del
+    efficienza dei circuiti serie stabilizzatore sotto quasi costante
+    caricare le condizioni di uno shunt resistivo all'elemento serie può
+    Migliorare l'efficienza </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1063 </ recordId>
+    <testo> considerazioni sul caso di uno standard specifico per
+    la descrizione di vecchi libri. esamina dell'IFLA progetto ISBD (a) di
+    novembre 78, Notando le differenze e le similitudini con ISBD (m).
+    Conclude ha una soluzione più soddisfacente sarebbe quello di produrre
+    appendice a ISBD (m) prevedere tutti i casi in cui una più grande
+    misura del dettaglio descrittivo cosa appropriata. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1066 </ recordId>
+    <text> l'attuale fase di biblioteca interdipartimentale
+    cooperazione. fasi di sviluppo di inter-biblioteca
+    cooperazione in URSS può essere fatta sul carico 30 anni.
+    cooperazione è di 3 tipi ', nel quadro di un
+    reparto; Coinvolgere le biblioteche di vari reparti, ma su
+    stesso sito o nello stesso campo economico, o senza alcun
+    confini di ricerca. l'elemento chiave è l'integrazione 'Planned
+    combinazione di risorse provenienti da biblioteche diverse per garantire
+    Il loro sfruttamento efficace. Questa è la base per la
+    formazione di una rete di biblioteca regionale. nel lungo termine, ricerca
+    sistemi integrati avranno un ruolo sempre più importante
+    giocare in biblioteconomia sovietico. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1067 </ recordId>
+    <text> indagine di fulmini globulari mediante modelli
+    esperimenti con scariche di gas sono descritte </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1068 | </ recordId>
+    <text> teoria non lineare di un'onda carica di spazio in movimento in
+    interagendo fasci di elettroni con l'applicazione di Radio solare
+    rumore </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1071 </ recordId>
+    <text> sulla questione dell'effetto continentale dello strato F
+    analisi dei dati indica f per aumentare ingrandire in giorno tempo di ionizzazione
+    durante i mesi estivi osservata da stazioni URSS nel
+    asia centrale confrontati con i dati ottenuti dalla dell'Europa occidentale
+    stazioni l'aumento sera in F appare molto meno pronunciata per
+    stazioni in Asia centrale, dove la massima solito una verifica a
+    locale effetto continentale mezzogiorno questo provoca difficoltà nella
+    interpolazione necessaria per la preparazione di muf
+    grafici </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1073 </ recordId>
+    <text> sul lectr cal pa all'età di alcuni tipi di s lenium
+    raddrizzatore </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1074 </ recordId>
+    sintesi <text> di amplificatori con triplice accoppiato tuned
+    circuiti </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1075 </ recordId>
+    oscillazioni sinusoidali <text> e relax sostenute da
+    reattanze non lineari sono date descrizioni delle varie
+    Combinazioni di componenti non lineari ad esempio un saturando soffocare con
+    componenti lineari ad esempio un condensatore quale resistenza negativa
+    caratteristiche può essere ottenuta o del tipo in cui
+    corrente è una singola funzione con valori di tensione o di tipo
+    In cui tensione è una singola funzione con valori di corrente
+    applicazioni pratiche sono discussi </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1076 </ recordId>
+    rapporto di ricerca <text> su una visione d'insieme di una proposta di monitoraggio
+    impianto per la grande scala, in linea basata su rete OCLC
+    Sistema. Affronta l'importanza critica di misurazione e
+    Valutare i sistemi di informazione funzionanti all'interno del computer
+    ambienti di rete. il focus è sui benefici significativi
+    associati all'uso di monitoraggio automatizzato come primario
+    informazioni meccanismo di misura del sistema nei risultati di calcolo
+    architetture. la grande scala, basati sulla rete, state-of-the-art
+    OCLC sistema on-line è utilizzato come sistema di informazione
+    ambiente a sostegno della ricerca e dello sviluppo tesi
+    attività. Non segnalare disponibile da NTIS. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1078 </ recordId>
+    <testo> lavoratori paraprofessional in quattro campi 'un confronto
+    studio. confronta l'educazione e la formazione dei australiano
+    con i tecnici della biblioteca hanno fatto di paraprofessionals nel sociale
+    lavoro, la medicina, e l'architettura. discute l'emergere di
+    il concetto di paraprofessionalism; ruoli professionali e
+    associazioni paraprofessional, la politica del governo e di finanziamento;
+    ruolo ei compiti del paraprofessionals; esigenze di manodopera, e
+    disponibilità e il livello di corsi di formazione. Conclude ha fatto il
+    proporzione di paraprofessionals in tutti i quattro settori è probabile
+    aumentare ingrandire; redistribuzione dei compiti tra i professionisti e
+    paraprofessionals si faranno sentire più gravemente nel
+    biblioteconomia, e l'impatto della tecnologia sarà significativo in
+    tutti e quattro i campi. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1079 </ recordId>
+    <testo> rivelatori a diodo di fase il caso generale di una disparità
+    Tensioni applicate fase push-pull semplice ed equilibrata
+    rilevatori è studiato curve per la progettazione e la valutazione di
+    precisione, sono riportati l'uso di un segnale maggiore della
+    tensione di riferimento Appare auspicabile in qualche
+    applicazioni </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1081 </ recordId>
+    <text> irregolarità e regolarità dello strato sporadico da
+    registrazione di osservazioni nelle stazioni di molte informazioni è ottenuta
+    circa la più alta incidenza di frequenza verticale-riflessione, ma
+    meno circa i risultati di frequenza ammantando deve essere interpretato
+    in termini di tempo di statistiche e funzioni di correlazione distanza
+    sono stabiliti regolarità geografiche diurne e stagionali
+    Discussi sono un netto massimo in una verifica all'equatore magnetico
+    nessuna influenza ben definito del ciclo solare è stato trovato e
+    solo molto deboli osservazioni degli effetti della marea lunare
+    variazione del coefficiente di riflessione con frequenza havebeen
+    fatto a parte le valutazioni di routine in latitudini temperate
+    in circa un terzo dei casi non vi è alcuna riflessione parziale in
+    altri casi variazioni locali di concentrazione di elettroni sono esaminati
+    ha il valore di picco Tasso medio di valore è compreso tra e più alto
+    rapporti sono rari alle basse latitudini la variazione può essere più
+    importanti Ionogrammi di diverse stazioni sono stati classificati
+    per trasparenza angolo dispersione di incidenza e strato
+    Spesso lo sviluppo eco diffuse esistono vicino al magnetica
+    equatore nella maggior parte dei casi di ionizzazione è nato come un sottile strato di
+    costanti altitudine movimenti transitori ribasso sono responsabili
+    durante il giorno per un cirro strato cumulo è un buon modello per
+    processi di ionizzazione di ionizzazione possibleness sono discussi </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1082 </ recordId>
+    <testo> oscillazioni a bassa frequenza di plasma in un campo magnetico
+    analisi matematica delle piccole oscillazioni di un plasma
+    Composto da elettroni e ioni singolarmente cariche qualche limitazione
+    casi sono discussi per i quali una soluzione della dispersione
+    equazione può essere trovato </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1083 </ recordId>
+    <testo> amplificatori a transistor per la radiodiffusione sonora
+    applicazione di ge transistori pnp a vari tipi
+    di amplificatore ad alta qualità è descritta nella valutazione è fatta di
+    l'idoneità di transistor per questo campo </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1086 </ recordId>
+    <text> preparazione dei computer di una concordanza Febbraio poesia,
+    1960 pittore, j. un ca600214 jb mar 22, 1978 02:05 </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1088 </ recordId>
+    circuiti di commutazione <testo> impulsi utilizzando progettazione nuclei magnetici
+    La teoria è presentato per usi nonstorage di nuclei con
+    cicli di isteresi rettangolari in computer digitale al fine di facilitarne
+    determinazione del senso di processi em un metodo di
+    rappresentazione causa di Mayer che viene utilizzato nella magnetico
+    Sostituito da elementi del circuito sono elementi di un sistema di specchi
+    dispositivi per l'eliminazione della tensione di uscita sul nucleo spola
+    Frequenze discussi sono operativi sono raggiungibili
+    riferimenti </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1090 </ recordId>
+    <text> confronto fiche e film 'una prova di velocità. velocità di
+    ricerca microfilm e microfiche cataloghi erano com Misurata
+    E rispetto. Ricerca motorizzata di microfilm catalogato cosa
+    risultata essere significativamente più veloce rispetto alla ricerca di microfiche
+    gli utenti meno esperti. il tempo di film più lento è stato più veloce rispetto alla maggior parte
+    fiche volte. risultati suggeriscono, tuttavia, ha fatto gli utenti frequenti
+    potrebbero migliorare i loro tempi alla ricerca e può quindi essere praticabile per
+    cercare fiche più veloce di film. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1091 </ recordId>
+    <text> SP / k: un sistema per l'insegnamento della programmazione di computer SP / K è
+    un sottoinsieme compatibile del linguaggio PL / ho fatto è stato progettato
+    per la programmazione didattica. le caratteristiche del linguaggio SP / k
+    sono stati scelti per incoraggiare problema solving strutturato da
+    computer, per rendere la lingua facile da imparare e da usare, per
+    eliminare costrutti confuse e ridondanti, e per rendere il
+    lingua facile da compilare. il linguaggio risultante è adatto
+    per i concetti di programmazione in Introducendo utilizzati in varie
+    applicazioni, incluso il trattamento dei dati aziendali, scientifici
+    calcoli e di calcolo non numerico. SP / k è in realtà un
+    sequenza di sottoinsiemi linguaggio chiamato SP / 1, PS / 2, ... SP / 8 ogni
+    sottoinsieme in troduces nuovi costrutti del linguaggio di programmazione, mentre
+    mantenendo tutti i costrutti di sottoinsiemi precedente. ogni sottoinsieme
+    è descritto precisamente definito e può essere imparato o senza Implementato
+    Seguendo Seguendo i sottoinsiemi. Maggio 1977 portano, r. c. Wortman, d b.
+    Barnard, d t. Cordy, j. r. educazione programmatore, università,
+    community college, scuole superiori, PL / I, SP / c, mini computer,
+    progettazione del linguaggio di programmazione, programmazione didattica, in
+    INTRODUTTIVA informatica 1.5 4.2 04:12 04:13 ca770501 jb 29 dicembre
+    1977 04:40 | </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1092 </ recordId>
+    <text> studio rf della radiazione solare su verso il tramonto e l'alba
+    rapporto di misure effettuate a Parigi con uno specchio parabolico
+    m di diametro grafici sono rappresentati mostra la variazione di
+    con angolo di rifrazione solare e intensità quasi periodico
+    Variazioni osservate Quando l'angolo di elevazione è inferiore
+    attenuazione dovuta all'assorbimento da ossigeno si osserva-at zn
+    angoli minori di circa </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1095 </ recordId>
+    <text> nuova derivazione della ripartizione equazione vuoto Relative
+    tensione ed elettrodo ripartizione separazione </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1096 </ recordId>
+    <text> dispersione di un'onda di superficie da una discontinuità nella
+    Reattanza di superficie su un cuneo ad angolo diritto all'esame del
+    em campo prodotto Quando un'onda di superficie viaggia lungo il fronte
+    volto di un cuneo angolare destra e c viene dispersa dalla
+    Suggerimento </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1098 </ recordId>
+    <text> transitoria metodo di calcolo per la risposta approssimativa
+    fase reti minime di spostare il ben noto metodo di lineare
+    segmento per il calcolo della posizione dei poli zero della
+    Funzione di trasferimento corrispondente ad una attenuazione givenName
+    caratteristica è estesa, consentendo gli zeri ed i poli
+    di assumere complesso invece di solo valori reali </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1102 </ recordId>
+    <text> un metodo rapido per la progettazione di un filtro Butterworth
+    procedura di progettazione e lavorato esempio sono date </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1103 </ recordId>
+    <text> l'effetto dei componenti reattivi nella misurazione
+    messa a terra circuiti discussione dei risultati delle misurazioni dei
+    resistenza di terra utilizzando ac nella gamma e </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1104 </ recordId>
+    coinvolgimento <text> video per biblioteche 'una consapevolezza di corrente
+    pacchetto per i professionisti. confronta e articoli aggiornamenti hanno fatto
+    Apparso in 2american libraries1 tra aprile 79 e 80 ottobre
+    articoli spaziano da argomenti di base nel video: come hardware,
+    software e la terminologia, le informazioni sul loro uso effettivo in video
+    scuole, biblioteche pubbliche, università e privati
+    organizzativo. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1106 </ recordId>
+    <text> proposto standard di diagramma di flusso simboli ottobre 1959
+    ca591003 jb Mar 22, 1978 04:16 </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1110 </ recordId>
+    algoritmo minit <text> di programmazione lineare (algoritmo R333)
+    maggio 1973 Holmgren, b. Obradovic, d Kolm, un ca730510 jb
+    23 gennaio 1978 16:38 </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1111 </ recordId>
+    <text> sull'effetto SWF fenomeno Dellinger e nel mondo
+    Assumendo un'ampia distribuzione Chapman distribuzione di ionizzazione
+    d per la regione si è mostrata fatto è una funzione solare zenit
+    latitudine angolo e magnetico mentre l'aumento di ingrandire durante una
+    improvviso disturbo ionosferico dipende angolo zenitale solare
+    Analizzato sono risultati solo osservazionali e l'effettiva
+    Quale fattore di radiazione solare è aumentata nel corso di un SID è
+    stimato </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1117 </ recordId>
+    <text> prestito interbibliotecario in tutto il mondo 'una recensione di recente
+    xii carte '. riassume 11 studi di efficienza prestiti internazionali
+    a livello regionale o di singole biblioteche in Canada,
+    Danimarca, Germania Est, Germania Ovest, l'Ungheria, e la
+    Stati Uniti d'America. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1118 </ recordId>
+    struttura organizzativa <text> e innovazione nel accademico
+    biblioteche. Condotto uno studio in cui 4 North American università
+    biblioteche per valutare garanzia Jerald Hage e la teoria di Michael Aiken fatto
+    il rapporto tra la complessità strutturale e variabile
+    tasso di innovazione è positivo e si è negativo per
+    centralizzazione, ne formalizzazione, e stratificazione. risultati
+    sostenere la teoria e la metodologia, con un po '
+    Le modifiche, che mostrate di essere trasferibili. </ Text>
+  </ DOC>
+  <Doc>
+    <recordId> 1122 </ recordId>
+    <text> l'ordine di complessità delle reti elettriche di
+    espressione per l'ordine cioè il numero di frequenze naturali
+    è derivato per una rete di set completi RLC dinamicamente
+    variabili di rete indipendenti sono ottenuti grazie alla rete
+    equazioni </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1124 </ recordId>
+    <text> il primo in Russia. Cronache 10 ° secolo raccontano come
+    principi russi apprezzato molti libro-raccolta e fondarono
+    scuole. di cronaca 11 ° secolo Descrive il primo russo
+    creazione della biblioteca, la biblioteca Yaroslav, contenente circa 500
+    volumi. i nostri antenati leggere libri di pietà, performance dal vivo della
+    santi, opere enciclopediche, e la geografia. gli
+    Monastero Kievo-pecherskii a Kiev aveva una grande collezione di
+    libri russi e greci. Una collezione di letteratura a Ryazan
+    la chiesa Nikola nel Zaraisk evidenzia l'ampia diffusione
+    della cultura. metà di tutti i sopravvissuti 11 ° al 14 ° secolo russo
+    i libri vengono da Novgorod. sofiiskoi nella biblioteca della cattedrale
+    Attratto Novgorod monaci dai monasteri lontani a Russo
+    trascrivere i libri. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1126 </ recordId>
+    <text> determinazione computer digitale di attività della sorgente alfa a
+    Descritta è la tecnica deterministica per l'attività mineraria e
+    omogeneità di origine alfa. Si crede ha fatto il
+    tecnica, utilizzando un computer digitale, ha molti usi e
+    applicazioni nel campo della fisica nucleare. la tecnica
+    Comporta manipolazione calcolatore dell'immagine digitale del
+    fonte nucleare. dettagli sperimentali sono dati. Gennaio 1964
+    Robbins, taylor d, w. e ca640111 jb 10 mar 1978 05:14
+    la </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1133 </ recordId>
+    analizzatore differenziale <text> semplificata analogico computer è
+    Descritto sulla base di dieci amplificatori operazionali identici che
+    may b utilizzato per l'integrazione moltiplicazione ecc come richiesto dalla
+    Particolare il problema-la disposizione è molto flessibile e può
+    essere usato con circuiti esterni per la generazione di speciale
+    funzioni necessarie a sintetizzare ingresso Particolare
+    analoghi </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1134 </ recordId>
+    <text> l'ufficio elettroniche. Descrive le funzioni e
+    attrezzature della previsione 'ufficio elettroniche', considerando in
+    termini fondamentali le funzioni di un 'ufficio' e il modo in
+    Quale tecnologia elettronica maturo potrebbe essere
+    dispiegati per aiutare le persone svolgono funzioni di indagine. Conclude
+    hanno fatto anche dopo i problemi tecnologici sono stati risolti,
+    la tempistica è probabilmente determinata da un commerciale
+    processo di bastone / slittamento ha fatto per molto tempo la nuova tecnologia
+    avrà poco impatto su modi normali di lavoro d'ufficio, ma
+    Quando si verificano cambiamenti iniziano theywill procedere oltre e
+    più velocemente di quanto vorremmo. </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1135 </ recordId>
+    oscillazioni <testo> e diffusione nei plasmi debolmente ionizzati l'
+    diffusione di particelle di plasma debolmente ionizzati si osserva in un
+    direzione perpendicolare al campo magnetico </ text>
+  </ DOC>
+  <Doc>
+    <recordId> 1137 </ recordId>
+    <text> push-pull amplificatore magnetico in corrente continua
+    uscita </ ​​text>
+  </ DOC>
   
