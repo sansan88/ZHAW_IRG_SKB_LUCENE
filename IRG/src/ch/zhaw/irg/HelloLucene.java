@@ -30,7 +30,6 @@ import java.io.IOException;
 public class HelloLucene {
 	private org.apache.lucene.document.Document d = null;
 	private String returnString = null;
-	private int documentId = 0;
 	private String filename = null;
 	private String[] collection = { "collection/irg_collection_DE.xml",
 			"collection/irg_collection_FI.xml",
@@ -40,8 +39,8 @@ public class HelloLucene {
 			"collection/irg_collection_EN.xml" };
 
 	// public static void main(String[] args, FileHandler collection)
-	public HelloLucene(String[] args, String language) throws IOException,
-			ParseException {
+	public HelloLucene(String[] args, String language, int queryId)
+			throws IOException, ParseException {
 
 		// 00. Get XML File from Language Key
 		switch (language) {
@@ -69,10 +68,10 @@ public class HelloLucene {
 		}
 
 		// Create absolut path:
-		//System.out.println("Realtive Path: " + filename);
+		// System.out.println("Realtive Path: " + filename);
 		File absolut = new File(filename);
 		filename = absolut.getAbsolutePath();
-		//System.out.println("Absolut path: " + filename);
+		// System.out.println("Absolut path: " + filename);
 
 		// 0. Specify the analyzer for tokenizing text.
 		// The same analyzer should be used for indexing and searching
@@ -107,8 +106,8 @@ public class HelloLucene {
 
 			// System.out.println(" Create Index Writer ");
 			IndexWriter w = new IndexWriter(index, config);
-			System.out.println("Read File: " + filename);
-			System.out.println("Create Collection in Language: "+ language);
+			// System.out.println("Read File: " + filename);
+			// System.out.println("Create Collection in Language: " + language);
 			for (int temp = 0; temp < nList.getLength(); temp++) {
 
 				Node nNode = nList.item(temp);
@@ -124,8 +123,9 @@ public class HelloLucene {
 							.getTextContent(),
 							eElement.getElementsByTagName("recordId").item(0)
 									.getTextContent());
-//					System.out.println("RecordId: " + eElement.getElementsByTagName("recordId").item(0)
-//									.getTextContent());
+					// System.out.println("RecordId: " +
+					// eElement.getElementsByTagName("recordId").item(0)
+					// .getTextContent());
 				}
 			}
 			// close doc
@@ -157,14 +157,24 @@ public class HelloLucene {
 		ScoreDoc[] hits = collector.topDocs().scoreDocs;
 
 		// 4. display results
-		System.out.println("Found " + hits.length + " hits.");
-		for (int i = 0; i < hits.length; ++i) {
-			int docId = hits[i].doc;
-			Document d = searcher.doc(docId);
-			
-			System.out.println((i + 1) + ". " + d.get("recordId")); //+ "\t"+ d.get("text"));
+		// System.out.println("Found " + hits.length + " hits.");
+
+		System.out
+				.println("-----------------------------------------------------------------");
+
+		if (hits.length == 0) {
+			System.out.println("No documents found for query: " + queryId);
 		}
 
+		for (int i = 0; i < hits.length; ++i) {
+			int docId = hits[i].doc;
+			d = searcher.doc(docId);
+
+			// Return String als Konsolen output
+			System.out.println(queryId + "\t" + "Q0" + "\t" + d.get("recordId")
+					+ "\t" + i + "\t" + hits[i].score + "\t"
+					+ "SCALCSAN&MAMUTNAD");
+		}
 		// reader can only be closed when there
 		// is no need to access the documents any more.
 		reader.close();
@@ -180,16 +190,7 @@ public class HelloLucene {
 		w.addDocument(doc);
 	}
 
-	public String getResult() {
+	public String getReturnString() {
 		return this.returnString;
 	}
-
-	public int getDocumentId() {
-		return this.documentId;
-	}
-
-	public Document getDocument() {
-		return this.d;
-	}
-
 }

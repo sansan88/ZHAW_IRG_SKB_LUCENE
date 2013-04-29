@@ -24,6 +24,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.sql.Timestamp;
 import java.util.StringTokenizer;
 
 public class MyFrame extends Frame implements WindowListener, ActionListener {
@@ -43,12 +44,9 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 	private Choice collectionLeft;
 	private Choice collectionRight;
 
-	// XML und Andere Attribute
-	private HelloLucene luceneLeft = null;
 	private StringTokenizer st = null;
 	private String[] queryDoc = null;
 	private String filename = null;
-	private File file; // parsed XML File
 	private String[] queryArray = { "query/irg_queries_DE.xml",
 			"query/irg_queries_FI.xml", "query/irg_queries_FR.xml",
 			"query/irg_queries_IT.xml", "query/irg_queries_RU.xml",
@@ -183,8 +181,8 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 			System.out.println("MAGIC HAPPENS HERE!! GOGOGO Lucene");
 
 			// Process Left Side
-			System.out.println("File Selected Left: "
-					+ collectionLeft.getSelectedItem());
+			// System.out.println("File Selected Left: "
+			// + collectionLeft.getSelectedItem());
 
 			// Get XML File from Language Key
 			switch (collectionLeft.getSelectedItem()) {
@@ -212,16 +210,16 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 			}
 
 			// Create absolut path:
-			System.out.println("Realtive Path: " + filename);
+			// System.out.println("Realtive Path: " + filename);
 			File absolut = new File(filename);
 			filename = absolut.getAbsolutePath();
-			System.out.println("Absolut path: " + filename);
+			// System.out.println("Absolut path: " + filename);
 
 			// Parse XML File
 			try {
 
 				File file = new File(filename);
-				System.out.println("Read File: \n" + file);
+				// System.out.println("Read File: \n" + file);
 
 				DocumentBuilderFactory dbFactory = DocumentBuilderFactory
 						.newInstance();
@@ -231,43 +229,50 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 
 				doc.getDocumentElement().normalize();
 
-//				System.out.println("Root element :"
-//						+ doc.getDocumentElement().getNodeName());
+				// System.out.println("Root element :"
+				// + doc.getDocumentElement().getNodeName());
 
 				NodeList nList = doc.getElementsByTagName("DOC");
 
 				for (int temp = 0; temp < nList.getLength(); temp++) {
 					Node nNode = nList.item(temp);
 
-//					System.out.println("\nCurrent Element :"
-//							+ nNode.getNodeName());
+					// System.out.println("\nCurrent Element :"
+					// + nNode.getNodeName());
 					if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 						Element eElement = (Element) nNode;
 
 						// Create Lucene Instance with String
-						System.out.println("--------------------------------------------------");
-						System.out
-								.println("Create Lucene Instance \nRecordId: " + eElement
-										.getElementsByTagName("recordId").item(0)
-										.getTextContent() + "\n" + "Query String: \n" + eElement
-								.getElementsByTagName("text").item(0)
-								.getTextContent());
+						// System.out
+						// .println("--------------------------------------------------------------------------");
+						// System.out
+						// .println("Create Lucene Instance \nRecordId: "
+						// + eElement
+						// .getElementsByTagName(
+						// "recordId").item(0)
+						// .getTextContent()
+						// + "\n"
+						// + "Query String: \n"
+						// + eElement.getElementsByTagName("text")
+						// .item(0).getTextContent());
 
 						// create tokenizer
 						st = new StringTokenizer(eElement
 								.getElementsByTagName("text").item(0)
 								.getTextContent());
 
-						System.out.println("Create queryDoc Array[].");
+						// System.out.println("Create queryDoc Array[].");
 						queryDoc = new String[st.countTokens()];
 						for (int i = 0; st.hasMoreTokens(); i++) {
 							queryDoc[i] = st.nextToken();
 						}
-
-						System.out.println("Call lucene with queryDoc Array and language "+ collectionLeft.getSelectedItem());
-						luceneLeft = null;
-						luceneLeft = new HelloLucene(queryDoc,
-								collectionLeft.getSelectedItem());
+						// erstelle Lucene mit Query[], ausgewählter Sprache und
+						// der ID von der Query
+						new HelloLucene(queryDoc,
+								collectionLeft.getSelectedItem(),
+								Integer.valueOf(eElement
+										.getElementsByTagName("recordId")
+										.item(0).getTextContent()));
 
 					}// ifend
 				}// for
