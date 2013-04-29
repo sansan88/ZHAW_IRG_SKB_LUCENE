@@ -2,6 +2,7 @@ package ch.zhaw.irg;
 
 import java.awt.BorderLayout;
 import java.awt.Button;
+import java.awt.Checkbox;
 import java.awt.Choice;
 import java.awt.Color;
 import java.awt.Frame;
@@ -19,6 +20,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
+
+import ch.zhaw.irg.HelloLucene;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -41,6 +44,9 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 	private TextArea txtAreaLeft;
 	private TextArea txtAreaRight;
 
+	private Checkbox chkBoxLeft;
+	private Checkbox chkBoxRight;
+	
 	private Choice collectionLeft;
 	private Choice collectionRight;
 
@@ -54,7 +60,7 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 
 	public static void main(String args[]) {
 		MyFrame myFrame = new MyFrame();
-		myFrame.setSize(600, 600);
+		myFrame.setSize(800, 800);
 		myFrame.setVisible(true);
 		myFrame.setLayout(new BorderLayout());
 	}
@@ -80,7 +86,7 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 
 		// CENTER
 		panelCenter = new Panel();
-		panelCenter.setLayout(new GridLayout(3, 2));
+		panelCenter.setLayout(new GridLayout(4, 2));
 
 		// Dropdown Left
 		collectionLeft = new Choice();
@@ -102,9 +108,16 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 		collectionRight.add("IT");
 		panelCenter.add(collectionRight);
 
+		//checkbox Stopwords
+		chkBoxLeft = new Checkbox("Enable Stopwords", false);
+		panelCenter.add(chkBoxLeft);
+		chkBoxRight = new Checkbox("Enable Stopwords", false);
+		panelCenter.add(chkBoxRight);
+		
+		//export buttons
 		btnExportLeft = new Button("Export to File, Left");
-
 		panelCenter.add(btnExportLeft);
+		
 		btnExportRight = new Button("Export to File, Right");
 		panelCenter.add(btnExportRight);
 
@@ -280,7 +293,6 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 			} catch (Exception exception) {
 				// TODO: handle exception
 			}
-
 		}
 	}
 
