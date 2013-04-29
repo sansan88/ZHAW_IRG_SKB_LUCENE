@@ -1,7 +1,5 @@
 package ch.zhaw.irg;
 
-//http://www.lucenetutorial.com/lucene-in-5-minutes.html
-
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
@@ -20,18 +18,17 @@ import org.apache.lucene.search.TopScoreDocCollector;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.util.Version;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
 
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.DocumentBuilder;
+import org.w3c.dom.NodeList;
+import org.w3c.dom.Node;
+import org.w3c.dom.Element;
 import java.io.File;
 import java.io.IOException;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
 public class HelloLucene {
-	private Document d = null;
+	private org.apache.lucene.document.Document d = null;
 	private String returnString = null;
 	private int documentId = 0;
 	private String filename = null;
@@ -45,7 +42,7 @@ public class HelloLucene {
 	// public static void main(String[] args, FileHandler collection)
 	public HelloLucene(String[] args, String language) throws IOException,
 			ParseException {
-		
+
 		// 00. Get XML File from Language Key
 		switch (language) {
 		case "DE":
@@ -70,7 +67,7 @@ public class HelloLucene {
 			this.filename = collection[5];
 			break;
 		}
-		
+
 		// 0. Specify the analyzer for tokenizing text.
 		// The same analyzer should be used for indexing and searching
 		StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_40);
@@ -84,6 +81,7 @@ public class HelloLucene {
 		// READ Collection
 		try {
 
+			// http://www.lucenetutorial.com/lucene-in-5-minutes.html
 			File fXmlFile = new File(filename);
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory
 					.newInstance();
@@ -96,19 +94,20 @@ public class HelloLucene {
 			doc.getDocumentElement().normalize();
 
 			// ROOT --> TREC
-			//System.out.println("Root element :"
-				//	+ doc.getDocumentElement().getNodeName());
+			// System.out.println("Root element :"
+			// + doc.getDocumentElement().getNodeName());
 
 			NodeList nList = doc.getElementsByTagName("DOC");
 
-			//System.out.println(" Create Index Writer ");
+			// System.out.println(" Create Index Writer ");
 			IndexWriter w = new IndexWriter(index, config);
 
 			for (int temp = 0; temp < nList.getLength(); temp++) {
 
 				Node nNode = nList.item(temp);
 
-				//System.out.println("\nCurrent Element :" + nNode.getNodeName());
+				// System.out.println("\nCurrent Element :" +
+				// nNode.getNodeName());
 
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 
@@ -121,7 +120,7 @@ public class HelloLucene {
 					// .getTextContent());
 					// System.out.println("text : "
 					// + eElement.getElementsByTagName("text").item(0)
-					//				.getTextContent());
+					// .getTextContent());
 
 					// add to collection
 					addDoc(w, eElement.getElementsByTagName("text").item(0)
@@ -159,14 +158,15 @@ public class HelloLucene {
 		ScoreDoc[] hits = collector.topDocs().scoreDocs;
 
 		// 4. display results
-		//System.out.println("Found " + hits.length + " hits.");
+		// System.out.println("Found " + hits.length + " hits.");
 		for (int i = 0; i < hits.length; ++i) {
 			int docId = hits[i].doc;
-			
+
 			this.d = searcher.doc(docId);
 			this.returnString = String.valueOf(docId);
 			this.documentId = docId;
-			//System.out.println((i + 1) + ". " + d.get("isbn") + "\t" + d.get("title"));
+			// System.out.println((i + 1) + ". " + d.get("isbn") + "\t" +
+			// d.get("title"));
 
 		}
 
@@ -184,14 +184,17 @@ public class HelloLucene {
 		doc.add(new StringField("recordId", recordId, Field.Store.YES));
 		w.addDocument(doc);
 	}
-	public String getResult(){
+
+	public String getResult() {
 		return this.returnString;
 	}
-	public int getDocumentId(){
+
+	public int getDocumentId() {
 		return this.documentId;
 	}
-	public Document getDocument(){
+
+	public Document getDocument() {
 		return this.d;
 	}
-	
+
 }

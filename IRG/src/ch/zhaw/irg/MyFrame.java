@@ -13,21 +13,18 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
-import org.apache.lucene.index.IndexWriter;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.DocumentBuilder;
+import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
+import org.w3c.dom.Node;
+import org.w3c.dom.Element;
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.StringTokenizer;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 
 public class MyFrame extends Frame implements WindowListener, ActionListener {
 	private Color bg;
@@ -43,7 +40,6 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 	private TextArea txtAreaLeft;
 	private TextArea txtAreaRight;
 
-	private Choice queryList;
 	private Choice collectionLeft;
 	private Choice collectionRight;
 
@@ -197,18 +193,19 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 
 			// Parse XML File
 			try {
-				file = new File(filename);
 
+				File file = new File(filename);
 				System.out.println("Read File: \n" + file);
 
 				DocumentBuilderFactory dbFactory = DocumentBuilderFactory
 						.newInstance();
 				DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-				org.w3c.dom.Document doc = dBuilder.parse(file);
-
+				
+				Document doc = dBuilder.parse(file);
+				System.out.println("test");
+				
 				doc.getDocumentElement().normalize();
 
-				// ROOT --> TREC
 				System.out.println("Root element :"
 						+ doc.getDocumentElement().getNodeName());
 
@@ -244,11 +241,12 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 						luceneLeft = new HelloLucene(queryDoc,
 								collectionLeft.getSelectedItem());
 
-						
-						System.out.println("get Results from document id: "+ luceneLeft.getDocumentId());
+						System.out.println("get Results from document id: "
+								+ luceneLeft.getDocumentId());
 						System.out.println(luceneLeft.getResult());
-						System.out.println(luceneLeft.getDocument().get("recordId") + luceneLeft.getDocument().get("text"));
-						
+						System.out.println(luceneLeft.getDocument().get(
+								"recordId")
+								+ luceneLeft.getDocument().get("text"));
 
 					}// ifend
 				}// for
