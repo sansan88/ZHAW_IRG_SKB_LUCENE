@@ -49,10 +49,10 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 	private String[] queryDoc = null;
 	private String filename = null;
 	private File file; // parsed XML File
-	private String[] queryArray = { "../query/irg_queries_DE.xml",
-			"../query/irg_queries_FI.xml", "../query/irg_queries_FR.xml",
-			"../query/irg_queries_IT.xml", "../query/irg_queries_RU.xml",
-			"../query/irg_queries_EN.xml" };
+	private String[] queryArray = { "query/irg_queries_DE.xml",
+			"query/irg_queries_FI.xml", "query/irg_queries_FR.xml",
+			"query/irg_queries_IT.xml", "query/irg_queries_RU.xml",
+			"query/irg_queries_EN.xml" };
 
 	public static void main(String args[]) {
 		MyFrame myFrame = new MyFrame();
@@ -133,7 +133,10 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 			// Hier einen FileWriter schreiben, der den Inhalt des TextArea in
 			// ein Result.trec File Format schreibt
 			try {
-				File file = new File("../results/resultLeft.txt");
+				File temp = new File("results/resultLeft.txt");
+				String absolutPath = new String(temp.getAbsolutePath());
+				File file = new File(absolutPath);
+
 				// if file doesnt exists, then create it
 				if (!file.exists()) {
 					file.createNewFile();
@@ -155,7 +158,24 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 			// !!!!!TODO!!!!!!!
 			// Hier einen FileWriter schreiben, der den Inhalt des TextArea in
 			// ein Result.trec File Format schreibt
+			try {
+				File temp = new File("results/resultRight.txt");
+				String absolutPath = new String(temp.getAbsolutePath());
+				File file = new File(absolutPath);
 
+				// if file doesnt exists, then create it
+				if (!file.exists()) {
+					file.createNewFile();
+				}
+				FileWriter fw = new FileWriter(file.getAbsoluteFile());
+				BufferedWriter bw = new BufferedWriter(fw);
+				bw.write(txtAreaRight.getText());
+				bw.close();
+				System.out.println("Done");
+
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			}
 		}
 
 		// MAGIC HAPPENS HERE!!
@@ -191,6 +211,12 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 				break;
 			}
 
+			// Create absolut path:
+			System.out.println("Realtive Path: " + filename);
+			File absolut = new File(filename);
+			filename = absolut.getAbsolutePath();
+			System.out.println("Absolut path: " + filename);
+
 			// Parse XML File
 			try {
 
@@ -200,29 +226,30 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 				DocumentBuilderFactory dbFactory = DocumentBuilderFactory
 						.newInstance();
 				DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-				
+
 				Document doc = dBuilder.parse(file);
-				System.out.println("test");
-				
+
 				doc.getDocumentElement().normalize();
 
-				System.out.println("Root element :"
-						+ doc.getDocumentElement().getNodeName());
+//				System.out.println("Root element :"
+//						+ doc.getDocumentElement().getNodeName());
 
 				NodeList nList = doc.getElementsByTagName("DOC");
 
 				for (int temp = 0; temp < nList.getLength(); temp++) {
 					Node nNode = nList.item(temp);
 
-					System.out.println("\nCurrent Element :"
-							+ nNode.getNodeName());
+//					System.out.println("\nCurrent Element :"
+//							+ nNode.getNodeName());
 					if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 						Element eElement = (Element) nNode;
 
 						// Create Lucene Instance with String
+						System.out.println("--------------------------------------------------");
 						System.out
-								.println("Create Lucene Instance with String");
-						System.out.println(eElement
+								.println("Create Lucene Instance \nRecordId: " + eElement
+										.getElementsByTagName("recordId").item(0)
+										.getTextContent() + "\n" + "Query String: \n" + eElement
 								.getElementsByTagName("text").item(0)
 								.getTextContent());
 
@@ -231,22 +258,16 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 								.getElementsByTagName("text").item(0)
 								.getTextContent());
 
-						System.out.println("create query string array.");
+						System.out.println("Create queryDoc Array[].");
 						queryDoc = new String[st.countTokens()];
 						for (int i = 0; st.hasMoreTokens(); i++) {
 							queryDoc[i] = st.nextToken();
 						}
 
-						System.out.println("call lucene with query doc");
+						System.out.println("Call lucene with queryDoc Array and language "+ collectionLeft.getSelectedItem());
+						luceneLeft = null;
 						luceneLeft = new HelloLucene(queryDoc,
 								collectionLeft.getSelectedItem());
-
-						System.out.println("get Results from document id: "
-								+ luceneLeft.getDocumentId());
-						System.out.println(luceneLeft.getResult());
-						System.out.println(luceneLeft.getDocument().get(
-								"recordId")
-								+ luceneLeft.getDocument().get("text"));
 
 					}// ifend
 				}// for
