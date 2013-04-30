@@ -18,7 +18,6 @@ import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopScoreDocCollector;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.RAMDirectory;
-import org.apache.lucene.util.PagedBytes.Reader;
 import org.apache.lucene.util.Version;
 
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -27,10 +26,6 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 
-import com.sun.corba.se.impl.transport.ReaderThreadImpl;
-import com.sun.org.apache.bcel.internal.generic.NEWARRAY;
-
-import java.awt.Checkbox;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
