@@ -45,6 +45,8 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 	private Button btnExportLeft = null;
 	private Button btnExportRight = null;
 
+	
+	
 	private TextArea txtAreaLeft;
 	private TextArea txtAreaRight;
 
