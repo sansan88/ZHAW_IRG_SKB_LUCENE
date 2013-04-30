@@ -32,6 +32,7 @@ import com.sun.org.apache.bcel.internal.generic.NEWARRAY;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collection;
 
 public class HelloLucene {
@@ -48,6 +49,18 @@ public class HelloLucene {
 	// public static void main(String[] args, FileHandler collection)
 	public HelloLucene(String[] args, String language, int queryId)
 			throws IOException, ParseException {
+		
+		// 000. StopWords
+		Collection<String> strList = new ArrayList<String>();
+		strList.add("Foobar"); 
+		
+		CharArraySet stopwords = new CharArraySet(Version.LUCENE_40, strList , true);
+	
+		
+		
+		
+		
+		
 
 		// 00. Get XML File from Language Key
 		switch (language) {
@@ -80,9 +93,7 @@ public class HelloLucene {
 		filename = absolut.getAbsolutePath();
 		// System.out.println("Absolut path: " + filename);
 		
-		Collection<?> c = null;
-		CharArraySet stopwords = new CharArraySet(Version.LUCENE_40, c , true);
-	
+
 		// 0. Specify the analyzer for tokenizing text.
 		// The same analyzer should be used for indexing and searching
  		StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_40, stopwords);
