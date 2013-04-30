@@ -53,7 +53,7 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 	
 	private Choice collectionLeft;
 	private Choice collectionRight;
-
+	
 	private StringTokenizer st = null;
 	private String[] queryDoc = null;
 	private String filename = null;
@@ -62,6 +62,14 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 			"query/irg_queries_IT.xml", "query/irg_queries_RU.xml",
 			"query/irg_queries_EN.xml" };
 
+	//private int stemmer; //options for checkboxes stemmer
+	//private int stopword; //options for checkboxes stopwords
+	private int options = 0;
+	private File absolut = null;
+	
+	private HelloLucene luceneLeft = null; 
+	private HelloLucene luceneRight = null;
+	
 	public static void main(String args[]) {
 		MyFrame myFrame = new MyFrame();
 		myFrame.setSize(800, 800);
@@ -204,11 +212,24 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 		// MAGIC HAPPENS HERE!!
 		if (e.getSource() == btnSearch) {
 			System.out.println("MAGIC HAPPENS HERE!! GOGOGO Lucene");
-
-			// Process Left Side
-			// System.out.println("File Selected Left: "
-			// + collectionLeft.getSelectedItem());
-
+			
+//Process Left Side			
+			// Get Options for left Side
+			//			Stem	Stop	
+			//			0	0	1
+			//			1	0	2
+			//			0	1	3
+			//			1	1	4
+			if (chbxStopLeft.getState() == false && chbxPortStemLeft.getState() == false){
+				options = 1;
+			}else if (chbxStopLeft.getState() == true && chbxPortStemLeft.getState() == false){
+				options = 2;
+			}else if (chbxStopLeft.getState() == false && chbxPortStemLeft.getState() == true){
+				options = 3;
+			}else if (chbxStopLeft.getState() == true && chbxPortStemLeft.getState() == true){ 
+				options = 4;
+			}
+			
 			// Get XML File from Language Key
 			switch (collectionLeft.getSelectedItem()) {
 			case "DE":
@@ -236,7 +257,7 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 
 			// Create absolut path:
 			// System.out.println("Realtive Path: " + filename);
-			File absolut = new File(filename);
+			absolut = new File(filename);
 			filename = absolut.getAbsolutePath();
 			// System.out.println("Absolut path: " + filename);
 
@@ -244,7 +265,6 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 			try {
 
 				File file = new File(filename);
-				// System.out.println("Read File: \n" + file);
 
 				DocumentBuilderFactory dbFactory = DocumentBuilderFactory
 						.newInstance();
@@ -267,20 +287,6 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 					if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 						Element eElement = (Element) nNode;
 
-						// Create Lucene Instance with String
-						// System.out
-						// .println("--------------------------------------------------------------------------");
-						// System.out
-						// .println("Create Lucene Instance \nRecordId: "
-						// + eElement
-						// .getElementsByTagName(
-						// "recordId").item(0)
-						// .getTextContent()
-						// + "\n"
-						// + "Query String: \n"
-						// + eElement.getElementsByTagName("text")
-						// .item(0).getTextContent());
-
 						// create tokenizer
 						st = new StringTokenizer(eElement
 								.getElementsByTagName("text").item(0)
@@ -290,23 +296,23 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 						queryDoc = new String[st.countTokens()];
 						for (int i = 0; st.hasMoreTokens(); i++) {
 							
-							//Stop Words
+							//Stop Words --> wird in collection gemacht.
 							
 							
 							//Porter Stemmer
-//						    PorterStemmer stemmer = new PorterStemmer();
-//						    return stemmer.stem(term);
+							//PorterStemmer stemmer = new PorterStemmer();
+							//return stemmer.stem(term);
 							
 							
 							queryDoc[i] = st.nextToken();
 						}
 						// erstelle Lucene mit Query[], ausgewählter Sprache und
 						// der ID von der Query
-						new HelloLucene(queryDoc,
+						setLuceneLeft(new HelloLucene(queryDoc,
 								collectionLeft.getSelectedItem(),
 								Integer.valueOf(eElement
 										.getElementsByTagName("recordId")
-										.item(0).getTextContent()));
+										.item(0).getTextContent()), options, true ));
 
 					}// ifend
 				}// for
@@ -314,6 +320,108 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 			} catch (Exception exception) {
 				// TODO: handle exception
 			}
+			
+//Process Right Side
+			
+			if (chbxStopRight.getState() == false && chbxPortStemRight.getState() == false){
+				options = 1;
+			}else if (chbxStopRight.getState() == true && chbxPortStemRight.getState() == false){
+				options = 2;
+			}else if (chbxStopRight.getState() == false && chbxPortStemRight.getState() == true){
+				options = 3;
+			}else if (chbxStopRight.getState() == true && chbxPortStemRight.getState() == true){ 
+				options = 4;
+			}
+			
+			// Get XML File from Language Key
+						switch (collectionRight.getSelectedItem()) {
+						case "DE":
+							filename = queryArray[0];
+							break;
+						case "FI":
+							filename = queryArray[1];
+							break;
+						case "FR":
+							filename = queryArray[2];
+							break;
+						case "IT":
+							filename = queryArray[3];
+							break;
+						case "RU":
+							filename = queryArray[4];
+							break;
+						case "EN":
+							filename = queryArray[5];
+							break;
+						default:
+							filename = queryArray[5];
+							break;
+						}
+
+						// Create absolut path:
+						// System.out.println("Realtive Path: " + filename);
+						absolut = new File(filename);
+						filename = absolut.getAbsolutePath();
+						// System.out.println("Absolut path: " + filename);
+
+						// Parse XML File
+						try {
+
+							File file = new File(filename);
+
+							DocumentBuilderFactory dbFactory = DocumentBuilderFactory
+									.newInstance();
+							DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+
+							Document doc = dBuilder.parse(file);
+
+							doc.getDocumentElement().normalize();
+
+							// System.out.println("Root element :"
+							// + doc.getDocumentElement().getNodeName());
+
+							NodeList nList = doc.getElementsByTagName("DOC");
+
+							for (int temp = 0; temp < nList.getLength(); temp++) {
+								Node nNode = nList.item(temp);
+
+								// System.out.println("\nCurrent Element :"
+								// + nNode.getNodeName());
+								if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+									Element eElement = (Element) nNode;
+
+									// create tokenizer
+									st = new StringTokenizer(eElement
+											.getElementsByTagName("text").item(0)
+											.getTextContent());
+
+									// System.out.println("Create queryDoc Array[].");
+									queryDoc = new String[st.countTokens()];
+									for (int i = 0; st.hasMoreTokens(); i++) {
+										
+										//Stop Words --> wird in collection gemacht.
+										
+										
+										//Porter Stemmer
+										//PorterStemmer stemmer = new PorterStemmer();
+										//return stemmer.stem(term);
+										
+										queryDoc[i] = st.nextToken();
+									}
+									// erstelle Lucene mit Query[], ausgewählter Sprache und
+									// der ID von der Query
+									setLuceneRight(new HelloLucene(queryDoc,
+											collectionRight.getSelectedItem(),
+											Integer.valueOf(eElement
+													.getElementsByTagName("recordId")
+													.item(0).getTextContent()), options, false ));
+								}// ifend
+							}// for
+
+						} catch (Exception exception) {
+							// TODO: handle exception
+						}			
+			
 		}
 	}
 
@@ -351,5 +459,21 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 	@Override
 	public void windowOpened(WindowEvent e) {
 		// TODO Auto-generated method stub
+	}
+
+	public HelloLucene getLuceneLeft() {
+		return luceneLeft;
+	}
+
+	public void setLuceneLeft(HelloLucene luceneLeft) {
+		this.luceneLeft = luceneLeft;
+	}
+
+	public HelloLucene getLuceneRight() {
+		return luceneRight;
+	}
+
+	public void setLuceneRight(HelloLucene luceneRight) {
+		this.luceneRight = luceneRight;
 	}
 }

@@ -30,7 +30,10 @@ import org.w3c.dom.Element;
 import com.sun.corba.se.impl.transport.ReaderThreadImpl;
 import com.sun.org.apache.bcel.internal.generic.NEWARRAY;
 
+import java.awt.Checkbox;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -39,33 +42,28 @@ public class HelloLucene {
 	private org.apache.lucene.document.Document d = null;
 	private String returnString = null;
 	private String filename = null;
+	private String filenameStopWords = null;
 	private String[] collection = { "collection/irg_collection_DE.xml",
 			"collection/irg_collection_FI.xml",
 			"collection/irg_collection_FR.xml",
 			"collection/irg_collection_IT.xml",
 			"collection/irg_collection_RU.xml",
 			"collection/irg_collection_EN.xml" };
+	private String[] stopWords = { "stopwords/stopwords_EnglishStopwords.txt",
+			"1", "2", "3", "4", "stopwords_GermanStopwords.txt" };
 
 	// public static void main(String[] args, FileHandler collection)
-	public HelloLucene(String[] args, String language, int queryId)
-			throws IOException, ParseException {
+	public HelloLucene(String[] args, String language, int queryId,
+			int options, Boolean isLeft) throws IOException, ParseException {
 		
-		// 000. StopWords
-		Collection<String> strList = new ArrayList<String>();
-		strList.add("Foobar"); 
-		
-		CharArraySet stopwords = new CharArraySet(Version.LUCENE_40, strList , true);
-	
-		
-		
-		
-		
-		
+		//local Attribute
+		StandardAnalyzer analyzer = null;
 
 		// 00. Get XML File from Language Key
 		switch (language) {
 		case "DE":
 			this.filename = collection[0];
+			this.filenameStopWords = stopWords[0];
 			break;
 		case "FI":
 			this.filename = collection[1];
@@ -81,35 +79,68 @@ public class HelloLucene {
 			break;
 		case "EN":
 			this.filename = collection[5];
+			this.filenameStopWords = stopWords[5];
 			break;
 		default:
 			this.filename = collection[5];
+			this.filenameStopWords = stopWords[5];
 			break;
 		}
 
 		// Create absolut path:
-		// System.out.println("Realtive Path: " + filename);
 		File absolut = new File(filename);
 		filename = absolut.getAbsolutePath();
-		// System.out.println("Absolut path: " + filename);
-		
 
+		// http://www.lucenetutorial.com/lucene-in-5-minutes.html
 		// 0. Specify the analyzer for tokenizing text.
 		// The same analyzer should be used for indexing and searching
- 		StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_40, stopwords);
- 		
-// 		  StandardAnalyzer(Version matchVersion) 
-//        Builds an analyzer with the default stop words (STOP_WORDS_SET). 
-//        
-//        StandardAnalyzer(Version matchVersion, CharArraySet stopWords) 
-//        Builds an analyzer with the given stop words. 
-//
-//        StandardAnalyzer(Version matchVersion, Reader stopwords) 
-//        Builds an analyzer with the stop words from the given reader. 
 
- 		
- 		
- 		
+		//		Stem	Stop			
+		//		0	0	1	STEM NEIN	STOP NEIN
+		//		1	0	2	STEM JA		STOP NEIN
+		//		0	1	3	STEM NEIN	STOP JA
+		//		1	1	4	STEM JA		STOP JA
+		if (options > 2) {
+			// Create absolut path Stop Words:
+			File absolutStopWords = new File(filenameStopWords);
+			filenameStopWords = absolutStopWords.getAbsolutePath();
+
+			// 000. StopWords
+			// StandardAnalyzer(Version matchVersion)
+			// Builds an analyzer with the default stop words (STOP_WORDS_SET).
+			//
+			// StandardAnalyzer(Version matchVersion, CharArraySet stopWords)
+			// Builds an analyzer with the given stop words.
+			//
+			// StandardAnalyzer(Version matchVersion, Reader stopwords)
+			// Builds an analyzer with the stop words from the given reader.
+			Collection<String> strList = new ArrayList<String>();
+			BufferedReader br = null;
+			try {
+				String sCurrentLine;
+				br = new BufferedReader(new FileReader(filenameStopWords));
+				while ((sCurrentLine = br.readLine()) != null) {
+					strList.add(sCurrentLine);
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			} finally {
+				try {
+					if (br != null)
+						br.close();
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+			}
+
+			CharArraySet stopwords = new CharArraySet(Version.LUCENE_40,
+					strList, true);
+
+			analyzer = new StandardAnalyzer(Version.LUCENE_40,
+					stopwords);
+		} else {
+			analyzer = new StandardAnalyzer(Version.LUCENE_40);
+		}
 
 		// 1. create the index
 		Directory index = new RAMDirectory();
@@ -119,8 +150,6 @@ public class HelloLucene {
 
 		// READ Collection
 		try {
-
-			// http://www.lucenetutorial.com/lucene-in-5-minutes.html
 			File fXmlFile = new File(filename);
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory
 					.newInstance();
@@ -133,21 +162,13 @@ public class HelloLucene {
 			doc.getDocumentElement().normalize();
 
 			// ROOT --> TREC
-			// System.out.println("Root element :"
-			// + doc.getDocumentElement().getNodeName());
-
 			NodeList nList = doc.getElementsByTagName("DOC");
 
 			// System.out.println(" Create Index Writer ");
 			IndexWriter w = new IndexWriter(index, config);
-			// System.out.println("Read File: " + filename);
-			// System.out.println("Create Collection in Language: " + language);
 			for (int temp = 0; temp < nList.getLength(); temp++) {
 
 				Node nNode = nList.item(temp);
-
-				// System.out.println("\nCurrent Element :" +
-				// nNode.getNodeName());
 
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 
@@ -157,9 +178,6 @@ public class HelloLucene {
 							.getTextContent(),
 							eElement.getElementsByTagName("recordId").item(0)
 									.getTextContent());
-					// System.out.println("RecordId: " +
-					// eElement.getElementsByTagName("recordId").item(0)
-					// .getTextContent());
 				}
 			}
 			// close doc
