@@ -16,6 +16,7 @@ import java.awt.event.WindowListener;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
@@ -27,7 +28,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.sql.Timestamp;
+
 import java.util.StringTokenizer;
 
 public class MyFrame extends Frame implements WindowListener, ActionListener {
@@ -44,8 +45,11 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 	private TextArea txtAreaLeft;
 	private TextArea txtAreaRight;
 
-	private Checkbox chkBoxLeft;
-	private Checkbox chkBoxRight;
+	private Checkbox chbxStopLeft;
+	private Checkbox chbxStopRight;
+	
+	private Checkbox chbxPortStemLeft;
+	private Checkbox chbxPortStemRight;
 	
 	private Choice collectionLeft;
 	private Choice collectionRight;
@@ -86,7 +90,7 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 
 		// CENTER
 		panelCenter = new Panel();
-		panelCenter.setLayout(new GridLayout(4, 2));
+		panelCenter.setLayout(new GridLayout(5, 2));
 
 		// Dropdown Left
 		collectionLeft = new Choice();
@@ -109,10 +113,18 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 		panelCenter.add(collectionRight);
 
 		//checkbox Stopwords
-		chkBoxLeft = new Checkbox("Enable Stopwords", false);
-		panelCenter.add(chkBoxLeft);
-		chkBoxRight = new Checkbox("Enable Stopwords", false);
-		panelCenter.add(chkBoxRight);
+		chbxStopLeft = new Checkbox("Enable Stopwords", false);
+		panelCenter.add(chbxStopLeft);
+		
+		chbxStopRight = new Checkbox("Enable Stopwords", false);
+		panelCenter.add(chbxStopRight);
+		
+		//checkbox porterstem
+		chbxPortStemLeft = new Checkbox("Use Porter Stemmer", false);
+		panelCenter.add(chbxPortStemLeft);
+		
+		chbxPortStemRight = new Checkbox("Use Porter Stemmer", false);
+		panelCenter.add(chbxPortStemRight);
 		
 		//export buttons
 		btnExportLeft = new Button("Export to File, Left");
@@ -277,6 +289,15 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 						// System.out.println("Create queryDoc Array[].");
 						queryDoc = new String[st.countTokens()];
 						for (int i = 0; st.hasMoreTokens(); i++) {
+							
+							//Stop Words
+							
+							
+							//Porter Stemmer
+//						    PorterStemmer stemmer = new PorterStemmer();
+//						    return stemmer.stem(term);
+							
+							
 							queryDoc[i] = st.nextToken();
 						}
 						// erstelle Lucene mit Query[], ausgewählter Sprache und
