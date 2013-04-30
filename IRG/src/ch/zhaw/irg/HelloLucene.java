@@ -27,8 +27,6 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 
-import com.sun.corba.se.impl.transport.ReaderThreadImpl;
-import com.sun.org.apache.bcel.internal.generic.NEWARRAY;
 
 import java.awt.Checkbox;
 import java.io.BufferedReader;
