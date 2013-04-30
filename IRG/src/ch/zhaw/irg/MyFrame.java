@@ -29,6 +29,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -216,7 +217,11 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 
 		// MAGIC HAPPENS HERE!!
 		if (e.getSource() == btnSearch) {
-			System.out.println("MAGIC HAPPENS HERE!! GOGOGO Lucene");
+			System.out
+					.println("MAGIC HAPPENS HERE!! GOGOGO Lucene\n Start Time: ");
+			java.util.Date date = new java.util.Date();
+			System.out.println(new Timestamp(date.getTime()));
+
 			// ------------------------------------
 			// Process Left Side
 			// ------------------------------------
@@ -345,7 +350,7 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 				}
 				FileWriter fw = new FileWriter(outputFileLeft.getAbsoluteFile());
 				BufferedWriter bw = new BufferedWriter(fw);
-
+				System.out.println("Write File: " + outputFileLeft);
 				for (Iterator iterator = outputFile.iterator(); iterator
 						.hasNext();) {
 					bw.write(iterator.next().toString());
@@ -358,6 +363,8 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 			// ------------------------------------
 			// Process Right Side
 			// ------------------------------------
+			java.util.Date date1 = new java.util.Date();
+			System.out.println(new Timestamp(date1.getTime()));
 			if (chbxStopRight.getState() == false
 					&& chbxPortStemRight.getState() == false) {
 				options = 1;
@@ -462,12 +469,12 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 						}
 					}// ifend
 				}// for
-					
+
 				// Write Output FIle and txtAreaRight
 				File tempR = new File("results/resultRight.txt");
 				String absolutPath = new String(tempR.getAbsolutePath());
 				File outputFileRight = new File(absolutPath);
-				
+
 				// if file doesnt exists, then create it
 				outputFileRight.delete();
 				if (!outputFileRight.exists()) {
@@ -477,7 +484,7 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 				FileWriter fw = new FileWriter(
 						outputFileRight.getAbsoluteFile());
 				BufferedWriter bw = new BufferedWriter(fw);
-
+				System.out.println("Write File: " + outputFileRight);
 				for (Iterator iterator = outputFile.iterator(); iterator
 						.hasNext();) {
 					bw.write(iterator.next().toString());
