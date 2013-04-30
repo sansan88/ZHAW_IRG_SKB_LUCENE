@@ -35,7 +35,7 @@ import java.util.Collection;
 
 public class HelloLucene {
 	private org.apache.lucene.document.Document d = null;
-	private String returnString = null;
+	//private String returnString = null;
 	private String filename = null;
 	private String filenameStopWords = null;
 	private String[] collection = { "collection/irg_collection_DE.xml",
@@ -46,6 +46,8 @@ public class HelloLucene {
 			"collection/irg_collection_EN.xml" };
 	private String[] stopWords = { "stopwords/stopwords_EnglishStopwords.txt",
 			"1", "2", "3", "4", "stopwords_GermanStopwords.txt" };
+	
+	private Collection<String> outputString = null;
 
 	// public static void main(String[] args, FileHandler collection)
 	public HelloLucene(String[] args, String language, int queryId,
@@ -96,6 +98,8 @@ public class HelloLucene {
 		//		0	1	3	STEM NEIN	STOP JA
 		//		1	1	4	STEM JA		STOP JA
 		if (options > 2) {
+			
+			
 			// Create absolut path Stop Words:
 			File absolutStopWords = new File(filenameStopWords);
 			filenameStopWords = absolutStopWords.getAbsolutePath();
@@ -112,10 +116,12 @@ public class HelloLucene {
 			Collection<String> strList = new ArrayList<String>();
 			BufferedReader br = null;
 			try {
+				System.out.println("add STOPWORDS");
 				String sCurrentLine;
 				br = new BufferedReader(new FileReader(filenameStopWords));
 				while ((sCurrentLine = br.readLine()) != null) {
 					strList.add(sCurrentLine);
+					System.out.println(sCurrentLine);
 				}
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -212,7 +218,9 @@ public class HelloLucene {
 		if (hits.length == 0) {
 			System.out.println("No documents found for query: " + queryId);
 		}
-
+		
+		outputString = new ArrayList<String>();
+		
 		for (int i = 0; i < hits.length; ++i) {
 			int docId = hits[i].doc;
 			d = searcher.doc(docId);
@@ -221,6 +229,11 @@ public class HelloLucene {
 			System.out.println(queryId + "\t" + "Q0" + "\t" + d.get("recordId")
 					+ "\t" + i + "\t" + hits[i].score + "\t"
 					+ "SCALCSAN&MAMUTNAD");
+			
+			//output File
+			outputString.add(queryId + "\t" + "Q0" + "\t" + d.get("recordId")
+					+ "\t" + i + "\t" + hits[i].score + "\t"
+					+ "SCALCSAN&MAMUTNAD\n");
 		}
 		// reader can only be closed when there
 		// is no need to access the documents any more.
@@ -236,8 +249,14 @@ public class HelloLucene {
 		doc.add(new StringField("recordId", recordId, Field.Store.YES));
 		w.addDocument(doc);
 	}
-
-	public String getReturnString() {
-		return this.returnString;
+	public Collection<String> getOutputString() {
+		return outputString;
 	}
+
+	public void setOutputString(Collection<String> outputString) {
+		this.outputString = outputString;
+	}
+//	public String getReturnString() {
+//		return this.returnString;
+//	}
 }

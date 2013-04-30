@@ -29,6 +29,9 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.StringTokenizer;
 
 public class MyFrame extends Frame implements WindowListener, ActionListener {
@@ -69,6 +72,8 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 	
 	private HelloLucene luceneLeft = null; 
 	private HelloLucene luceneRight = null;
+	
+	private Collection<String> outputFile = null;
 	
 	public static void main(String args[]) {
 		MyFrame myFrame = new MyFrame();
@@ -278,7 +283,9 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 				// + doc.getDocumentElement().getNodeName());
 
 				NodeList nList = doc.getElementsByTagName("DOC");
-
+				
+			    outputFile = new ArrayList<String>();
+			    
 				for (int temp = 0; temp < nList.getLength(); temp++) {
 					Node nNode = nList.item(temp);
 
@@ -313,10 +320,33 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 								Integer.valueOf(eElement
 										.getElementsByTagName("recordId")
 										.item(0).getTextContent()), options, true ));
-
+						
+						for (Iterator iterator = getLuceneLeft().getOutputString().iterator(); iterator
+								.hasNext();) {
+							outputFile.add(iterator.next().toString());
+						}
 					}// ifend
 				}// for
+				
+				//Write Output FIle and txtAreaLEft
+				File temp = new File("results/resultLeft.txt");
+				String absolutPath = new String(temp.getAbsolutePath());
+				File outputFileLeft = new File(absolutPath);
 
+				// if file doesnt exists, then create it
+				if (!outputFileLeft.exists()) {
+					outputFileLeft.createNewFile();
+				}
+				FileWriter fw = new FileWriter(outputFileLeft.getAbsoluteFile());
+				BufferedWriter bw = new BufferedWriter(fw);
+
+				for (Iterator iterator = outputFile.iterator(); iterator
+						.hasNext();) {
+					bw.write(iterator.next().toString());
+				}
+				bw.close();
+				
+				
 			} catch (Exception exception) {
 				// TODO: handle exception
 			}
