@@ -34,7 +34,7 @@ import java.util.Collection;
 
 public class HelloLucene {
 	private org.apache.lucene.document.Document d = null;
-	//private String returnString = null;
+	// private String returnString = null;
 	private String filename = null;
 	private String filenameStopWords = null;
 	private String[] collection = { "collection/irg_collection_DE.xml",
@@ -44,15 +44,16 @@ public class HelloLucene {
 			"collection/irg_collection_RU.xml",
 			"collection/irg_collection_EN.xml" };
 	private String[] stopWords = { "stopwords/stopwords_EnglishStopwords.txt",
-			"1", "2", "3", "4", "stopwords_GermanStopwords.txt" };
-	
+			"1", "2", "3", "4", "stopwords/stopwords_GermanStopwords.txt" };
+
 	private Collection<String> outputString = null;
 
 	// public static void main(String[] args, FileHandler collection)
 	public HelloLucene(String[] args, String language, int queryId,
-			int options, Boolean isLeft) throws IOException, ParseException {
-		
-		//local Attribute
+			boolean boolStopWords, Boolean isLeft) throws IOException,
+			ParseException {
+
+		// local Attribute
 		StandardAnalyzer analyzer = null;
 
 		// 00. Get XML File from Language Key
@@ -87,19 +88,12 @@ public class HelloLucene {
 		File absolut = new File(filename);
 		filename = absolut.getAbsolutePath();
 
-		// http://www.lucenetutorial.com/lucene-in-5-minutes.html
-		// 0. Specify the analyzer for tokenizing text.
-		// The same analyzer should be used for indexing and searching
-
-		//		Stem	Stop			
-		//		0	0	1	STEM NEIN	STOP NEIN
-		//		1	0	2	STEM JA		STOP NEIN
-		//		0	1	3	STEM NEIN	STOP JA
-		//		1	1	4	STEM JA		STOP JA
-		if (options > 2) {
-			
-			
+		System.out
+		.println("-----------------------------------------------------------------");
+		
+		if (boolStopWords == true) {
 			// Create absolut path Stop Words:
+			System.out.println("Use stopwords in Language " + language);
 			File absolutStopWords = new File(filenameStopWords);
 			filenameStopWords = absolutStopWords.getAbsolutePath();
 
@@ -115,12 +109,10 @@ public class HelloLucene {
 			Collection<String> strList = new ArrayList<String>();
 			BufferedReader br = null;
 			try {
-				System.out.println("add STOPWORDS");
 				String sCurrentLine;
 				br = new BufferedReader(new FileReader(filenameStopWords));
 				while ((sCurrentLine = br.readLine()) != null) {
 					strList.add(sCurrentLine);
-					System.out.println(sCurrentLine);
 				}
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -136,8 +128,7 @@ public class HelloLucene {
 			CharArraySet stopwords = new CharArraySet(Version.LUCENE_40,
 					strList, true);
 
-			analyzer = new StandardAnalyzer(Version.LUCENE_40,
-					stopwords);
+			analyzer = new StandardAnalyzer(Version.LUCENE_40, stopwords);
 		} else {
 			analyzer = new StandardAnalyzer(Version.LUCENE_40);
 		}
@@ -164,7 +155,6 @@ public class HelloLucene {
 			// ROOT --> TREC
 			NodeList nList = doc.getElementsByTagName("DOC");
 
-			// System.out.println(" Create Index Writer ");
 			IndexWriter w = new IndexWriter(index, config);
 			for (int temp = 0; temp < nList.getLength(); temp++) {
 
@@ -210,16 +200,12 @@ public class HelloLucene {
 
 		// 4. display results
 		// System.out.println("Found " + hits.length + " hits.");
-
-		System.out
-				.println("-----------------------------------------------------------------");
-
 		if (hits.length == 0) {
 			System.out.println("No documents found for query: " + queryId);
 		}
-		
+
 		outputString = new ArrayList<String>();
-		
+
 		for (int i = 0; i < hits.length; ++i) {
 			int docId = hits[i].doc;
 			d = searcher.doc(docId);
@@ -228,8 +214,8 @@ public class HelloLucene {
 			System.out.println(queryId + "\t" + "Q0" + "\t" + d.get("recordId")
 					+ "\t" + i + "\t" + hits[i].score + "\t"
 					+ "SCALCSAN&MAMUTNAD");
-			
-			//output File
+
+			// output File
 			outputString.add(queryId + "\t" + "Q0" + "\t" + d.get("recordId")
 					+ "\t" + i + "\t" + hits[i].score + "\t"
 					+ "SCALCSAN&MAMUTNAD\n");
@@ -248,6 +234,7 @@ public class HelloLucene {
 		doc.add(new StringField("recordId", recordId, Field.Store.YES));
 		w.addDocument(doc);
 	}
+
 	public Collection<String> getOutputString() {
 		return outputString;
 	}
