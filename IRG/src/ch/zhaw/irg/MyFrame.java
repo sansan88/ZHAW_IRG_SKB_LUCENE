@@ -358,7 +358,7 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 					bw.write(iterator.next().toString());
 				}
 				bw.close();
-
+				txtAreaLeft.setText( outputFile.toString() );
 			} catch (Exception exception) {
 				// TODO: handle exception
 			}
@@ -490,6 +490,7 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 				bw.write(iterator.next().toString());
 			}
 			bw.close();
+			txtAreaRight.setText( outputFile.toString() );
 
 		} catch (Exception exception) {
 			// TODO: handle exception
