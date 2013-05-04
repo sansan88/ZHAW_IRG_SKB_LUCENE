@@ -43,8 +43,12 @@ public class HelloLucene {
 			"collection/irg_collection_IT.xml",
 			"collection/irg_collection_RU.xml",
 			"collection/irg_collection_EN.xml" };
-	private String[] stopWords = { "stopwords/stopwords_EnglishStopwords.txt",
-			"1", "2", "3", "4", "stopwords/stopwords_GermanStopwords.txt" };
+	private String[] stopWords = { "stopwords/stopwords_GermanStopwords.txt",
+			"stopwords/stopwords_FinnishStopwords.txt",
+			"stopwords/stopwords_FrenchStopwords.txt",
+			"stopwords/stopwords_ItalianStopwords.txt",
+			"stopwords/stopwords_RussianStopwords.txt", 
+			"stopwords/stopwords_EnglishStopwords.txt" };
 
 	private Collection<String> outputString = null;
 
@@ -64,15 +68,19 @@ public class HelloLucene {
 			break;
 		case "FI":
 			this.filename = collection[1];
+			this.filenameStopWords = stopWords[1];
 			break;
 		case "FR":
 			this.filename = collection[2];
+			this.filenameStopWords = stopWords[2];
 			break;
 		case "IT":
 			this.filename = collection[3];
+			this.filenameStopWords = stopWords[3];
 			break;
 		case "RU":
 			this.filename = collection[4];
+			this.filenameStopWords = stopWords[4];
 			break;
 		case "EN":
 			this.filename = collection[5];
