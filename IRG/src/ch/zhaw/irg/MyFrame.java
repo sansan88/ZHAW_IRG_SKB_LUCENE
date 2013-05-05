@@ -5,6 +5,7 @@ import java.awt.Button;
 import java.awt.Checkbox;
 import java.awt.Choice;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Frame;
 import java.awt.GridLayout;
 import java.awt.Panel;
@@ -14,6 +15,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
+import javax.swing.text.EditorKit;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
 
@@ -43,8 +45,8 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 	private Panel panelCenter;
 
 	private Button btnSearch = null;
-	private Button btnExportLeft = null;
-	private Button btnExportRight = null;
+//	private Button btnExportLeft = null;
+//	private Button btnExportRight = null;
 
 	private TextArea txtAreaLeft;
 	private TextArea txtAreaRight;
@@ -66,9 +68,6 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 			"query/irg_queries_IT.xml", "query/irg_queries_RU.xml",
 			"query/irg_queries_EN.xml" };
 
-	// private int stemmer; //options for checkboxes stemmer
-	// private int stopword; //options for checkboxes stopwords
-	private int options = 0;
 	private File absolut = null;
 
 	private HelloLucene luceneLeft = null;
@@ -88,13 +87,14 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 
 		bg = new Color(255, 255, 200);
 		setBackground(bg);
-
+		
 		setTitle("IRG Search by scalcsan & mamutnad");
 
 		// GUI Komponenten erzeugen
 
 		// TOP Panel mit Query Bereich
 		panelTop = new Panel();
+		panelTop.setSize(50,200);
 		panelTop.setLayout(new GridLayout(1, 1));
 
 		btnSearch = new Button("GoGoGo");
@@ -104,7 +104,8 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 
 		// CENTER
 		panelCenter = new Panel();
-		panelCenter.setLayout(new GridLayout(5, 2));
+		panelCenter.setLayout(new GridLayout(3, 2));
+		panelCenter.setSize(600, 1000);
 
 		// Dropdown Left
 		collectionLeft = new Choice();
@@ -140,80 +141,82 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 		// chbxPortStemRight = new Checkbox("Use Porter Stemmer", false);
 		// panelCenter.add(chbxPortStemRight);
 
-		// export buttons
-		btnExportLeft = new Button("Export to File, Left");
-		panelCenter.add(btnExportLeft);
-
-		btnExportRight = new Button("Export to File, Right");
-		panelCenter.add(btnExportRight);
+//		// EXPORT BUTTONS
+//		BTNEXPORTLEFT = NEW BUTTON("EXPORT TO FILE, LEFT");
+//		PANELCENTER.ADD(BTNEXPORTLEFT);
+//
+//		BTNEXPORTRIGHT = NEW BUTTON("EXPORT TO FILE, RIGHT");
+//		PANELCENTER.ADD(BTNEXPORTRIGHT);
 
 		txtAreaLeft = new TextArea("Magic happens here");
 		panelCenter.add(txtAreaLeft);
 		txtAreaRight = new TextArea("or it could happen here");
 		panelCenter.add(txtAreaRight);
-
+		
 		add(panelCenter, BorderLayout.CENTER);
 
 		// Beim Listener registrieren
-		btnExportLeft.addActionListener(this);
-		btnExportRight.addActionListener(this);
+//		btnExportLeft.addActionListener(this);
+//		btnExportRight.addActionListener(this);
 		btnSearch.addActionListener(this);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		if (e.getSource() == btnExportLeft) {
-			System.out.println("Export Left");
-			System.out.println(txtAreaLeft.getText());
-			// !!!!!TODO!!!!!!!
-			// Hier einen FileWriter schreiben, der den Inhalt des TextArea in
-			// ein Result.trec File Format schreibt
-			try {
-				File temp = new File("results/resultLeft.txt");
-				String absolutPath = new String(temp.getAbsolutePath());
-				File file = new File(absolutPath);
-
-				// if file doesnt exists, then create it
-				if (!file.exists()) {
-					file.createNewFile();
-				}
-				FileWriter fw = new FileWriter(file.getAbsoluteFile());
-				BufferedWriter bw = new BufferedWriter(fw);
-				bw.write(txtAreaLeft.getText());
-				bw.close();
-				System.out.println("Done");
-
-			} catch (IOException e1) {
-				e1.printStackTrace();
-			}
-		}
-
-		if (e.getSource() == btnExportRight) {
-			System.out.println("Export Right");
-			System.out.println(txtAreaRight.getText());
-			// !!!!!TODO!!!!!!!
-			// Hier einen FileWriter schreiben, der den Inhalt des TextArea in
-			// ein Result.trec File Format schreibt
-			try {
-				File temp = new File("results/resultRight.txt");
-				String absolutPath = new String(temp.getAbsolutePath());
-				File file = new File(absolutPath);
-
-				// if file doesnt exists, then create it
-				if (!file.exists()) {
-					file.createNewFile();
-				}
-				FileWriter fw = new FileWriter(file.getAbsoluteFile());
-				BufferedWriter bw = new BufferedWriter(fw);
-				bw.write(txtAreaRight.getText());
-				bw.close();
-				System.out.println("Done");
-
-			} catch (IOException e1) {
-				e1.printStackTrace();
-			}
-		}
+		
+		//Wird nicht mehr gebraucht, da export automatisch in file erfolgt.
+//		if (e.getSource() == btnExportLeft) {
+//			System.out.println("Export Left");
+//			System.out.println(txtAreaLeft.getText());
+//			// !!!!!TODO!!!!!!!
+//			// Hier einen FileWriter schreiben, der den Inhalt des TextArea in
+//			// ein Result.trec File Format schreibt
+//			try {
+//				File temp = new File("results/resultLeft.txt");
+//				String absolutPath = new String(temp.getAbsolutePath());
+//				File file = new File(absolutPath);
+//
+//				// if file doesnt exists, then create it
+//				if (!file.exists()) {
+//					file.createNewFile();
+//				}
+//				FileWriter fw = new FileWriter(file.getAbsoluteFile());
+//				BufferedWriter bw = new BufferedWriter(fw);
+//				bw.write(txtAreaLeft.getText());
+//				bw.close();
+//				System.out.println("Done");
+//
+//			} catch (IOException e1) {
+//				e1.printStackTrace();
+//			}
+//		}
+//
+//		if (e.getSource() == btnExportRight) {
+//			System.out.println("Export Right");
+//			System.out.println(txtAreaRight.getText());
+//			// !!!!!TODO!!!!!!!
+//			// Hier einen FileWriter schreiben, der den Inhalt des TextArea in
+//			// ein Result.trec File Format schreibt
+//			try {
+//				File temp = new File("results/resultRight.txt");
+//				String absolutPath = new String(temp.getAbsolutePath());
+//				File file = new File(absolutPath);
+//
+//				// if file doesnt exists, then create it
+//				if (!file.exists()) {
+//					file.createNewFile();
+//				}
+//				FileWriter fw = new FileWriter(file.getAbsoluteFile());
+//				BufferedWriter bw = new BufferedWriter(fw);
+//				bw.write(txtAreaRight.getText());
+//				bw.close();
+//				System.out.println("Done");
+//
+//			} catch (IOException e1) {
+//				e1.printStackTrace();
+//			}
+//		}
 
 		// MAGIC HAPPENS HERE!!
 		if (e.getSource() == btnSearch) {
