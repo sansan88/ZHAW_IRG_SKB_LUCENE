@@ -24,8 +24,10 @@ import org.w3c.dom.Element;
 
 import ch.zhaw.irg.HelloLucene;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -242,10 +244,36 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 
 		if (e.getSource() == "btnSearchAll") {
 			HashMap<Integer, Integer> rangliste = new HashMap<>();
-			
-			
+			//Read Files DE
+			BufferedReader br = null;
+			try {
+				String sCurrentLine;
+				br = new BufferedReader(new FileReader("C:\\Users\\sandro\\Documents\\GitHub\\ZHAW_IRG_SKB_LUCENE\\IRG\\results\\DE.txt"));
+				while ((sCurrentLine = br.readLine()) != null) {
+					StringTokenizer st = new StringTokenizer(sCurrentLine);
+					Integer queryId = new Integer(Integer.getInteger(st.nextToken()));
+					Integer durchgang = new Integer(Integer.getInteger(st.nextToken()));
+					Integer document = new Integer(Integer.getInteger(st.nextToken()));
+					
+					String keyString = new String(String.valueOf(queryId)+String.valueOf(document));
+					Integer keyInteger = new Integer(Integer.valueOf(keyString));
+					
+					Integer rang = new Integer(Integer.valueOf(st.nextToken()));
+					rang ++;
+					
+					rangliste.put(keyInteger, rang);
+				}
+	 
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			} finally {
+				try {
+					if (br != null)br.close();
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+			} 
 		}
-
 	}
 
 	// METHODEN
