@@ -5,7 +5,6 @@ import java.awt.Button;
 import java.awt.Checkbox;
 import java.awt.Choice;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Frame;
 import java.awt.GridLayout;
 import java.awt.Panel;
@@ -15,7 +14,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
-import javax.swing.text.EditorKit;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
 
@@ -34,6 +32,7 @@ import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.StringTokenizer;
 
@@ -45,8 +44,9 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 	private Panel panelCenter;
 
 	private Button btnSearch = null;
-//	private Button btnExportLeft = null;
-//	private Button btnExportRight = null;
+	private Button btnSearchAll = null;
+	// private Button btnExportLeft = null;
+	// private Button btnExportRight = null;
 
 	private TextArea txtAreaLeft;
 	private TextArea txtAreaRight;
@@ -87,18 +87,21 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 
 		bg = new Color(255, 255, 200);
 		setBackground(bg);
-		
+
 		setTitle("IRG Search by scalcsan & mamutnad");
 
 		// GUI Komponenten erzeugen
 
 		// TOP Panel mit Query Bereich
 		panelTop = new Panel();
-		panelTop.setSize(50,200);
-		panelTop.setLayout(new GridLayout(1, 1));
+		panelTop.setSize(50, 200);
+		panelTop.setLayout(new GridLayout(1, 2)); // Reihen / Spalten
 
-		btnSearch = new Button("GoGoGo");
+		btnSearch = new Button("GoGoGo Left/Right");
 		panelTop.add(btnSearch);
+
+		btnSearchAll = new Button("Search All");
+		panelTop.add(btnSearchAll);
 
 		add(panelTop, BorderLayout.NORTH);
 
@@ -134,89 +137,21 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 		chbxStopRight = new Checkbox("Enable Stopwords", false);
 		panelCenter.add(chbxStopRight);
 
-		// checkbox porterstem
-		// chbxPortStemLeft = new Checkbox("Use Porter Stemmer", false);
-		// panelCenter.add(chbxPortStemLeft);
-		//
-		// chbxPortStemRight = new Checkbox("Use Porter Stemmer", false);
-		// panelCenter.add(chbxPortStemRight);
-
-//		// EXPORT BUTTONS
-//		BTNEXPORTLEFT = NEW BUTTON("EXPORT TO FILE, LEFT");
-//		PANELCENTER.ADD(BTNEXPORTLEFT);
-//
-//		BTNEXPORTRIGHT = NEW BUTTON("EXPORT TO FILE, RIGHT");
-//		PANELCENTER.ADD(BTNEXPORTRIGHT);
-
 		txtAreaLeft = new TextArea("Magic happens here");
 		panelCenter.add(txtAreaLeft);
 		txtAreaRight = new TextArea("or it could happen here");
 		panelCenter.add(txtAreaRight);
-		
+
 		add(panelCenter, BorderLayout.CENTER);
 
 		// Beim Listener registrieren
-//		btnExportLeft.addActionListener(this);
-//		btnExportRight.addActionListener(this);
 		btnSearch.addActionListener(this);
+		btnSearchAll.addActionListener(this);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		
-		//Wird nicht mehr gebraucht, da export automatisch in file erfolgt.
-//		if (e.getSource() == btnExportLeft) {
-//			System.out.println("Export Left");
-//			System.out.println(txtAreaLeft.getText());
-//			// !!!!!TODO!!!!!!!
-//			// Hier einen FileWriter schreiben, der den Inhalt des TextArea in
-//			// ein Result.trec File Format schreibt
-//			try {
-//				File temp = new File("results/resultLeft.txt");
-//				String absolutPath = new String(temp.getAbsolutePath());
-//				File file = new File(absolutPath);
-//
-//				// if file doesnt exists, then create it
-//				if (!file.exists()) {
-//					file.createNewFile();
-//				}
-//				FileWriter fw = new FileWriter(file.getAbsoluteFile());
-//				BufferedWriter bw = new BufferedWriter(fw);
-//				bw.write(txtAreaLeft.getText());
-//				bw.close();
-//				System.out.println("Done");
-//
-//			} catch (IOException e1) {
-//				e1.printStackTrace();
-//			}
-//		}
-//
-//		if (e.getSource() == btnExportRight) {
-//			System.out.println("Export Right");
-//			System.out.println(txtAreaRight.getText());
-//			// !!!!!TODO!!!!!!!
-//			// Hier einen FileWriter schreiben, der den Inhalt des TextArea in
-//			// ein Result.trec File Format schreibt
-//			try {
-//				File temp = new File("results/resultRight.txt");
-//				String absolutPath = new String(temp.getAbsolutePath());
-//				File file = new File(absolutPath);
-//
-//				// if file doesnt exists, then create it
-//				if (!file.exists()) {
-//					file.createNewFile();
-//				}
-//				FileWriter fw = new FileWriter(file.getAbsoluteFile());
-//				BufferedWriter bw = new BufferedWriter(fw);
-//				bw.write(txtAreaRight.getText());
-//				bw.close();
-//				System.out.println("Done");
-//
-//			} catch (IOException e1) {
-//				e1.printStackTrace();
-//			}
-//		}
 
 		// MAGIC HAPPENS HERE!!
 		if (e.getSource() == btnSearch) {
@@ -228,107 +163,21 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 			// ------------------------------------
 			// Process Left Side
 			// ------------------------------------
-			// Get Options for left Side
-			// Stem Stop
-			// 0 0 1
-			// 1 0 2
-			// 0 1 3
-			// 1 1 4
-
-			// ist sowieso falsch?
-			// if (chbxstopleft.getstate() == false
-			// && chbxportstemleft.getstate() == false) {
-			// options = 1;
-			// } else if (chbxstopleft.getstate() == true
-			// && chbxportstemleft.getstate() == false) {
-			// options = 2;
-			// } else if (chbxstopleft.getstate() == false
-			// && chbxportstemleft.getstate() == true) {
-			// options = 3;
-			// } else if (chbxstopleft.getstate() == true
-			// && chbxportstemleft.getstate() == true) {
-			// options = 4;
-			// }
-
 			// Get XML File from Language Key
-			switch (collectionLeft.getSelectedItem()) {
-			case "DE":
-				filename = queryArray[0];
-				break;
-			case "FI":
-				filename = queryArray[1];
-				break;
-			case "FR":
-				filename = queryArray[2];
-				break;
-			case "IT":
-				filename = queryArray[3];
-				break;
-			case "RU":
-				filename = queryArray[4];
-				break;
-			case "EN":
-				filename = queryArray[5];
-				break;
-			default:
-				filename = queryArray[5];
-				break;
-			}
+			filename = getQueryFileFromName(collectionLeft.getSelectedItem());
 
-			// Create absolut path:
-			// System.out.println("Realtive Path: " + filename);
-			absolut = new File(filename);
-			filename = absolut.getAbsolutePath();
-			// System.out.println("Absolut path: " + filename);
-
-			// Parse XML File
 			try {
-
-				File file = new File(filename);
-
-				DocumentBuilderFactory dbFactory = DocumentBuilderFactory
-						.newInstance();
-				DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-
-				Document doc = dBuilder.parse(file);
-
-				doc.getDocumentElement().normalize();
-
-				// System.out.println("Root element :"
-				// + doc.getDocumentElement().getNodeName());
-
-				NodeList nList = doc.getElementsByTagName("DOC");
-
+				NodeList nList = getNodeListFromFilename(filename);// Parse XML
+																	// File
 				outputFile = new ArrayList<String>();
 
 				for (int temp = 0; temp < nList.getLength(); temp++) {
 					Node nNode = nList.item(temp);
 
-					// System.out.println("\nCurrent Element :"
-					// + nNode.getNodeName());
 					if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 						Element eElement = (Element) nNode;
 
-						// create tokenizer
-						st = new StringTokenizer(eElement
-								.getElementsByTagName("text").item(0)
-								.getTextContent());
-
-						// System.out.println("Create queryDoc Array[].");
-						queryDoc = new String[st.countTokens()];
-						for (int i = 0; st.hasMoreTokens(); i++) {
-
-							// Stop Words --> wird in collection gemacht.
-
-							// Porter Stemmer
-							// PorterStemmer stemmer = new PorterStemmer();
-							// return stemmer.stem(term);
-
-							queryDoc[i] = st.nextToken();
-						}
-						// erstelle Lucene mit Query[], ausgewählter Sprache und
-						// der ID von der Query
-						setLuceneLeft(new HelloLucene(queryDoc,
+						setLuceneLeft(new HelloLucene(getQueryDoc(eElement),
 								collectionLeft.getSelectedItem(),
 								Integer.valueOf(eElement
 										.getElementsByTagName("recordId")
@@ -343,50 +192,78 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 					}// ifend
 				}// for
 
-				// Write Output FIle and txtAreaLEft
-				File temp = new File("results/resultLeft.txt");
-				String absolutPath = new String(temp.getAbsolutePath());
-				File outputFileLeft = new File(absolutPath);
+				writeOutPutFile(chbxStopLeft.getState(), collectionLeft,
+						outputFile);
+				txtAreaLeft.setText(outputFile.toString());
+				// ------------------------------------
+				// Process Right Side
+				// ------------------------------------
+				java.util.Date date1 = new java.util.Date();
+				System.out.println(new Timestamp(date1.getTime()));
 
-				// if file doesnt exists, then create it
-				outputFileLeft.delete();
-				if (!outputFileLeft.exists()) {
-					outputFileLeft.createNewFile();
-				}
-				FileWriter fw = new FileWriter(outputFileLeft.getAbsoluteFile());
-				BufferedWriter bw = new BufferedWriter(fw);
-				System.out.println("Write File: " + outputFileLeft);
-				for (Iterator iterator = outputFile.iterator(); iterator
-						.hasNext();) {
-					bw.write(iterator.next().toString());
-				}
-				bw.close();
-				txtAreaLeft.setText( outputFile.toString() );
+				// Get XML File from Language Key
+				filename = getQueryFileFromName(collectionRight
+						.getSelectedItem());
+
+				NodeList nListRight = getNodeListFromFilename(filename);// Parse
+																		// XML
+																		// File
+				outputFile = new ArrayList<String>();
+
+				for (int temp = 0; temp < nListRight.getLength(); temp++) {
+					Node nNode = nListRight.item(temp);
+
+					if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+						Element eElement = (Element) nNode;
+
+						setLuceneRight(new HelloLucene(getQueryDoc(eElement),
+								collectionRight.getSelectedItem(),
+								Integer.valueOf(eElement
+										.getElementsByTagName("recordId")
+										.item(0).getTextContent()),
+								chbxStopRight.getState(), false));
+
+						for (Iterator iterator = getLuceneRight()
+								.getOutputString().iterator(); iterator
+								.hasNext();) {
+							outputFile.add(iterator.next().toString());
+						}
+					}// ifend
+				}// for
+
+				writeOutPutFile(chbxStopRight.getState(), collectionRight,
+						outputFile);
+				txtAreaRight.setText(outputFile.toString());
+
 			} catch (Exception exception) {
 				// TODO: handle exception
 			}
-			// ------------------------------------
-			// Process Right Side
-			// ------------------------------------
-			java.util.Date date1 = new java.util.Date();
-			System.out.println(new Timestamp(date1.getTime()));
+		} // ENDIF MAGIC HAPPENS HERE!!
 
-			// if (chbxStopRight.getState() == false
-			// && chbxPortStemRight.getState() == false) {
-			// options = 1;
-			// } else if (chbxStopRight.getState() == true
-			// && chbxPortStemRight.getState() == false) {
-			// options = 2;
-			// } else if (chbxStopRight.getState() == false
-			// && chbxPortStemRight.getState() == true) {
-			// options = 3;
-			// } else if (chbxStopRight.getState() == true
-			// && chbxPortStemRight.getState() == true) {
-			// options = 4;
+		if (e.getSource() == "btnSearchAll") {
+			HashMap<Integer, Integer> rangliste = new HashMap<>();
+			
+			
 		}
 
-		// Get XML File from Language Key
-		switch (collectionRight.getSelectedItem()) {
+	}
+
+	// METHODEN
+	public String[] getQueryDoc(Element el) {
+		st = new StringTokenizer(el // create tokenizer from query
+				.getElementsByTagName("text").item(0).getTextContent());
+
+		queryDoc = new String[st.countTokens()];
+		for (int i = 0; st.hasMoreTokens(); i++) {
+			queryDoc[i] = st.nextToken();
+		}
+		return queryDoc;
+	}
+
+	public String getQueryFileFromName(String language) {
+		String filename = null;
+
+		switch (language) {
 		case "DE":
 			filename = queryArray[0];
 			break;
@@ -409,95 +286,63 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 			filename = queryArray[5];
 			break;
 		}
-
 		// Create absolut path:
-		// System.out.println("Realtive Path: " + filename);
 		absolut = new File(filename);
 		filename = absolut.getAbsolutePath();
-		// System.out.println("Absolut path: " + filename);
+		return filename;
+	}
 
-		// Parse XML File
+	public void writeOutPutFile(boolean checkbox, Choice choice,
+			Collection<String> outFile) {
+		// Write Output FIle and txtAreaRight
+		String filename = null;
+		if (checkbox == true) {
+			filename = new String("results/"
+					+ choice.getSelectedItem().toString() + "_Stop" + ".txt");
+		} else {
+			filename = new String("results/"
+					+ choice.getSelectedItem().toString() + ".txt");
+		}
+		File temp = null;
+		temp = new File(filename);
+		String absolutPath = null;
+		absolutPath = new String(temp.getAbsolutePath());
+		File outputFileRight = null;
+		outputFileRight = new File(absolutPath);
+
 		try {
-
-			File file = new File(filename);
-
-			DocumentBuilderFactory dbFactory = DocumentBuilderFactory
-					.newInstance();
-			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-
-			Document doc = dBuilder.parse(file);
-
-			doc.getDocumentElement().normalize();
-
-			// System.out.println("Root element :"
-			// + doc.getDocumentElement().getNodeName());
-
-			NodeList nList = doc.getElementsByTagName("DOC");
-			outputFile = new ArrayList<String>();
-			for (int temp = 0; temp < nList.getLength(); temp++) {
-				Node nNode = nList.item(temp);
-
-				// System.out.println("\nCurrent Element :"
-				// + nNode.getNodeName());
-				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-					Element eElement = (Element) nNode;
-
-					// create tokenizer
-					st = new StringTokenizer(eElement
-							.getElementsByTagName("text").item(0)
-							.getTextContent());
-
-					// System.out.println("Create queryDoc Array[].");
-					queryDoc = new String[st.countTokens()];
-					for (int i = 0; st.hasMoreTokens(); i++) {
-
-						// Stop Words --> wird in collection gemacht.
-
-						// Porter Stemmer
-						// PorterStemmer stemmer = new PorterStemmer();
-						// return stemmer.stem(term);
-
-						queryDoc[i] = st.nextToken();
-					}
-					// erstelle Lucene mit Query[], ausgewählter Sprache und
-					// der ID von der Query
-					setLuceneRight(new HelloLucene(queryDoc,
-							collectionRight.getSelectedItem(),
-							Integer.valueOf(eElement
-									.getElementsByTagName("recordId").item(0)
-									.getTextContent()),
-							chbxStopRight.getState(), false));
-
-					for (Iterator iterator = getLuceneRight().getOutputString()
-							.iterator(); iterator.hasNext();) {
-						outputFile.add(iterator.next().toString());
-					}
-				}// ifend
-			}// for
-
-			// Write Output FIle and txtAreaRight
-			File tempR = new File("results/resultRight.txt");
-			String absolutPath = new String(tempR.getAbsolutePath());
-			File outputFileRight = new File(absolutPath);
-
 			// if file doesnt exists, then create it
-			outputFileRight.delete();
 			if (!outputFileRight.exists()) {
 				outputFileRight.createNewFile();
 			}
-
+			System.out.println("Write File: " + outputFileRight);
 			FileWriter fw = new FileWriter(outputFileRight.getAbsoluteFile());
 			BufferedWriter bw = new BufferedWriter(fw);
-			System.out.println("Write File: " + outputFileRight);
-			for (Iterator iterator = outputFile.iterator(); iterator.hasNext();) {
+			for (Iterator iterator = outFile.iterator(); iterator.hasNext();) {
 				bw.write(iterator.next().toString());
 			}
 			bw.close();
-			txtAreaRight.setText( outputFile.toString() );
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
-		} catch (Exception exception) {
+	public NodeList getNodeListFromFilename(String filename) {
+		NodeList nList = null;
+		try {
+			File file = new File(filename);
+			DocumentBuilderFactory dbFactory = DocumentBuilderFactory
+					.newInstance();
+			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+			Document doc = dBuilder.parse(file);
+			doc.getDocumentElement().normalize();
+			nList = doc.getElementsByTagName("DOC");
+
+		} catch (Exception e) {
 			// TODO: handle exception
 		}
+		return nList;
 	}
 
 	@Override
