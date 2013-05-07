@@ -13,30 +13,32 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
-
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.DocumentBuilder;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
-import org.w3c.dom.Node;
-import org.w3c.dom.Element;
-
-import ch.zhaw.irg.HelloLucene;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.SortedSet;
 import java.util.StringTokenizer;
+import java.util.TreeSet;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
+
+import ch.zhaw.irg.*;
 
 public class MyFrame extends Frame implements WindowListener, ActionListener {
 	private Color bg;
@@ -47,17 +49,12 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 
 	private Button btnSearch = null;
 	private Button btnSearchAll = null;
-	// private Button btnExportLeft = null;
-	// private Button btnExportRight = null;
 
 	private TextArea txtAreaLeft;
 	private TextArea txtAreaRight;
 
 	private Checkbox chbxStopLeft;
 	private Checkbox chbxStopRight;
-
-	// private Checkbox chbxPortStemLeft;
-	// private Checkbox chbxPortStemRight;
 
 	private Choice collectionLeft;
 	private Choice collectionRight;
@@ -69,6 +66,12 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 			"query/irg_queries_FI.xml", "query/irg_queries_FR.xml",
 			"query/irg_queries_IT.xml", "query/irg_queries_RU.xml",
 			"query/irg_queries_EN.xml" };
+
+	private String[] resultArray = { "results/DE.txt", "results/DE_Stop.txt",
+			"results/FI.txt", "results/FI_Stop.txt", "results/FR.txt",
+			"results/FR_Stop.txt", "results/IT.txt", "results/IT_Stop.txt",
+			"results/RU.txt", "results/RU_Stop.txt", "results/EN.txt",
+			"results/EN_Stop.txt" };
 
 	private File absolut = null;
 
@@ -242,39 +245,86 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 			}
 		} // ENDIF MAGIC HAPPENS HERE!!
 
-		if (e.getSource() == "btnSearchAll") {
-			HashMap<Integer, Integer> rangliste = new HashMap<>();
-			//Read Files DE
+		if (e.getSource() == btnSearchAll) {
+
+			HashMap<String, Float> rangListe = new HashMap<>();
+			String queryId = null;
+			String q0 = null;
+			String docId = null;
+			Float score = null; // score for put value to hashmap
+			Float oldScore = null; // if key exists this variable will be filled
+									// with a value.
+			String stringKey = null; // contains queryId and docId String.
+			String ranking = null;
+
+			String sCurrentLine;
+
+			// Read Files DE
 			BufferedReader br = null;
-			try {
-				String sCurrentLine;
-				br = new BufferedReader(new FileReader("C:\\Users\\sandro\\Documents\\GitHub\\ZHAW_IRG_SKB_LUCENE\\IRG\\results\\DE.txt"));
-				while ((sCurrentLine = br.readLine()) != null) {
-					StringTokenizer st = new StringTokenizer(sCurrentLine);
-					Integer queryId = new Integer(Integer.getInteger(st.nextToken()));
-					Integer durchgang = new Integer(Integer.getInteger(st.nextToken()));
-					Integer document = new Integer(Integer.getInteger(st.nextToken()));
-					
-					String keyString = new String(String.valueOf(queryId)+String.valueOf(document));
-					Integer keyInteger = new Integer(Integer.valueOf(keyString));
-					
-					Integer rang = new Integer(Integer.valueOf(st.nextToken()));
-					rang ++;
-					
-					rangliste.put(keyInteger, rang);
-				}
-	 
-			} catch (IOException e1) {
-				e1.printStackTrace();
-			} finally {
+			for (int i = 0; i < resultArray.length; i++) {
+
+				// Create absolut filename
+				File temp = new File(resultArray[i]);
+				String absolutPath = new String(temp.getAbsolutePath());
+
 				try {
-					if (br != null)br.close();
-				} catch (IOException ex) {
-					ex.printStackTrace();
-				}
-			} 
-		}
-	}
+					br = new BufferedReader(new FileReader(absolutPath));
+
+					while ((sCurrentLine = br.readLine()) != null) {
+						StringTokenizer st = new StringTokenizer(sCurrentLine);
+
+						// while (st.hasMoreElements()) {
+						// get tokens from string
+						queryId = new String(st.nextToken());
+						q0 = new String(st.nextToken());
+						docId = new String(st.nextToken());
+
+						stringKey = new String(queryId + " " + docId);
+						ranking = new String(st.nextToken());
+
+						// enthält schlüssel, dh. updaten
+						if (rangListe.containsKey(stringKey)) {
+							oldScore = new Float(rangListe.get(stringKey));
+							score = new Float(oldScore
+									+ Float.valueOf(st.nextToken()));
+						} else { // euer Eintrag machen
+							score = new Float(Float.valueOf(st.nextToken()));
+						}
+						rangListe.put(stringKey, score);
+						// }// endwhile
+					}// endwhile
+
+				} catch (IOException e1) {
+					e1.printStackTrace();
+				} finally {
+					try {
+						if (br != null)
+							br.close();
+					} catch (IOException ex) {
+						ex.printStackTrace();
+					}// endtry
+				} // entry
+			}// endfor results array
+
+			// Sorted List by hasmap keys:
+			//
+			// SortedSet<String> keys = new TreeSet<String>(myHashMap.keySet());
+			// Sorted List by hashmap values:
+			//
+			// SortedSet<String> values = new
+			// TreeSet<String>(myHashMap.values());
+
+			// Write file to
+			SortedSet<String> sortKeys = new TreeSet<String>(rangListe.keySet());
+			SortedSet<Float> sortValues = new TreeSet<Float>(rangListe.values());
+
+			for (Iterator iterator = sortKeys.iterator(); iterator.hasNext();) {
+				// iterator.next();
+				System.out.println(iterator.next());
+			}
+
+		}// if btn search all
+	}// end action listener
 
 	// METHODEN
 	public String[] getQueryDoc(Element el) {
