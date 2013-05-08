@@ -247,8 +247,9 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 
 		if (e.getSource() == btnSearchAll) {
 
-			HashMap<String, Float> rangListe = new HashMap<>();
+			HashMap<Key, Float> rangListe = new HashMap<>();
 			String queryId = null;
+			Key key = null;
 			String q0 = null;
 			String docId = null;
 			Float score = null; // score for put value to hashmap
@@ -261,7 +262,7 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 
 			// Read Files DE
 			BufferedReader br = null;
-			for (int i = 0; i < resultArray.length; i++) {
+			for (int i = 0; i < 3; i++) { //resultArray.length; i++) {
 
 				// Create absolut filename
 				File temp = new File(resultArray[i]);
@@ -272,14 +273,16 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 
 					while ((sCurrentLine = br.readLine()) != null) {
 						StringTokenizer st = new StringTokenizer(sCurrentLine);
+						
+						//http://stackoverflow.com/questions/14677993/how-to-create-a-hashmap-with-two-keys-key-pair-value
 
 						// while (st.hasMoreElements()) {
 						// get tokens from string
 						queryId = new String(st.nextToken());
 						q0 = new String(st.nextToken());
 						docId = new String(st.nextToken());
-
-						stringKey = new String(queryId + " " + docId);
+						
+//						stringKey = new String(queryId + " " + docId);
 						ranking = new String(st.nextToken());
 
 						// enthält schlüssel, dh. updaten
@@ -290,7 +293,7 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 						} else { // euer Eintrag machen
 							score = new Float(Float.valueOf(st.nextToken()));
 						}
-						rangListe.put(stringKey, score);
+						rangListe.put(key = new Key(Integer.valueOf(queryId),Integer.valueOf(docId)), score);
 						// }// endwhile
 					}// endwhile
 
@@ -315,7 +318,7 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 			// TreeSet<String>(myHashMap.values());
 
 			// Write file to
-			SortedSet<String> sortKeys = new TreeSet<String>(rangListe.keySet());
+			SortedSet<Key> sortKeys = new TreeSet<Key>(rangListe.keySet());
 			SortedSet<Float> sortValues = new TreeSet<Float>(rangListe.values());
 
 			for (Iterator iterator = sortKeys.iterator(); iterator.hasNext();) {
