@@ -78,9 +78,8 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 			"query/irg_queries_EN.xml" };
 
 	private String[] resultArray = { "results/DE.txt", "results/DE_Stop.txt",
-			"results/FI.txt", "results/FI_Stop.txt",
-			"results/FR.txt", "results/FR_Stop.txt",
-			"results/IT.txt", "results/IT_Stop.txt",
+			"results/FI.txt", "results/FI_Stop.txt", "results/FR.txt",
+			"results/FR_Stop.txt", "results/IT.txt", "results/IT_Stop.txt",
 			"results/RU.txt", "results/RU_Stop.txt", "results/EN.txt",
 			"results/EN_Stop.txt" };
 
@@ -295,21 +294,15 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 																				// line
 																				// at
 																				// space
-
-						// http://stackoverflow.com/questions/14677993/how-to-create-a-hashmap-with-two-keys-key-pair-value
-
+						
 						queryId = new String(st.nextToken());
 						q0 = new String(st.nextToken());
 						docId = new String(st.nextToken());
 						ranking = new String(st.nextToken());
 						score = new Float(st.nextToken());
-						System.out.println(queryId + " " + q0 + " " + docId
-								+ " " + ranking + " " + score);
-						if (queryId.compareTo("891") == 0) {
-							if (ranking.compareTo("655") == 0) {
-								System.out.println("buuum");
-							}
-						}
+//						System.out.println(queryId + " " + q0 + " " + docId
+//								+ " " + ranking + " " + score);
+						
 						// eintrag mit schlüssel schon vorhanden, dh. updaten
 						if (map.containsKey(Integer.valueOf(queryId))) { // eintrag
 																			// 245
@@ -356,43 +349,86 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 				} // entry
 			}// endfor results array
 
-			SortedSet<Integer> sortKeys = new TreeSet<Integer>(map.keySet());
-			final boolean DESC = false;
+			// Create File
+			String filenameRangliste = new String("results/rangliste.txt");
+			File tempRangliste = new File(filenameRangliste);
+			String absolutPathRangliste = new String(
+					tempRangliste.getAbsolutePath());
+			File outputFileRangliste = new File(absolutPathRangliste);
 
-			int qId = 0;
-			for (Iterator iterator = sortKeys.iterator(); iterator.hasNext();) {
-				qId = (int) iterator.next();
+			try {
+				System.out.println("Write File: " + outputFileRangliste);
+				FileWriter fw = new FileWriter(
+						outputFileRangliste.getAbsoluteFile());
+				BufferedWriter bw = new BufferedWriter(fw);
+				// if file doesnt exists, then create it
+				if (!outputFileRangliste.exists()) {
+					outputFileRangliste.createNewFile();
+				}
 
-				valueMap = new HashMap<>(map.get(qId));
+				SortedSet<Integer> sortKeys = new TreeSet<Integer>(map.keySet());
+				final boolean DESC = false;
 
-				List<Entry<Integer, Float>> list = new LinkedList<Entry<Integer, Float>>(
-						valueMap.entrySet());
-
-				// Sorting the list based on values
-				Collections.sort(list, new Comparator<Entry<Integer, Float>>() {
-					public int compare(Entry<Integer, Float> o1,
-							Entry<Integer, Float> o2) {
-						if (DESC) {
-							return o1.getValue().compareTo(o2.getValue());
-						} else {
-							return o2.getValue().compareTo(o1.getValue());
-						}
-					}
-				});
-
-				// Maintaining insertion order with the help of LinkedList
+				int qId = 0;
 				Map<Integer, Float> sortedMap = new LinkedHashMap<Integer, Float>();
-				for (Entry<Integer, Float> entry : list) {
-					sortedMap.put(entry.getKey(), entry.getValue());
-				}
-				int i = 0;
-				for (Entry<Integer, Float> entry : sortedMap.entrySet()) {
-					System.out.println(qId + "\t" + "Q0" + "\t "
-							+ entry.getKey() + "\t" + i + "\t"
-							+ entry.getValue() + "\t" + "scalcsan&mamutnad");
-					i++;
-				}
-			}
+								
+				//loop all querys
+				for (Iterator iterator = sortKeys.iterator(); iterator
+						.hasNext();) {
+					qId = (int) iterator.next();
+
+					valueMap = new HashMap<>(map.get(qId));
+
+					List<Entry<Integer, Float>> list = new LinkedList<Entry<Integer, Float>>(
+							valueMap.entrySet());
+
+					// Sorting the list based on values
+					Collections.sort(list,
+							new Comparator<Entry<Integer, Float>>() {
+								public int compare(Entry<Integer, Float> o1,
+										Entry<Integer, Float> o2) {
+									if (DESC) {
+										return o1.getValue().compareTo(
+												o2.getValue());
+									} else {
+										return o2.getValue().compareTo(
+												o1.getValue());
+									}
+								}
+							});
+
+					// Maintaining insertion order with the help of LinkedList
+					for (Entry<Integer, Float> entry : list) {
+						sortedMap.put(entry.getKey(), entry.getValue());
+					}
+
+					int i = 0;
+					//Loop sorted dokuments for query
+					for (Entry<Integer, Float> entry : sortedMap.entrySet()) {
+						// System.out
+						// .println(qId + "\t" + "Q0" + "\t "
+						// + entry.getKey() + "\t" + i + "\t"
+						// + entry.getValue() + "\t"
+						// + "scalcsan&mamutnad");
+						// Write Data to file here:
+						if (i < 1000){
+						bw.write(qId + " " + "Q0" + " " + entry.getKey() + " "
+								+ i + " " + entry.getValue() + " "
+								+ "scalcsan&mamutnad" + "\n");
+						}
+						// Write file fertig
+						i++;
+					}
+					i = 0;
+					// } catch (IOException e1) {
+					// // TODO Auto-generated catch block
+					// e1.printStackTrace();
+					// }//endtry file
+				}//endloop query
+				bw.close();
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			}// endtry
 		}// if btn search all
 	}// end action listener
 
