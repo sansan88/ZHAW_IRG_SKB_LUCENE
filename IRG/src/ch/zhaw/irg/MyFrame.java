@@ -22,10 +22,18 @@ import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.SortedSet;
 import java.util.StringTokenizer;
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -35,6 +43,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
+import sun.reflect.generics.tree.Tree;
 
 import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
 
@@ -68,8 +78,9 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 			"query/irg_queries_EN.xml" };
 
 	private String[] resultArray = { "results/DE.txt", "results/DE_Stop.txt",
-			"results/FI.txt", "results/FI_Stop.txt", "results/FR.txt",
-			"results/FR_Stop.txt", "results/IT.txt", "results/IT_Stop.txt",
+			"results/FI.txt", "results/FI_Stop.txt",
+			"results/FR.txt", "results/FR_Stop.txt",
+			"results/IT.txt", "results/IT_Stop.txt",
 			"results/RU.txt", "results/RU_Stop.txt", "results/EN.txt",
 			"results/EN_Stop.txt" };
 
@@ -154,6 +165,7 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 		btnSearchAll.addActionListener(this);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
@@ -247,22 +259,28 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 
 		if (e.getSource() == btnSearchAll) {
 
-			HashMap<Key, Float> rangListe = new HashMap<>();
+			HashMap<Integer, HashMap<Integer, Float>> map = new HashMap<>();
+			// HashMap<Key, Float> rangListe = new HashMap<>();
+			// Key key = null;
+
 			String queryId = null;
-			Key key = null;
 			String q0 = null;
 			String docId = null;
 			Float score = null; // score for put value to hashmap
 			Float oldScore = null; // if key exists this variable will be filled
-									// with a value.
-			String stringKey = null; // contains queryId and docId String.
+
+			HashMap<Integer, Float> valueMap = null;
+
+			// with a value.
+			// String stringKey = null; // contains queryId and docId String.
 			String ranking = null;
 
-			String sCurrentLine;
+			String sCurrentLine; // read file line
 
-			// Read Files DE
+			// Read Files DE FI IT FR
 			BufferedReader br = null;
-			for (int i = 0; i < 3; i++) { //resultArray.length; i++) {
+			for (int i = 0; i < resultArray.length; i++) { // resultArray.length;
+															// i++) {
 
 				// Create absolut filename
 				File temp = new File(resultArray[i]);
@@ -272,29 +290,58 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 					br = new BufferedReader(new FileReader(absolutPath));
 
 					while ((sCurrentLine = br.readLine()) != null) {
-						StringTokenizer st = new StringTokenizer(sCurrentLine);
-						
-						//http://stackoverflow.com/questions/14677993/how-to-create-a-hashmap-with-two-keys-key-pair-value
+						StringTokenizer st = new StringTokenizer(sCurrentLine); // tokenize
+																				// the
+																				// line
+																				// at
+																				// space
 
-						// while (st.hasMoreElements()) {
-						// get tokens from string
+						// http://stackoverflow.com/questions/14677993/how-to-create-a-hashmap-with-two-keys-key-pair-value
+
 						queryId = new String(st.nextToken());
 						q0 = new String(st.nextToken());
 						docId = new String(st.nextToken());
-						
-//						stringKey = new String(queryId + " " + docId);
 						ranking = new String(st.nextToken());
-
-						// enthält schlüssel, dh. updaten
-						if (rangListe.containsKey(stringKey)) {
-							oldScore = new Float(rangListe.get(stringKey));
-							score = new Float(oldScore
-									+ Float.valueOf(st.nextToken()));
-						} else { // euer Eintrag machen
-							score = new Float(Float.valueOf(st.nextToken()));
+						score = new Float(st.nextToken());
+						System.out.println(queryId + " " + q0 + " " + docId
+								+ " " + ranking + " " + score);
+						if (queryId.compareTo("891") == 0) {
+							if (ranking.compareTo("655") == 0) {
+								System.out.println("buuum");
+							}
 						}
-						rangListe.put(key = new Key(Integer.valueOf(queryId),Integer.valueOf(docId)), score);
-						// }// endwhile
+						// eintrag mit schlüssel schon vorhanden, dh. updaten
+						if (map.containsKey(Integer.valueOf(queryId))) { // eintrag
+																			// 245
+																			// existiert
+																			// schon.
+
+							// if
+							// (map.get(Integer.valueOf(queryId)).containsKey(Integer.valueOf(docId))){
+							// get all values of this query (contains: docId
+							// with score)
+							valueMap = new HashMap<>(map.get(Integer
+									.valueOf(queryId)));
+							// existiert dokument?
+							if (valueMap.containsKey(Integer.valueOf(docId))) {
+								// get score of document
+								oldScore = valueMap.get(Integer.valueOf(docId));
+								score = score + oldScore;
+							} else {
+								// System.out.println(queryId+" "+docId + " " +
+								// absolutPath);
+								// score = new
+								// Float(Float.valueOf(st.nextToken()));
+							}
+							valueMap.put(Integer.valueOf(docId), score);
+
+						} else {// neuer Eintrag machen mit neuem query
+							valueMap = new HashMap<>();
+							// save float and docId
+							valueMap.put(Integer.valueOf(docId), score);
+						}
+
+						map.put(Integer.valueOf(queryId), valueMap);
 					}// endwhile
 
 				} catch (IOException e1) {
@@ -309,23 +356,43 @@ public class MyFrame extends Frame implements WindowListener, ActionListener {
 				} // entry
 			}// endfor results array
 
-			// Sorted List by hasmap keys:
-			//
-			// SortedSet<String> keys = new TreeSet<String>(myHashMap.keySet());
-			// Sorted List by hashmap values:
-			//
-			// SortedSet<String> values = new
-			// TreeSet<String>(myHashMap.values());
+			SortedSet<Integer> sortKeys = new TreeSet<Integer>(map.keySet());
+			final boolean DESC = false;
 
-			// Write file to
-			SortedSet<Key> sortKeys = new TreeSet<Key>(rangListe.keySet());
-			SortedSet<Float> sortValues = new TreeSet<Float>(rangListe.values());
-
+			int qId = 0;
 			for (Iterator iterator = sortKeys.iterator(); iterator.hasNext();) {
-				// iterator.next();
-				System.out.println(iterator.next());
-			}
+				qId = (int) iterator.next();
 
+				valueMap = new HashMap<>(map.get(qId));
+
+				List<Entry<Integer, Float>> list = new LinkedList<Entry<Integer, Float>>(
+						valueMap.entrySet());
+
+				// Sorting the list based on values
+				Collections.sort(list, new Comparator<Entry<Integer, Float>>() {
+					public int compare(Entry<Integer, Float> o1,
+							Entry<Integer, Float> o2) {
+						if (DESC) {
+							return o1.getValue().compareTo(o2.getValue());
+						} else {
+							return o2.getValue().compareTo(o1.getValue());
+						}
+					}
+				});
+
+				// Maintaining insertion order with the help of LinkedList
+				Map<Integer, Float> sortedMap = new LinkedHashMap<Integer, Float>();
+				for (Entry<Integer, Float> entry : list) {
+					sortedMap.put(entry.getKey(), entry.getValue());
+				}
+				int i = 0;
+				for (Entry<Integer, Float> entry : sortedMap.entrySet()) {
+					System.out.println(qId + "\t" + "Q0" + "\t "
+							+ entry.getKey() + "\t" + i + "\t"
+							+ entry.getValue() + "\t" + "scalcsan&mamutnad");
+					i++;
+				}
+			}
 		}// if btn search all
 	}// end action listener
 

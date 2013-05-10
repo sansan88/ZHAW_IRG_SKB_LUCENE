@@ -47,7 +47,7 @@ public class HelloLucene {
 			"stopwords/stopwords_FinnishStopwords.txt",
 			"stopwords/stopwords_FrenchStopwords.txt",
 			"stopwords/stopwords_ItalianStopwords.txt",
-			"stopwords/stopwords_RussianStopwords.txt", 
+			"stopwords/stopwords_RussianStopwords.txt",
 			"stopwords/stopwords_EnglishStopwords.txt" };
 
 	private Collection<String> outputString = null;
@@ -97,8 +97,8 @@ public class HelloLucene {
 		filename = absolut.getAbsolutePath();
 
 		System.out
-		.println("-----------------------------------------------------------------");
-		
+				.println("-----------------------------------------------------------------");
+
 		if (boolStopWords == true) {
 			// Create absolut path Stop Words:
 			System.out.println("Use stopwords in Language " + language);
@@ -217,16 +217,23 @@ public class HelloLucene {
 		for (int i = 0; i < hits.length; ++i) {
 			int docId = hits[i].doc;
 			d = searcher.doc(docId);
+			
+//			Integer testInt = new Integer(docId);
+//			testInt.valueOf(d.get("recordId"));
 
-			// Return String als Konsolen output
-			System.out.println(queryId + "\t" + "Q0" + "\t" + d.get("recordId")
-					+ "\t" + i + "\t" + hits[i].score + "\t"
-					+ "SCALCSAN&MAMUTNAD");
+			if (d.get("recordId").isEmpty()) {
+				System.out.println("DocId Tag ist leer oder falsch oder so - FEHLER");
+			} else {
+				// Return String als Konsolen output
+				System.out.println(queryId + "\t" + "Q0" + "\t"
+						+ d.get("recordId") + "\t" + i + "\t" + hits[i].score//
+						+ "\t" + "SCALCSAN&MAMUTNAD");
 
-			// output File
-			outputString.add(queryId + " " + "Q0" + " " + d.get("recordId")
-					+ " " + i + " " + hits[i].score + " "
-					+ "SCALCSAN&MAMUTNAD\n");
+				// output File
+				outputString.add(queryId + " " + "Q0" + " " + d.get("recordId")
+						+ " " + i + " " + hits[i].score + " "
+						+ "SCALCSAN&MAMUTNAD\n");
+			}
 		}
 		// reader can only be closed when there
 		// is no need to access the documents any more.
